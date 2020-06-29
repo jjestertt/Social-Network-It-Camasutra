@@ -1,12 +1,12 @@
-// //Возведение массива в степень
-// const arr = [1, 2, 3, 4, 5];
-// let arrToPow = (parametr = prompt('Введите степень')) => {
-//     for (let i = 0; i < arr.length; i++) {
-//         arr[i] = arr[i] ** parametr;
-//     }
-//     return arr;
-// }
-// console.log(arrToPow());
+//Возведение массива в степень
+const arr = [1, 2, 3, 4, 5];
+let arrToPow = (parametr = prompt('Введите степень')) => {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] ** parametr;
+    }
+    return arr;
+}
+console.log(arrToPow());
 
 
 
@@ -37,8 +37,6 @@
 
 
 //простое если при делении на любое число кроме 1 и n есть остаток.
-
-let n = 10;
 
 
 
