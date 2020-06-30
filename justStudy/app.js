@@ -36,7 +36,15 @@ console.log(arrToPow());
 
 
 
-//простое если при делении на любое число кроме 1 и n есть остаток.
-
-
+// //простое если при делении на любое число кроме 1 и n есть остаток.
+// let num = 22;
+// setCounter:
+// for (let i = 2; i < num; i++) {
+//     for (let j = 2; j < i - 1; j++) {
+//         if (i % j == 0) {
+//             continue setCounter;
+//         }
+//     }
+//     console.log(i);
+// }
 
