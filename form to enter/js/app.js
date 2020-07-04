@@ -1,65 +1,56 @@
-const headerBtn = document.querySelector('#header-btn');
-const titleContent = document.querySelector('#title-content');
+const titleContent = document.querySelector(`#title-content`);
+//Форма входа
+const showWindowFormSignBtn = document.querySelector(`#header-btn`); //Кнопка показа формы входа
+const showWindowFormSign = document.querySelector(`#form-wrapper`); //Сама форма
+const userName = document.querySelector(`#user-name`); // Имя пользователя
+const userPass = document.querySelector(`#user-pass`); // Пароль
+const buttonSign = document.querySelector(`#btn-sign`); // Кнопка входа на сайт
+const showCheckPass = document.querySelector(`#show-check-pass`); // Показ правильности введенного пароля 
+let checkOpenForm = false; //Проверка открытого окна входа
 
-
-let clickFunction = () => {
-
+//Функция показа окна
+let showWindowJoin = () => {
+    if (checkOpenForm === false) {
+        showWindowFormSign.style.display = `block`;
+        formTojoin = true;
+    }
+    else if (checkOpenForm === true) {
+        showWindowFormSign.style.display = `none`;
+        formTojoin = false;
+    }
 }
-
-headerBtn.addEventListener('click', clickFunction);
-
-
-
-// //Название JS
-// let qwestonJs = prompt(`What is original name JavaScript?`)
-// if (qwestonJs === `ECMAScript`) titleContent.innerHTML = `This is true`;
-// else {
-//     titleContent.innerHTML = `You dont know? It's ECMAScript!`
-//     setTimeout(clickFunction, 1500);
-// }
-
-// //Проверка числа на знак 
-// let num = +prompt(`Введите число`)
-// if (num === 0) alert(0);
-// else if (num < 0) alert(-1);
-// else if (num > 0) alert(1);
-
-//Тернарное выражение
-// let a = +prompt();
-// let b = +prompt();
-// let num = (a + b <= 4) ? `Мало` : `Много`
-// alert(num);
-// Спрашиваем имя 
-
-// //Скрипт ввода логина и пароля
-// let login = prompt(`Please enter yor login`);
-// //Добавляем проверку что строка не пустая иначе ошибка
-// if (login != null) login = login.toLowerCase();
-// let pass = '';
-// //Если админ то просим пароль 
-// if (login === `admin`) {
-//     pass = prompt(`Please enter password`);
-//     //если пароль верен пишем привет
-//     if (pass === `i'm a boss`) {
-//         titleContent.innerHTML = `Hello boss!`
-//     }
-//     // если нажали отмену
-//     else if (pass === null) {
-//         titleContent.innerHTML = `Canceled`
-//     }
-//     //Если пароль неверен
-//     else {
-//         titleContent.innerHTML = `Password uncorrected`
-//     }
-// }
-// //Если нажали отмену при вводе имени
-// else if (login === null) {
-//     titleContent.innerHTML = `Canceled`
-// }
-// //Пустой ввод возвращает пустую строку а отмена возвращает null
-// else {
-//     titleContent.innerHTML = `I dont know who are you`
-// }
-
-//Вывод спец символов
-//for (let i = 2000; i < 9000; i++) titleContent.innerHTML += `&#${i}`;
+let signToSite = (event) => {
+    event.preventDefault();
+    //Скрипт ввода логина и пароля
+    let login = userName.value;
+    let pass = userPass.value;
+    showCheckPass.style.color = `red`;
+    //Добавляем проверку что строка не пустая иначе ошибка
+    if (login != null) login = login.toLowerCase(); //Убираем чувствительность регистра
+    //Если админ то просим пароль 
+    if (login === `admin`) {
+        //если пароль верен пишем привет
+        if (pass === `123`) {
+            showCheckPass.style.color = `green`;
+            showCheckPass.innerHTML = `Привет Босс!`
+        }
+        else if (pass === ``) {
+            showCheckPass.style.color = `rgb(136, 136, 136)`;
+            showCheckPass.innerHTML = `Введите пароль`
+        }
+        // // если нажали отмену (отмены больше нет)
+        // else if (pass === null) {
+        //     showCheckPass.innerHTML = `Canceled`
+        // }
+        //Если пароль неверен
+        else {
+            showCheckPass.innerHTML = `Неправильный пароль`
+        }
+    }
+    //Пустой ввод возвращает пустую строку  
+    else {
+        showCheckPass.innerHTML = `Я не знаю кто ты`
+    }
+}
+showWindowFormSignBtn.addEventListener(`click`, showWindowJoin);// Слушатель показа окна
+buttonSign.addEventListener(`click`, signToSite); // Слушатель входа на сайт

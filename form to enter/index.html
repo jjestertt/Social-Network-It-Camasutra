@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,31 +15,34 @@
             <div class="wrapper">
                 <div class="inner__logo">
                     <div class="logo">М</div>
-                    <h1 class="header__title">Максим Сивак</h1>
+                    <h1 class="header__title">аксим Сивак</h1>
                 </div>
-                <div class="header__btn" id="header-btn">Log In</div>
-
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        <div class="container">
-            <div class="title__content" id="title-content">
-
+                <div class="header__btn" id="header-btn">Sign In</div>
             </div>
         </div>
     </div>
 
-
-    <div class="form__wrapper">
-        <div class="form__title">Sign In</div>
+    <div class="form__wrapper" id="form-wrapper">
+        <div class="form__title">
+            <div class="form__title-text">Sign In</div>
+        </div>
         <form action="" class="form__main" id="form-main">
-            <input class="user__name" id="user-name" type="text" placeholder="UserName">
+            <div class="show__check-pass" id='show-check-pass'></div>
+            <input class="user__name" autocomplete="off" id="user-name" type="text" placeholder="UserName">
             <input class="user__pass" id="user-pass" type="password" placeholder="Password">
-            <!-- <a href="#">Немогу вспомнить пароль</a> -->
+            <a class="forget__pass" href="#">Вспомнить пароль</a>
             <button class="btn__sign" id="btn-sign" type="submit">Log In</button>
         </form>
     </div>
+
+    <div class="title">
+        <div class="container">
+            <div class="title__content" id="title-content">
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="js/app.js"></script>
 </body>

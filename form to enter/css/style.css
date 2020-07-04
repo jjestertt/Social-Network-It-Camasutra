@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 .header {
-    background-color: blueviolet;
+    background-color:rgb(188, 135, 248);
 }
 .wrapper {
     display: flex;
@@ -24,50 +24,53 @@
 .logo {
     margin-left: 15px;
     margin-top:4px;
-    background-color: burlywood;
-    color: blueviolet;
-    width: 30px;
+    background-color: rgb(238, 235, 235);
+    color: rgb(24, 7, 7);
+    width: 42px;
     height: 30px;
     text-align: center;
-    line-height:30px;
+    line-height:32px;
     font-weight: 900;
     font-size: 22px;
-    border-radius: 50%;
+    border-radius: 50px 6px;
 }
 .header__title {
-    margin-top: 17px;
-    margin-left: 8px;
-    color: burlywood;
+    margin-top: 13.5px;
+    margin-left: -10px;
+    color: rgb(0, 0, 0);
     font-size:14px;
 }
 .header__btn {
     margin-top: 6px;;
     margin-right:15px ;
-    background-color: burlywood;
-    color: blueviolet;
+    background-color: rgb(238, 235, 235);
+    color: rgb(0, 0, 0);
     border-radius: 2px;
     width: 90px;
     height: 25px;
     text-align: center;
     line-height:25px;
-    font-weight: bold;
     font-size: 13px;
     cursor: pointer;
     user-select: none;
 }
-.btn:hover{
+/* .btn:hover{
     background-color: rgb(216, 139, 37);
-}
+} */
 
 .form__wrapper {
-    margin: 35px auto;
+    display: none;
+    margin-top: 14px;
+    margin-right: 14px;
+    float: right;
     max-width: 230px;
     height: 250px;
     width: 100%;
     border-radius: 6px 6px 1px 1px;
 }
 .form__title {
-    background-color: rgb(123, 243, 143);
+    padding-top: 18px;
+    background-color: rgb(188, 135, 248);
     height: 80px;
     line-height: 80px;
     text-align: center;
@@ -75,18 +78,74 @@
     font-size: 19px;
     border-radius: 6px 6px 1px 1px;
 }
+.form__title-text{
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(238, 235, 235);
+    border-radius: 50px 3px;
+    width: 94px;
+    height: 42px;
+    line-height: 42px;
+}
 .form__main {
-    background: rgb(245, 242, 242);
-    padding-top: 30px;
+    background: rgb(238, 235, 235);
+    padding-top: 15px;
+    height: 213px;
 }
 .user__name, .user__pass, .btn__sign {
+    outline: none;
     display: block;
     margin: 0 auto;
     width: 90%;
     height: 40px;
-    padding-left: 5px;
+    font-size: 14px;
     border: 1px solid black;
     border-radius: 50px;
+    letter-spacing: 0.2px;
 }
+.user__name {
+    margin-top: 10px;;
+    padding-left: 15px;
+
+}
+.user__pass {
+    margin-top: 8px;
+    padding-left: 15px;
+}
+.forget__pass{
+    display: block;
+    margin-right: 10px;
+    margin-top: 2px;
+    /* text-decoration: none; */
+    font-size: 10px;
+    color: rgb(167, 157, 157);
+    text-align: end;
+}
+.btn__sign{
+    margin-top: 11px;
+    height: 38px;  
+}
+.btn__sign:hover {
+    background-color: rgb(236, 228, 228);
+}
+.show__check-pass{
+    text-align: center;
+    color: red;
+}
+   @media screen and (max-device-width: 425px) {
+    .form__wrapper {
+        float: none;
+        display: none;
+        margin: 0 auto;
+        margin-top: 14px;
+        max-width: 230px;
+        height: 250px;
+        width: 100%;
+        border-radius: 6px 6px 1px 1px;
+    }
+   }
+   .w{
+       color: rgb(136, 136, 136);
+   }
 
 
