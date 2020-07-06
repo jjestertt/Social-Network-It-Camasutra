@@ -8,16 +8,38 @@ const buttonSign = document.querySelector(`#btn-sign`); // Кнопка вход
 const showCheckPass = document.querySelector(`#show-check-pass`); // Показ правильности введенного пароля 
 let checkOpenForm = false; //Проверка открытого окна входа
 
+
 //Функция показа окна
 let showWindowJoin = () => {
     if (checkOpenForm === false) {
         showWindowFormSign.style.display = `block`;
-        formTojoin = true;
+        checkOpenForm = true;
     }
     else if (checkOpenForm === true) {
         showWindowFormSign.style.display = `none`;
-        formTojoin = false;
+        checkOpenForm = false;
     }
+}
+//Функция анимации формы входа
+let setAnimation = () => {
+    let pLeft = 0;
+    sideCheck = true;
+    let intervalAnimationCheckPassOne = setInterval(() => {
+        if (pLeft < 5 && sideCheck === true) {
+            pLeft++;
+            showCheckPass.style.paddingLeft = `${pLeft}px`;
+        }
+        else if (pLeft === 5) {
+            sideCheck = false;
+        }
+        if (pLeft > 0 && sideCheck === false) {
+            pLeft--;
+            showCheckPass.style.paddingLeft = `${pLeft}px`;
+        }
+        else if (pLeft === 0 && sideCheck === false) {
+            clearInterval(intervalAnimationCheckPassOne);
+        }
+    }, 13);
 }
 let signToSite = (event) => {
     event.preventDefault();
@@ -32,7 +54,7 @@ let signToSite = (event) => {
         //если пароль верен пишем привет
         if (pass === `123`) {
             showCheckPass.style.color = `green`;
-            showCheckPass.innerHTML = `Привет Босс!`
+            showCheckPass.innerHTML = `Добро пожаловать`
         }
         else if (pass === ``) {
             showCheckPass.style.color = `rgb(136, 136, 136)`;
@@ -45,12 +67,16 @@ let signToSite = (event) => {
         //Если пароль неверен
         else {
             showCheckPass.innerHTML = `Неправильный пароль`
+            setAnimation();
         }
     }
     //Пустой ввод возвращает пустую строку  
     else {
-        showCheckPass.innerHTML = `Я не знаю кто ты`
+        showCheckPass.innerHTML = `Введите имя пользователя`
+        setAnimation();
     }
 }
 showWindowFormSignBtn.addEventListener(`click`, showWindowJoin);// Слушатель показа окна
 buttonSign.addEventListener(`click`, signToSite); // Слушатель входа на сайт
+
+

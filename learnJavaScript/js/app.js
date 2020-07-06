@@ -1,12 +1,8 @@
 const headerBtn = document.querySelector('#header-btn');
 const titleContent = document.querySelector('#title-content');
+// const inputOne = document.querySelector('#input-one');
+// const inputTwo = document.querySelector('#input-two');
 
-
-let clickFunction = () => {
-
-}
-
-headerBtn.addEventListener('click', clickFunction);
 
 
 
@@ -63,3 +59,19 @@ headerBtn.addEventListener('click', clickFunction);
 
 //Вывод спец символов
 //for (let i = 2000; i < 9000; i++) titleContent.innerHTML += `&#${i}`;
+
+// // добавление в массив свойств из инпута нужны 2 инпута
+// class Car {
+//     constructor(name, rms) {
+//         this.name = name;
+//         this.rms = rms;
+//     }
+// }
+// let cars = [];
+// let i = 0;
+// let clickFunction = () => {
+//     cars[i] = new Car(inputTwo.value, inputOne.value);
+//     i++;
+// }
+
+headerBtn.addEventListener('click', clickFunction);
