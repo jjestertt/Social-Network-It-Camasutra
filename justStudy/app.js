@@ -47,4 +47,35 @@ console.log(arrToPow());
 //     }
 //     console.log(i);
 // }
-
+// //object calc
+// class Calc {
+//     constructor(a, b) {
+//         this.a = a,
+//             this.b = b
+//     }
+//     plus = () => {
+//         return (+this.a + +this.b);
+//     }
+//     minis = () => {
+//         return (this.a - this.b);
+//     }
+//     divid = () => {
+//         return (this.a / this.b);
+//     }
+//     multiply = () => {
+//         return (this.a * this.b);
+//     }
+//     equals = () => {
+//         if (this.b == 0) {
+//             console.log('error divid at null imposible')
+//         }
+//         else if (this.b != null && this.b != '' && +this.b > 0 && +this.a >= 0) {
+//             console.log(`${this.a} + ${this.b} = ${this.plus()}`);
+//             console.log(`${this.a} - ${this.b} = ${this.minis()}`);
+//             console.log(`${this.a} / ${this.b} = ${this.divid()}`);
+//             console.log(`${this.a} * ${this.b} = ${this.multiply()}`);
+//         }
+//     }
+// }
+// let rndNum = new Calc(prompt(`first number`), prompt(`second number`));
+// rndNum.equals();
