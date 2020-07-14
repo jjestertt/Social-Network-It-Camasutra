@@ -36,56 +36,33 @@
 // }
 // buttonSlider.addEventListener(`click`, chageButtonSLider);
 
-let setWord = prompt('type the word');
-setWord = setWord.toLowerCase();
-const arrWord = [];
 let lives = 10;
-for (let i = 0; i < setWord.length; i++) {
-    arrWord[i] = '_';
+let theHiddenWord = prompt('type the word');
+const arrayHiddenWord = [];
+theHiddenWord = theHiddenWord.toLowerCase();
+for (let i = 0; i < theHiddenWord.length; i++) {
+    arrayHiddenWord[i] = '_';
 }
 
-
-let checkChar = () => {
+let checkLetter = () => {
     let point = prompt('type the char');
     point = point.toLowerCase();
-    for (let j = 0; j < setWord.length; j++) {
-        if (point === setWord[j] && setWord[j] != '_') {
-            arrWord[j] = point;
+    for (let j = 0; j < theHiddenWord.length; j++) {
+        if (theHiddenWord[j] === '_') {
+            continue;
         }
-        else { console.log('*') }
+        else if (point === theHiddenWord[j]) {
+            arrayHiddenWord[j] = point;
+            console.log(arrayHiddenWord);
+        }
+        else {
+            console.log(1);
+            break;
+        }
+
     }
-    console.log(arrWord);
-    console.log(lives);
-    checkChar();
+    checkLetter();
 }
 
 
-
-checkChar();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+checkLetter();
