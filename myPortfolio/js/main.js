@@ -36,33 +36,28 @@
 // }
 // buttonSlider.addEventListener(`click`, chageButtonSLider);
 
-let lives = 10;
-let theHiddenWord = prompt('type the word');
-const arrayHiddenWord = [];
-theHiddenWord = theHiddenWord.toLowerCase();
-for (let i = 0; i < theHiddenWord.length; i++) {
-    arrayHiddenWord[i] = '_';
-}
-
-let checkLetter = () => {
-    let point = prompt('type the char');
-    point = point.toLowerCase();
-    for (let j = 0; j < theHiddenWord.length; j++) {
-        if (theHiddenWord[j] === '_') {
-            continue;
+let changeWord = (vstring = prompt(`send word`)) => {
+    let score = 10;
+    let hideWord = vstring.toLowerCase();
+    let arrayHideWord = [];
+    console.log(hideWord);
+    for (let i = 0; i < hideWord.length; i++) arrayHideWord[i] = '_';
+    console.log(arrayHideWord);
+    let checkLatter = (letter = prompt(`send letter`)) => {
+        let hideLetter = letter.toLowerCase();
+        for (let j = 0; j < hideWord.length; j++) {
+            if (hideWord[j] === hideLetter) {
+                arrayHideWord[j] = hideLetter;
+            }
+            // else if (hideWord[j] != hideLetter) {
+            //     score--;
+            //     console.log(score);
+            //     checkLatter();
+            //     break;
+            // }
         }
-        else if (point === theHiddenWord[j]) {
-            arrayHiddenWord[j] = point;
-            console.log(arrayHiddenWord);
-        }
-        else {
-            console.log(1);
-            break;
-        }
-
+        console.log(arrayHideWord);
     }
-    checkLetter();
+    checkLatter();
 }
-
-
-checkLetter();
+changeWord();
