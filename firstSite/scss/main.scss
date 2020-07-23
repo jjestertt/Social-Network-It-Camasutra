@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+.container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.header{
+    position: absolute;
+    top: auto;
+    width: 100%;
+    color: #ebefff;
+    a {
+        color: #ebefff;
+    }
+    &__inner {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+            padding: 34px 0px 34px 0px;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    &__nav {
+            // padding-top: 37px;
+            max-width: 580px;
+            width: 100%;
+                &-list {
+                padding: 0px 0px 0px 40px;
+                    li {
+                        display: inline-block;
+                    }
+                    li+li {
+                        padding-left: 70px;
+                    }
+                    a {
+                        font-size: 18px;
+                    }
+                    a:hover {
+                        border-bottom: 1px solid #ebefff;
+                    }
+            }
+        }
+    &__contacts {
+            display: flex;
+            justify-content: space-between;
+            max-width: 150px;
+            width: 100%;
+        }
+}
+.main{
+    background-image: url(..//img/main-bg.png);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+        &__left{
+            padding-top: 290px;
+            max-width: 485px;
+            width: 100%;
+        }
+        &__title {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        &__subtitle{
+            font-size: 17px;
+            line-height: 30px;
+            max-width: 445px;
+        }
+        &__buttons{
+            max-width: 333px;
+        }
+
+
+}
+
+
+
+
+
+//         .header__bottom-right {
+//             position: relative;
+//             width: 50%;
+//             .align{
+//                 position: absolute;
+//                 display: flex;
+//                 font-weight: bold;
+//                 justify-content: center;
+//                 align-items: center;  
+//                 border-radius: 50%;
+//                 text-transform: uppercase;
+//             }
+//             }
+//             .item-header__bottom1{
+//                 @extend .align;
+//                 top:224px;
+//                 left:412px;
+//                 width: 57px;
+//                 height: 57px;
+//                 background-color: #fff;
+//                 color: #6ca3ff;
+//                 font-size: 20;
+//             }
+//             .item-header__bottom2 {
+//                 @extend .align;
+//                 top:405px;
+//                 left:439px;
+//                 width: 88px;
+//                 height: 88px;
+//                 background-color:#6ca3ff;
+//                 color: #fff;
+//                 font-size: 16px;
+//             }
+//             .item-header__bottom3 {
+//                 @extend .align;
+//                 top:489px;
+//                 left:-25px;
+//                 width: 88px;
+//                 height: 88px;
+//                 background-color:#fc6a42;
+//                 color: #fff;            
+//                 font-size: 18px;
+//             }
+//             .item-header__bottom4 {
+//                 @extend .align;
+//                 top:715px;
+//                 left:434px;
+//                 width: 57px;
+//                 height: 57px;
+//                 background-color:#fcec64;
+//                 color: #6ca3ff;
+//                 font-size: 18px;
+//             }
+//             .item-header__bottom5 {
+//                 @extend .align;
+//                 top:782px;
+//                 left:-25px;
+//                 width: 49px;
+//                 height: 49px;
+//                 background-color:#fff;
+//                 -webkit-box-shadow: 1px 1px 1px 0px rgba(246, 247, 247, 0.2);
+//                 -moz-box-shadow: 1px 1px 1px 0px rgba(246, 247, 247, 0.2);
+//                 box-shadow: 1px 1px 1px 0px rgba(246, 247, 247, 0.2);
+//             }
+//     }    
+// }

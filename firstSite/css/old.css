@@ -48,10 +48,10 @@ a {
     max-width: 540px;
     width: 100%;
 }
-nav li a {
+    li a {
     font-size: 18px;
 }
-nav li a:hover {
+    li a:hover {
     border-bottom: 2px solid #ebefff;
 }
 .header__contacts {

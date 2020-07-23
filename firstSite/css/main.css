@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: absolute;
+  top: auto;
+  width: 100%;
+  color: #ebefff;
+}
+.header a {
+  color: #ebefff;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  padding: 34px 0px 34px 0px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__nav {
+  max-width: 580px;
+  width: 100%;
+}
+.header__nav-list {
+  padding: 0px 0px 0px 40px;
+}
+.header__nav-list li {
+  display: inline-block;
+}
+.header__nav-list li + li {
+  padding-left: 70px;
+}
+.header__nav-list a {
+  font-size: 18px;
+}
+.header__nav-list a:hover {
+  border-bottom: 1px solid #ebefff;
+}
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  max-width: 150px;
+  width: 100%;
+}
+
+.main {
+  background-image: url(..//img/main-bg.png);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+}
+.main__left {
+  padding-top: 290px;
+  max-width: 485px;
+  width: 100%;
+}
+.main__title {
+  font-size: 60px;
+  font-weight: bold;
+}
+.main__subtitle {
+  font-size: 17px;
+  line-height: 30px;
+  max-width: 445px;
+}
+.main__buttons {
+  max-width: 333px;
+}
+
+/*# sourceMappingURL=main.css.map */
