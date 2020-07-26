@@ -211,3 +211,37 @@ h1,h2,h3,h4,ul,li,form,input{
         }
     }
 }
+.contact{
+    background-color: #fff;
+    border-bottom: 1px solid #b7b7b7;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
+    &__left{
+        max-width: 365px;
+    }
+    &__title{
+        font-size: 20px;
+        font-weight: bold;
+        color:#333333;
+        margin-bottom: 10px;
+    }
+    &__subtitle{
+        font-size: 14px;
+        line-height: 20px;
+        color: #86878b;
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        color:#cccccc;
+        font-size: 48px;
+    }
+    &__item+&__item{
+        margin-left: 50px;
+    }
+}

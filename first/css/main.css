@@ -138,4 +138,31 @@ h1, h2, h3, h4, ul, li, form, input {
       .main__form-button:hover {
         background-color: #f8740f; }
 
+.contact {
+  background-color: #fff;
+  border-bottom: 1px solid #b7b7b7; }
+  .contact__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px; }
+  .contact__left {
+    max-width: 365px; }
+  .contact__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px; }
+  .contact__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: #86878b; }
+  .contact__right {
+    display: flex;
+    align-items: center; }
+  .contact__item {
+    color: #cccccc;
+    font-size: 48px; }
+  .contact__item + .contact__item {
+    margin-left: 50px; }
+
 /*# sourceMappingURL=main.css.map */
