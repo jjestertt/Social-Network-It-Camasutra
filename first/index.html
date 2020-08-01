@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Axit</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:ital,wght@0,300;1,400&display=swap"
@@ -11,12 +11,10 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-    <!-- <div class="btn__wrap">
-        <div class="btn__in"></div>
-    </div> -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -24,6 +22,9 @@
                     <img src="img/header-logo.png" alt="Logo">
                 </a>
                 <nav class="header__menu">
+                    <div class="header__menu-btn-wrapper">
+                        <div class="header__menu-btn-inner"></div>
+                    </div>
                     <ul class="header__menu-list">
                         <li class="header__menu-item"><a href="#">Features</a></li>
                         <li class="header__menu-item"><a href="#">About</a></li>
@@ -85,11 +86,11 @@
         <div class="container">
             <div class="tabs__inner">
                 <div class="tabs__right">
-                    <div class="tabs__change">TAB 1</div>
-                    <div class="tabs__change">TAB 2</div>
-                    <div class="tabs__change">TAB 3</div>
+                    <div class="tabs__change tabs__active" id="tabBtn1">TAB 1</div>
+                    <div class="tabs__change" id="tabBtn2">TAB 2</div>
+                    <div class="tabs__change" id="tabBtn3">TAB 3</div>
                 </div>
-                <div class="tabs__center">
+                <div class="tabs__center" id="tabText1">
                     <h4 class="tabs__title section__title">Tabs with soft transitioning effect.</h4>
                     <div class="tabs__line section__line"></div>
                     <p class="tabs__subtitle section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -102,7 +103,24 @@
                         elit. Aenean euismod bibendum laoreet.</p>
                     <a href="#" class="tabs__btn section__btn">Download</a>
                 </div>
-                <div class="tabs__right"><img src="img//build.png" alt="build" class="tabs__img"></div>
+                <div class="tabs__center" id="tabText2">
+                    <h4 class="tabs__title section__title">Tabs with soft transitioning effect.</h4>
+                    <div class="tabs__line section__line"></div>
+                    <p class="tabs__subtitle section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Aenean euismod
+                        bibendum laoreet.</p>
+                    <a href="#" class="tabs__btn section__btn">Download</a>
+                </div>
+                <div class="tabs__center" id="tabText3">
+                    <h4 class="tabs__title section__title">Tabs with soft transitioning effect.</h4>
+                    <div class="tabs__line section__line"></div>
+                    <p class="tabs__subtitle section__subtitle">Lorem ipsum dolor sit amet.</p>
+                    <p class="tabs__subtitle section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aenean euismod bibendum laoreet.</p>
+                    <a href="#" class="tabs__btn section__btn">Download</a>
+                </div>
+                <!-- <div class="tabs__right"><img src="img//build.png" alt="build" class="tabs__img"></div> -->
             </div>
         </div>
     </section>
@@ -139,7 +157,7 @@
             </div>
         </div>
     </section>
-    <section class="picture">
+    <!-- <section class="picture">
         <div class="container">
             <div class="picture__inner">
                 <div class="picture__left">
@@ -160,6 +178,40 @@
             </div>
         </div>
     </section>
+    <section class="awesome">
+        <div class="container">
+            <div class="awesome__top section-bottom__top">
+                <div class="awesome__title section-bottom__title">Why this is awesome</div>
+                <div class="line__title section-bottom__line"></div>
+                <div class="awesome__subtitle section-bottom__subtitle">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                    elit.</div>
+            </div>
+            <div class="awesome__bottom">
+                <div class="awesome__colum">
+                    <div class="awesome-bottom__img"><span class="icon-lightbulb-o"></span></div>
+                    <div class="awesome-bottom__title">Thoughtful Design</div>
+                    <div class="awesome-bottom__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aenean euismod bibendum laoreet. Proin gravida
+                        dolor sit amet lacus accumsan et viverra.</div>
+                </div>
+                <div class="awesome__colum">
+                    <div class="awesome-bottom__img"><span class="icon-keyboard-o"></span></div>
+                    <div class="awesome-bottom__title">Well Crafted</div>
+                    <div class="awesome-bottom__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aenean euismod bibendum laoreet. Proin gravida
+                        dolor sit amet lacus accumsan et viverra.</div>
+                </div>
+                <div class="awesome__colum">
+                    <div class="awesome-bottom__img"><span class="icon-flash"></span></div>
+                    <div class="awesome-bottom__title">Easy to Customize</div>
+                    <div class="awesome-bottom__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aenean euismod bibendum laoreet. Proin gravida
+                        dolor sit amet lacus accumsan et viverra.</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
@@ -175,7 +227,7 @@
                 <p class="footer__copyright">© 2015 Axure Themes</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script src="js/main.js"></script>
 </body>
 
