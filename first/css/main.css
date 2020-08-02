@@ -98,10 +98,9 @@ h1, h2, h3, h4, ul, li, form, input {
   height: 2px;
   background-color: #ff8b38; }
 .section__img-bg {
-  background-color: #9a9a9a;
   max-width: 451px;
+  margin: 0 auto;
   width: 100%;
-  max-height: 302px;
   height: 100%;
   -webkit-box-shadow: -5px 6px 54px -5px #9a9a9a;
   -moz-box-shadow: -5px 6px 54px -5px #9a9a9a;
@@ -314,8 +313,7 @@ h1, h2, h3, h4, ul, li, form, input {
     padding-top: 25px;
     max-width: 450px;
     width: 100%;
-    display: flex;
-    justify-content: flex-start; }
+    display: block; }
   .list__right {
     max-width: 510px;
     padding-left: 20px;
@@ -355,16 +353,13 @@ h1, h2, h3, h4, ul, li, form, input {
   padding: 89px 0px 125px 0px; }
   .picture__inner {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap-reverse; }
   .picture__left {
     max-width: 494px;
     padding-right: 20px; }
   .picture__subtitle {
     margin-bottom: 25px; }
-  .picture__right {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; }
 
 .awesome {
   padding: 105px 0 100px 0; }
@@ -373,7 +368,8 @@ h1, h2, h3, h4, ul, li, form, input {
     justify-content: space-between;
     flex-wrap: wrap; }
   .awesome__colum {
-    max-width: 355px;
+    max-width: 370px;
+    padding: 0 15px;
     text-align: center; }
   .awesome-bottom__img {
     display: flex;

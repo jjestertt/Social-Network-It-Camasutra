@@ -119,10 +119,9 @@ h1,h2,h3,h4,ul,li,form,input{
         background-color: #ff8b38;
     }
     &__img-bg{
-        background-color: #9a9a9a;
         max-width: 451px;
+        margin: 0 auto;
         width: 100%;
-        max-height: 302px;
         height: 100%;
         -webkit-box-shadow: -5px 6px 54px -5px rgba(154,154,154,1);
         -moz-box-shadow: -5px 6px 54px -5px rgba(154,154,154,1);
@@ -384,8 +383,7 @@ h1,h2,h3,h4,ul,li,form,input{
         padding-top: 25px;
         max-width: 450px;
         width: 100%;
-        display: flex;
-        justify-content: flex-start;  
+        display: block; 
     }
     &__right{
         max-width: 510px;
@@ -432,6 +430,7 @@ h1,h2,h3,h4,ul,li,form,input{
     &__inner{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap-reverse;
     }
     &__left{
         max-width: 494px;
@@ -439,11 +438,6 @@ h1,h2,h3,h4,ul,li,form,input{
     }
     &__subtitle{
         margin-bottom: 25px;
-    }
-    &__right{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
     }
 }
 .awesome{
@@ -454,7 +448,8 @@ h1,h2,h3,h4,ul,li,form,input{
         flex-wrap: wrap;
     }
     &__colum{
-        max-width: 355px;
+        max-width: 370px;
+        padding: 0 15px;
         text-align: center;
     }
     &-bottom{
