@@ -19,7 +19,8 @@ ul li {
   list-style: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none; 
+}
 
 h1, h2, h3, h4, ul, li, form, input {
   margin: 0;
