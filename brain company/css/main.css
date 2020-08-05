@@ -11,7 +11,7 @@ a {
   text-decoration: none;
   color: inherit; }
 
-h1, h2, h3, h4, ul, li, form, input {
+h1, h2, h3, h4, h5, h6, ul, li, form, input {
   margin: 0;
   padding: 0; }
 
@@ -185,5 +185,34 @@ ul li {
     left: 378px;
     width: 184px;
     height: 184px; }
+
+.section__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px; }
+
+.about__top {
+  padding-top: 20px;
+  background: #003F5D;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.12); }
+  .about__top .container {
+    background: url(..///img/about/about-bg-1.png) no-repeat bottom right/861px 574px; }
+.about__main-title {
+  margin-bottom: 91px; }
+.about__name {
+  font-family: guerrilla;
+  font-size: 36px;
+  line-height: 43px; }
+.about__position {
+  font-family: guerrilla;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 13px; }
+.about__line {
+  width: 262px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 31px; }
 
 /*# sourceMappingURL=main.css.map */
