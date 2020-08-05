@@ -214,5 +214,18 @@ ul li {
   height: 2px;
   background-color: #fff;
   margin-bottom: 31px; }
+.about__advantages-item {
+  padding-left: 40px;
+  display: block;
+  font-size: 24px;
+  line-height: 28px; }
+.about__advantages-item + .about__advantages-item {
+  margin-top: 22px; }
+.about__advantages {
+  margin-bottom: 58px; }
+.about__text {
+  padding: 33px;
+  max-width: 893px;
+  background: rgba(0, 0, 0, 0.8); }
 
 /*# sourceMappingURL=main.css.map */

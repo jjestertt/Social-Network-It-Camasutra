@@ -228,5 +228,23 @@ ul li {
         background-color: #fff;
         margin-bottom: 31px;
     }
-    
+    &__advantages-item{
+        padding-left: 40px;
+        display: block;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &__advantages-item+&__advantages-item{
+        margin-top: 22px;
+    }
+    &__advantages{
+        margin-bottom: 58px;
+    }
+    &__text{
+        padding: 33px;
+        max-width: 893px;
+        background: rgba(0, 0, 0, 0.8);
+        //доделать текст
+    }
 }
+
