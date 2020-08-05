@@ -26,9 +26,15 @@ ul li {
   margin: 0 auto; }
 
 .header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 .header__menu-item + .header__menu-item {
   margin-left: 80px; }
 .header__menu-link {
@@ -38,6 +44,8 @@ ul li {
   .header__menu-link:hover {
     color: #EA3838; }
 .header__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 .header__contact-link {
   display: block;
@@ -51,30 +59,43 @@ ul li {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 .header__contact-youtube {
   background-color: #F40000; }
 .header__contact-vk {
   background-color: #7294C7; }
 .header__contact-instagram {
+  background: -webkit-linear-gradient(46.1deg, #EEA054 16.16%, #D64763 50.11%, #B62A99 83.68%);
   background: linear-gradient(43.9deg, #EEA054 16.16%, #D64763 50.11%, #B62A99 83.68%); }
 
 .main {
   background-color: #002E44;
-  padding: 92px 0 67px;
-  position: relative; }
+  padding: 92px 0 67px; }
   .main__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between; }
-  .main__img {
-    max-width: 100%;
-    max-height: 100%; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .main__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 52%; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 52%;
+            flex: 0 0 52%; }
   .main__title {
     font-family: GUERRILLA;
     font-size: 48px;
@@ -103,6 +124,66 @@ ul li {
     margin-left: 27px;
     border: 2px solid #EA3838;
     box-sizing: border-box;
-    filter: drop-shadow(0px 4px 6px rgba(234, 56, 56, 0.15)); }
+    -webkit-filter: drop-shadow(0px 4px 6px rgba(234, 56, 56, 0.15));
+            filter: drop-shadow(0px 4px 6px rgba(234, 56, 56, 0.15)); }
+  .main__left {
+    position: relative; }
+  .main__img {
+    max-width: 100%;
+    max-height: 100%; }
+  .main__img-bg1 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -39px;
+    left: 466px;
+    width: 232px;
+    height: 198px; }
+  .main__img-bg1 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -39px;
+    left: 466px;
+    width: 232px;
+    height: 198px; }
+  .main__img-bg2 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 26px;
+    left: 337px;
+    width: 178px;
+    height: 168px; }
+  .main__img-bg3 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 115px;
+    left: 367px;
+    width: 298px;
+    height: 297px; }
+  .main__img-bg4 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 359px;
+    left: 461px;
+    width: 225px;
+    height: 184px; }
+  .main__img-bg5 {
+    position: absolute;
+    background-image: url(..//img/main/main-img-bg-5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 422px;
+    left: 378px;
+    width: 184px;
+    height: 184px; }
 
 /*# sourceMappingURL=main.css.map */
