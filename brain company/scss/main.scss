@@ -492,6 +492,9 @@ ul li {
     &__title{
         margin-bottom: 60px;
     }
+    &__slider{
+        overflow: hidden;
+    }
     &__slider-item{
         max-width: 376px;
         min-height:500px;
@@ -499,8 +502,39 @@ ul li {
         background: #003F5D;
         border: 3px solid #FFFFFF;
     }
+    //slider
+    .slick-track{
+        display: flex;
+        justify-content: space-between;
+    }
+    & .slick-dots{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    & .slick-dots li {
+        list-style: none;
+        margin: 6px 10px 0;
+        outline: none;
+    }
+    & .slick-dots button{
+        border: none;
+        font-size: 0;
+        width: 15px;
+        height:15px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    & .slick-dots li.slick-active button{
+        background: transparent;
+        border: 2px solid #fff;
+    }
+    //slider
     &__slider-top{
         display: flex;
+        min-width: 0;
         margin-bottom: 30px;
     }
     &__slider-top--right{
@@ -524,14 +558,6 @@ ul li {
         font-size: 20px;
         line-height: 24px;
     }
-
-
-    ///
-    .feedback__slider{
-      display: flex;
-      justify-content: space-between;
-    }
-    ///
 }
 .footer{
     background-color: #000F16;

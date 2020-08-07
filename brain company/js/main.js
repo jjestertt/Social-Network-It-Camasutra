@@ -12,7 +12,12 @@ for (let smoothLink of smoothLinks) {
 };
 $(document).ready(function () {
     $('.feedback__slider').slick({
-        infinite: false,
-        arrows: false
+        infinite: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000
     });
 });
