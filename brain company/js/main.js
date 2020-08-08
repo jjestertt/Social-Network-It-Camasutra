@@ -12,12 +12,13 @@ for (let smoothLink of smoothLinks) {
 };
 $(document).ready(function () {
     $('.feedback__slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
         infinite: true,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000
+        dots: true
+
     });
 });
