@@ -158,7 +158,52 @@ ul li {
     width: 184px;
     height: 184px; }
   .main__video {
-    display: none; }
+    display: none;
+    align-items: center;
+    width: 54.4%;
+    height: 0;
+    padding-bottom: 30.4%;
+    position: relative; }
+    .main__video-img {
+      background: url(..//img/main/video.png) no-repeat left 95% top 26%/112%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .main__video-blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.38); }
+    .main__video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #003F5D;
+      transform: rotate(-3.04deg); }
+    .main__video-link {
+      z-index: 1;
+      width: 57px;
+      height: 57px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #EA3838;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .main__video-btn {
+      margin-left: 5px;
+      width: 23px;
+      height: 26px; }
 
 .section__title {
   text-align: center;
