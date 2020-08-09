@@ -198,7 +198,7 @@ ul li {
         height: 0;
         padding-bottom: 30.4%;
         position: relative;
-        &-img{
+        &-img, .main__video-img_680px{
             background: url(..//img/main/video.png) no-repeat left 95% top 26%/112%;
             position: absolute;
             top: 0;
@@ -242,6 +242,30 @@ ul li {
             margin-left: 5px;
             width: 23px;
             height: 26px;
+        }
+        &-circle1, &-circle2{
+            display: none;
+            position: absolute;
+            top: 73%;
+            left: 76%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition-duration: 2000ms;
+        }
+        &-circle1{
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            
+        }
+        &-circle2{
+            width: 126px;
+            height: 126px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        &-circle-active{
+            width: 0;
+            height: 0;
         }
     }
 }

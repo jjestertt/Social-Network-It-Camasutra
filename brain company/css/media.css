@@ -54,6 +54,11 @@
     display: block;
   }
 }
+@media (min-width: 768px) {
+  .main__video-img_680px {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .container {
     max-width: 768px;
@@ -74,6 +79,16 @@
     position: relative;
     min-height: 490px;
   }
+  .main__right {
+    text-align: start;
+    z-index: 2;
+    margin-top: 35px;
+    margin-left: 15px;
+  }
+  .main__line {
+    margin-left: 0px;
+    margin-right: auto;
+  }
   .main__video {
     position: absolute;
     left: -10%;
@@ -81,13 +96,71 @@
     height: 100%;
   }
   .main__video-img {
-    background: url(..//img/main/video.png) no-repeat left 66% top 26%/150% 150%;
+    background: url(..//img/main/video.png) no-repeat left 48% top 0%/122%;
   }
   .main__video-bg {
     display: none;
   }
-  .main__video-blur {
-    display: none;
+  .main__video-link {
+    top: 73%;
+    left: 76%;
+  }
+  .main__video-link {
+    width: 93px;
+    height: 93px;
+  }
+  .main__video-circle1, .main__video-circle2 {
+    display: block;
+  }
+  .main__video-link {
+    z-index: 3;
+  }
+}
+@media (max-width: 559px) {
+  .main__video-img {
+    background: url(..//img/main/video.png) no-repeat left 64% top 0%/179%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .main__right {
+    margin-top: 11px;
+  }
+  .main__video-img {
+    background: url(..//img/main/video.png) no-repeat left 64% top 0%/179%;
+  }
+  .main__subtitle {
+    margin-bottom: 148px;
+  }
+  .main .buttons {
+    max-width: 210px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .main__button-registration, .main__button-lesson {
+    display: block;
+    text-align: center;
+    font-family: GUERRILLA;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 10px;
+    border-radius: 25px;
+  }
+  .main__button-registration {
+    margin-bottom: 21px;
+  }
+  .main__button-lesson {
+    margin-left: 0;
+  }
+  .main__video-link {
+    top: 78%;
+    left: 76%;
+  }
+  .main__video-circle1, .main__video-circle2 {
+    top: 78%;
   }
 }
 
