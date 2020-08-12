@@ -79,9 +79,99 @@ ul li {
 .main{
     background-color: #002E44;
     font-family: guerrilla;
-    &__inner{
-        margin-left: auto;
+    
+    &__wrapper{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        min-height: 693px;
+        flex-grow: 1;
+        max-width: 680px;
+        padding: 0 15px;
+        width: 100%;
+        position: relative;
+    }
+    &__bg{
+        &-girl{
+            position: absolute;
+            background-image: url(..//img/main/main-img.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 320px;
+            height: 481px;
+        }
+        &-border{
+            position: absolute;
+            background-image: url(..//img/main/main__board.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 27%;
+            left: 17%;
+            max-width: 540px;
+            width: 100%;
+            height: 515px;
+        }
+    }
+    &__img-bg1{
+        position: absolute;
+        background-image: url(..//img/main/main-img-bg-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 19%;
+        left: 37%;
+        width: 232px;
+        height: 198px;
+    }    
+    &__img-bg2{
+        position: absolute;
+        background-image: url(..//img/main/main-img-bg-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 150px;
+        left: 165px;
+        width: 178px;
+        height: 168px;
+    }
+    &__img-bg3{
+        position: absolute;
+        background-image: url(..//img/main/main-img-bg-3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 64px;
+        left: 384px;
+        width: 298px;
+        height: 297px;
+    }
+    &__img-bg4{
+        position: absolute;
+        background-image: url(..//img/main/main-img-bg-4.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 269px;
+        left: 377px;
+        width: 225px;
+        height: 184px;
+    }
+    &__img-bg5{
+        position: absolute;
+        background-image: url(..//img/main/main-img-bg-5.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 312px;
+        left: 254px;
+        width: 184px;
+        height: 184px;
+    }
+    &__right{
         max-width: 555px;
+        width: 100%;
+        min-width: 371px;
         text-align: center;
     }
     &__title{
@@ -127,8 +217,6 @@ ul li {
         border: 2px solid #EA3838;
         filter: drop-shadow(0px 4px 6px rgba(234, 56, 56, 0.15));
     }
-
-
 }
 .section__title{
     text-align: center;
