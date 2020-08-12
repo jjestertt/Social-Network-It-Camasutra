@@ -87,36 +87,11 @@ ul li {
     }
     &__left{
         min-height: 693px;
-        flex-grow: 1;
-        max-width: 680px;
-        padding: 0 15px;
+        flex: 0 0 576px;
         width: 100%;
         position: relative;
-    }
-    &__bg{
-        &-girl{
-            position: absolute;
-            background-image: url(..//img/main/main-img.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 320px;
-            height: 481px;
-        }
-        &-border{
-            position: absolute;
-            background-image: url(..//img/main/main__board.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            bottom: 27%;
-            left: 17%;
-            max-width: 540px;
-            width: 100%;
-            height: 515px;
-        }
+        background: url(..//img/main/main-img.png) no-repeat left -21% bottom, url(..//img/main/main__board.png) no-repeat bottom 109% left 91%;
+        z-index: 1;
     }
     &__img-bg1{
         position: absolute;
@@ -133,8 +108,8 @@ ul li {
         background-image: url(..//img/main/main-img-bg-2.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 150px;
-        left: 165px;
+        top: 20%;
+        left: 18%;
         width: 178px;
         height: 168px;
     }
@@ -143,8 +118,8 @@ ul li {
         background-image: url(..//img/main/main-img-bg-3.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 64px;
-        left: 384px;
+        top: 9%;
+        left: 57%;
         width: 298px;
         height: 297px;
     }
@@ -153,8 +128,8 @@ ul li {
         background-image: url(..//img/main/main-img-bg-4.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 269px;
-        left: 377px;
+        top: 41%;
+        left: 52%;
         width: 225px;
         height: 184px;
     }
@@ -163,15 +138,14 @@ ul li {
         background-image: url(..//img/main/main-img-bg-5.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 312px;
-        left: 254px;
+        top: 44%;
+        left: 30%;
         width: 184px;
         height: 184px;
     }
     &__right{
-        max-width: 555px;
-        width: 100%;
-        min-width: 371px;
+        flex: 1 1 555px;
+        // max-width: 555px
         text-align: center;
     }
     &__title{
