@@ -1,3 +1,83 @@
-
+@media (max-width: 1090px) {
+  .main__btn-lesson {
+    margin-left: 13px;
+  }
+  .main__left {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 540px;
+        -ms-flex: 1 1 540px;
+            flex: 1 1 540px;
+  }
+  .main__btn-registration, .main__btn-lesson {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .main__img-bg1 {
+    top: 20%;
+    left: 28%;
+  }
+  .main__img-bg2 {
+    top: 27%;
+    left: 11%;
+  }
+  .main__img-bg3 {
+    top: 12%;
+    left: 51%;
+  }
+  .main__img-bg4 {
+    top: 49%;
+    left: 47%;
+  }
+  .main__img-bg5 {
+    top: 50%;
+    left: 26%;
+  }
+}
+@media (max-width: 976px) {
+  .main__left {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 354px;
+        -ms-flex: 0 0 354px;
+            flex: 0 0 354px;
+    min-height: 480px;
+  }
+  .main__girl {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 250px;
+        -ms-flex: 1 1 250px;
+            flex: 1 1 250px;
+    padding-bottom: 355px;
+  }
+  .main__img-bg1 {
+    width: 30%;
+    height: 30%;
+    top: -2%;
+    left: 44%;
+  }
+  .main__img-bg2 {
+    width: 25%;
+    height: 25%;
+    top: 22%;
+    left: 22%;
+  }
+  .main__img-bg3 {
+    width: 61%;
+    height: 42%;
+    top: 9%;
+    left: 52%;
+  }
+  .main__img-bg4 {
+    width: 45%;
+    height: 26%;
+    top: 34%;
+    left: 43%;
+  }
+  .main__img-bg5 {
+    width: 30%;
+    height: 30%;
+    top: 59%;
+    left: 37%;
+  }
+}
 
 /*# sourceMappingURL=media.css.map */

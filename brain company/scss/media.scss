@@ -1,0 +1,77 @@
+@media (max-width: 1090px){
+    .main{
+        &__btn-lesson {
+            margin-left: 13px;
+        }
+        &__left{
+            flex: 1 1 540px;
+        }
+        &__btn-registration,
+        &__btn-lesson{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__img-bg1 {
+            top: 20%;
+            left: 28%;   
+        }
+        &__img-bg2 {
+            top: 27%;
+            left: 11%;
+        }
+        &__img-bg3 {
+            top: 12%;
+            left: 51%;
+        }
+        &__img-bg4 {
+            top: 49%;
+            left: 47%;
+        }
+        &__img-bg5 {
+            top: 50%;
+            left: 26%;
+        }
+    }
+}
+@media (max-width: 976px){
+    .main{
+        &__left{
+            flex: 0 0 354px;
+            min-height: 480px;
+        } 
+        &__girl{
+            flex: 1 1 250px;          
+            padding-bottom: 355px;
+        }
+        &__img-bg1 {
+            width: 30%;
+            height: 30%;
+            top: -2%;
+            left: 44%;   
+        }
+        &__img-bg2 {
+            width: 25%;
+            height: 25%;
+            top: 22%;
+            left: 22%;
+        }
+        &__img-bg3 {
+            width: 61%;
+            height: 42%;
+            top: 9%;
+            left: 52%;
+        }
+        &__img-bg4 {
+            width: 45%;
+            height: 26%;
+            top: 34%;
+            left: 43%;
+        }
+        &__img-bg5 {
+            width: 30%;
+            height: 30%;
+            top: 59%;
+            left: 37%;
+        }
+    }
+}

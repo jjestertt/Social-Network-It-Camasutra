@@ -87,19 +87,41 @@ ul li {
     }
     &__left{
         min-height: 693px;
-        flex: 0 0 576px;
+        flex: 1 1 576px;
         width: 100%;
         position: relative;
-        background: url(..//img/main/main-img.png) no-repeat left -21% bottom, url(..//img/main/main__board.png) no-repeat bottom 109% left 91%;
         z-index: 1;
+    }
+    &__board{
+        flex: 1 1 540px;
+        background-image: url(..//img/main/main__board.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 540px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 515px;
+        position: absolute;
+    }   
+    &__girl{
+        flex: 1 1 320px;
+        background-image: url(..//img/main/main-img.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 0;
+        padding-bottom: 481px;
+        position: absolute;
+        bottom: 0;
+        left: -50px;
     }
     &__img-bg1{
         position: absolute;
         background-image: url(..//img/main/main-img-bg-1.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 19%;
-        left: 37%;
+        top: 24%;
+        left: 32%;
         width: 232px;
         height: 198px;
     }    
@@ -108,8 +130,8 @@ ul li {
         background-image: url(..//img/main/main-img-bg-2.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 20%;
-        left: 18%;
+        top: 31%;
+        left: 7%;
         width: 178px;
         height: 168px;
     }
@@ -118,8 +140,8 @@ ul li {
         background-image: url(..//img/main/main-img-bg-3.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 9%;
-        left: 57%;
+        top: 16%;
+        left: 53%;
         width: 298px;
         height: 297px;
     }
@@ -128,7 +150,7 @@ ul li {
         background-image: url(..//img/main/main-img-bg-4.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 41%;
+        top: 53%;
         left: 52%;
         width: 225px;
         height: 184px;
@@ -138,14 +160,13 @@ ul li {
         background-image: url(..//img/main/main-img-bg-5.png);
         background-size: cover;
         background-repeat: no-repeat;
-        top: 44%;
+        top: 57%;
         left: 30%;
         width: 184px;
         height: 184px;
     }
     &__right{
         flex: 1 1 555px;
-        // max-width: 555px
         text-align: center;
     }
     &__title{
