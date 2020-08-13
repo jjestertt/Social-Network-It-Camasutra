@@ -23,7 +23,8 @@ ul li {
   max-width: 1260px;
   width: 100%;
   padding: 0 20px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .header__inner {
   display: flex;
@@ -190,7 +191,10 @@ ul li {
   background: #003F5D;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.12); }
   .about__top .container {
-    background: url(..///img/about/about-bg-1.png) no-repeat bottom -65% right/861px 574px; }
+    background-image: url(..///img/about/about-bg-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom -65% right;
+    background-size: 861px 574px; }
 .about__main-title {
   margin-bottom: 91px; }
 .about__name {
@@ -239,7 +243,10 @@ ul li {
   background-color: #002E44; }
   .about__bottom .container {
     text-align: end;
-    background: url(..///img/about/about-bg-2.png) no-repeat bottom left -46%/861px 574px; }
+    background: url(..///img/about/about-bg-2.png);
+    background-repeat: no-repeat;
+    background-position: bottom left -46%;
+    background-size: 861px 574px; }
   .about__bottom .about__name {
     padding-top: 160px; }
   .about__bottom .about__line, .about__bottom .about__text {

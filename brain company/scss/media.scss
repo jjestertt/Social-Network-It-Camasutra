@@ -32,6 +32,62 @@
             left: 26%;
         }
     }
+    .about{
+        &__top{
+            padding-top: 20px;
+            & .container{
+                background-position: bottom -200% right -29%;
+                background-size: 700px 467px;
+            }
+        }
+        &__main-title{
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 36px;
+        }
+        &__name{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &__position{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__advantages-item{
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &__text{
+            font-size: 20px;
+            line-height: 23px; 
+        }
+        &__advantages-item+&__advantages-item{
+            margin-top: 17px;
+        }
+        &__bottom{ 
+            background-color: #002E44;
+            & .container {
+                text-align: end;
+                background: url(..///img/about/about-bg-2.png);
+                background-repeat: no-repeat;
+                background-position: bottom left -46%;
+                 background-size: 700px 466px;
+            }
+            & .about__name{
+                padding-top: 90px;
+            }
+            & .about__line, & .about__text{
+                margin-left: auto;
+            }
+            & .about__advantages{
+                margin-bottom: 96px;
+            }
+            & .about__advantages-item{
+                padding-left: 0px;
+                padding-right: 40px;
+            }
+        }
+    }
 }
 @media (max-width: 976px){
     .main{
@@ -74,4 +130,187 @@
             left: 37%;
         }
     }
+}
+@media (max-width: 767px){
+    .main{
+        position: relative;
+        min-height: 547px;
+        &__board{
+            background: none;
+        }
+        &__right{
+            position: absolute;
+            text-align: start;
+            z-index: 1;
+        }
+        &__title{
+            &::after{
+                transform: translate(0, 0);
+                left: 0%;
+                margin-bottom: 4px;
+            }
+        }
+        &__subtitle{
+            display: block;
+            max-width: 315px;
+            margin-bottom: 218px;
+        }
+        &__buttons{
+            display: block;
+            max-width: 215px;
+            margin-bottom: 20px;
+        }
+        &__btn-registration,
+        &__btn-lesson{
+         display: block;
+         text-align: center;
+         padding: 17px 18px 19px 19px;
+         
+        }
+        &__btn-registration{
+            margin-bottom: 21px;
+        }
+        &__btn-lesson{
+            margin-left: 0px;    
+        }
+        &__left{
+            flex: 1 1 100%;
+            min-height: 547px;
+            position: relative;
+            overflow: hidden;
+        }
+        &__board{
+            flex: 1 1 100%;
+        }
+        &__girl{
+            bottom: 0;
+            max-width: 250px;
+            width: 100%;
+            left: 50%;    
+        }
+        &__img-bg1 {
+            width: 30%;
+            height: 30%;
+            top: 33%;
+            left: 47%;  
+            transform: matrix(-0.84, -0.48, -0.58, 0.86, 0, 0); 
+        }
+        &__img-bg2 {
+            width: 25%;
+            height: 25%;
+            top: 36%;
+            left: 5%;
+            transform: matrix(-0.73, 0.73, 0.64, 0.73, 0, 0);
+        }
+        &__img-bg3 {
+            width: 61%;
+            height: 42%;
+            top: 38%;
+            left: 80%;
+        }
+        &__img-bg4 {
+            width: 36%;
+            height: 25%;
+            top: 54%;
+            left: 19%;
+            transform: matrix(1, -0.05, -0.01, 1, 0, 0);
+        }
+        &__img-bg5 {
+            width: 30%;
+            height: 30%;
+            top: 75%;
+            left: 44%;
+        }
+    }
+}
+@media (max-width: 658px){
+    .main{
+        &__img-bg3 {
+            width: 61%;
+            height: 42%;
+            top: 38%;
+            left: 67%;
+        }
+    }
+}
+@media (max-width: 620px){
+    .main{
+        &__img-bg3 {
+            width: 61%;
+            height: 42%;
+            top: 38%;
+            left: 58%;
+        }
+    }
+}
+@media (max-width: 462px){
+    .main{
+        min-height: 495px;
+        &__left{
+            min-height: 514px;
+        }
+        &__right{
+            width: 89%;
+            text-align: center;
+        }
+        &__title{
+            font-size: 30px;
+            line-height: 36px;
+            &::after{
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }    
+        &__subtitle{
+            max-width: 209px;
+            font-size: 20px;
+            line-height: 24px;
+            display: inline-block;
+            margin-bottom: 228px;
+        } 
+        &__buttons{
+            margin: 0 auto;
+            max-width: 280px;
+            margin-bottom: 19px;
+        }
+        &__btn-registration,
+        &__btn-lesson{
+         padding: 17px 25px 24px 19px;
+        }
+        &__btn-registration{
+            margin-bottom: 10px;
+        }
+        &__girl{
+            bottom: 12%;
+            max-width: 208px;
+            width: 100%;
+            left: 22%;  
+        }
+        &__img-bg1 {
+            width: 40%;
+            height: 22%;
+            top: 40%;
+            left: 69%;
+            transform: matrix(-0.84, -0.48, -0.58, 0.86, 0, 0); 
+        }
+        &__img-bg2 {
+            display: none;
+        }
+        &__img-bg3 {
+            display: none;
+        }
+        &__img-bg4 {
+            width: 42%;
+            height: 18%;
+            top: 34%;
+            left: 3%;
+            transform: matrix(1, -0.05, -0.01, 1, 0, 0);
+        }
+        &__img-bg5 {
+            width: 37%;
+            height: 24%;
+            top: 53%;
+            left: 4%;
+        }
+    }   
 }
