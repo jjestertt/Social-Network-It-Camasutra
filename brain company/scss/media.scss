@@ -67,11 +67,8 @@
         &__bottom{ 
             background-color: #002E44;
             & .container {
-                text-align: end;
-                background: url(..///img/about/about-bg-2.png);
-                background-repeat: no-repeat;
                 background-position: bottom left -46%;
-                 background-size: 700px 466px;
+                background-size: 700px 466px;
             }
             & .about__name{
                 padding-top: 90px;
@@ -89,6 +86,10 @@
         }
     }
 }
+
+
+
+
 @media (max-width: 976px){
     .main{
         &__left{
@@ -130,7 +131,41 @@
             left: 37%;
         }
     }
+    .about{
+        &__content{
+            max-width: 427px;
+        }
+        &__top{
+            & .container{
+                background-position: bottom -30% right -29%;
+                background-size: 600px 400px;
+            }
+        }
+        &__bottom{ 
+            & .container {
+                background-position: bottom left -46%;
+                background-size: 600px 400px;
+            }
+        }
+        &__text{
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
 }
+
+
+@media (max-width: 808px){
+    .about{
+        &__bottom{
+            & .container {
+                background-position: bottom left -71%;
+            } 
+        }
+    }    
+}
+
+
 @media (max-width: 767px){
     .main{
         position: relative;
@@ -223,6 +258,11 @@
         }
     }
 }
+
+
+
+
+
 @media (max-width: 658px){
     .main{
         &__img-bg3 {
@@ -243,6 +283,11 @@
         }
     }
 }
+
+
+
+
+
 @media (max-width: 462px){
     .main{
         min-height: 495px;

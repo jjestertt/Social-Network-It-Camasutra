@@ -289,6 +289,7 @@ ul li {
         background: rgba(0, 0, 0, 0.8);
         font-size: 24px;
         line-height: 28px;
+        text-align: start;
     }
     &__bottom{ 
         background-color: #002E44;
@@ -298,6 +299,9 @@ ul li {
             background-repeat: no-repeat;
             background-position: bottom left -46%;
              background-size: 861px 574px;
+        }
+        & .about__content{
+            margin-left:auto;
         }
         & .about__name{
             padding-top: 160px;
