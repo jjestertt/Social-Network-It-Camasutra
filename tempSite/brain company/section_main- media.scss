@@ -1,0 +1,166 @@
+@media (max-width: 1152px){
+    .main{
+        &__right{
+            text-align: center;
+        }
+        &__img-bg1{
+            display: none;
+        }    
+        &__img-bg2{
+            top: 54px;
+            left: 337px;
+        }
+        &__img-bg3{
+            top: -113px;
+            left: -50px;
+        }
+        &__img-bg4{
+            top: 393px;
+            left: 343px;
+        }
+        &__img-bg5{
+            top: -82px;
+            left: 557px;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .container {
+        max-width: 1000px;
+    }
+    .main{
+        &__inner{
+            align-items: center;
+        }
+        &__left{
+            display: none; 
+        }
+        &__right{
+            text-align: center;
+            max-width: 391px;
+            padding-right: 15px;
+        }
+        &__button-registration, &__button-lesson{
+            padding-left: 19px;
+            padding-right: 19px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__button-lesson{
+            margin-left: 13px;
+        }
+        &__video{
+            display: block;
+        }
+    }
+} 
+@media (min-width: 768px){
+    .main__video-img_680px{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .container {
+        max-width: 768px;
+    }
+    .main{
+        & .container{
+            padding: 0;
+        }
+        overflow: hidden;
+        padding: 0;
+        &__inner{
+            align-items: flex-start;
+            position: relative;
+            min-height: 490px; 
+        }
+        &__right{
+            text-align: start;
+            z-index: 2;
+            margin-top: 35px;
+            margin-left: 15px;
+        }
+        &__line{
+            margin-left: 0px;
+            margin-right: auto;
+        }
+        &__video{
+            position: absolute;
+            left:-10%;
+            width: 113%;
+            height: 100%;  
+            &-img{
+                background: url(..//img/main/video.png) no-repeat left 48% top 0% / 122%
+            }
+            &-bg{
+                display: none;
+            }
+            &-blur{
+            }
+            &-link{
+                top: 73%;
+                left: 76%;
+            }
+            &-link{
+                width: 93px;
+                height: 93px;
+            }
+            &-circle1, &-circle2 {
+                display: block;
+            }
+            &-link{
+                z-index: 3;
+            }
+        }
+    }  
+}  
+@media (max-width: 559px){
+    .main__video-img{
+            background: url(..//img/main/video.png) no-repeat left 64% top 0%/179%
+    }
+};
+
+@media (max-width: 480px){
+    .container{
+        max-width: 500px;
+    }
+    .main{
+        &__right{
+            margin-top: 11px;
+        }
+        &__video-img{
+            background: url(..//img/main/video.png) no-repeat left 64% top 0%/179%
+        }
+        &__subtitle{
+            margin-bottom: 148px;
+        }
+        .buttons{
+            max-width: 210px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        &__button-registration, 
+        &__button-lesson{
+            display: block;
+            text-align: center;
+            font-family: GUERRILLA;
+            font-size: 20px;
+            line-height: 24px;
+            padding: 16px 10px;
+            border-radius: 25px;
+        }
+        &__button-registration{
+            margin-bottom: 21px;
+        }
+        &__button-lesson {
+            margin-left: 0;
+        }
+        &__video-link{
+            top: 78%;
+            left: 76%;
+        }
+        &__video-circle1, &__video-circle2{
+            top: 78%;
+        }
+    }
+}
