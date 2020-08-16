@@ -214,89 +214,15 @@ ul li {
   font-size: 48px;
   line-height: 56px; }
 
-.about__top {
-  padding-top: 20px;
+.about {
   background: #003F5D;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.12); }
-  .about__top .container {
-    background-image: url(..///img/about/about-bg-1.png);
-    background-repeat: no-repeat;
-    background-position: bottom -65% right;
-    background-size: 861px 574px; }
-.about__main-title {
-  margin-bottom: 91px; }
-.about__name {
-  font-family: guerrilla;
-  font-size: 36px;
-  line-height: 43px; }
-.about__position {
-  font-family: guerrilla;
-  font-size: 24px;
-  line-height: 29px;
-  margin-bottom: 13px; }
-.about__line {
-  width: 262px;
-  height: 2px;
-  background-color: #fff;
-  margin-bottom: 31px; }
-.about__advantages-item {
-  padding-left: 40px;
-  display: block;
-  font-size: 24px;
-  line-height: 28px;
-  position: relative; }
-.about__advantages-ico1::before, .about__advantages-ico2::before, .about__advantages-ico3::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 30px;
-  height: 30px; }
-.about__advantages-ico1::before {
-  background-image: url(..//img/about/about-ico-1.png); }
-.about__advantages-ico2::before {
-  background-image: url(..//img/about/about-ico-2.png); }
-.about__advantages-ico3::before {
-  background-image: url(..//img/about/about-ico-3.png); }
-.about__advantages-item + .about__advantages-item {
-  margin-top: 22px; }
-.about__advantages {
-  margin-bottom: 58px; }
-.about__text {
-  padding: 33px;
-  max-width: 827px;
-  background: rgba(0, 0, 0, 0.8);
-  font-size: 24px;
-  line-height: 28px;
-  text-align: start; }
-.about__bottom {
-  background-color: #002E44; }
-  .about__bottom .container {
-    text-align: end;
-    background: url(..///img/about/about-bg-2.png);
-    background-repeat: no-repeat;
-    background-position: bottom left -46%;
-    background-size: 861px 574px; }
-  .about__bottom .about__content {
-    margin-left: auto; }
-  .about__bottom .about__name {
-    padding-top: 160px; }
-  .about__bottom .about__line, .about__bottom .about__text {
-    margin-left: auto; }
-  .about__bottom .about__advantages {
-    margin-bottom: 160px; }
-  .about__bottom .about__advantages-item {
-    padding-left: 0px;
-    padding-right: 40px; }
-.about__advantages-ico4::after, .about__advantages-ico5::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 30px;
-  height: 30px; }
-.about__advantages-ico4::after {
-  background-image: url(..//img/about/about-ico-4.png); }
-.about__advantages-ico5::after {
-  background-image: url(..//img/about/about-ico-5.png); }
+  padding-top: 10px; }
+  .about__section-title {
+    margin-bottom: 91px; }
+  .about__name {
+    font-family: guerrilla;
+    font-size: 36px;
+    line-height: 43px; }
 
 .statistic {
   padding: 16px 0 30px;
