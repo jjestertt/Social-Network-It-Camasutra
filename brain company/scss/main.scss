@@ -37,6 +37,9 @@ ul li {
     &__menu-item+&__menu-item{
         margin-left: 80px;
     }
+    &__menu-hide{
+        display: none;
+    }
     &__menu-link{
         font-size: 17px;
         line-height: 20px;
@@ -214,24 +217,18 @@ ul li {
         filter: drop-shadow(0px 4px 6px rgba(234, 56, 56, 0.15));
     }
 }
-
-
 .section__title{
     text-align: center;
     font-weight: 500;
     font-size: 48px;
     line-height: 56px;
 }
-
 .about{
     background: #003F5D;
-    padding-top: 10px;
-    &__section-title{
-        margin-bottom: 91px;
-    }
+    padding-top: 50px;
     &__inner{
-        // display: flex;
-        // justify-content: space-between;
+        position: relative;  
+        z-index: 0;
     }
     &__name{
         font-family: guerrilla;
@@ -256,7 +253,7 @@ ul li {
         }
     }
     &__skills{
-        margin-bottom: 40px;
+        
     }
     &__skills li{
         display: block;
@@ -271,7 +268,6 @@ ul li {
             height: 30px;
             top: 0;
             left:0;
-            background: tomato;
         }
     }
     &__text{
@@ -283,22 +279,98 @@ ul li {
         line-height: 28px;
     }
     &__img-wrapper{
-        max-width: 901px;
-        width: 100%;
-        height: 0;
-        padding-bottom: 68.15%;
+        max-height: 574px;
     }
     &__item-left{
-        position: relative;
+        z-index: 0;
         & .about__content{
             max-width: 550px;
             padding-right: 15px;
+            margin-top: 91px;
+            padding-bottom: 40px;
+        }
+        & .about__skills li{
+            padding-left: 40px;
+            &::before{
+                content:'';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 0;
+                left:0;
+            }
+        }
+        & .about__skils-item1::before{
+            background-image:url(..//img/about/about-ico-1.png);
+        }
+        & .about__skils-item2::before{
+            background-image:url(..//img/about/about-ico-2.png);
+        }
+        & .about__skils-item3::before{
+            background-image:url(..//img/about/about-ico-3.png);
         }
         & .about__img-wrapper{
             position: absolute;
-            top: 0;
+            max-width: 861px;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+    &__item-right{
+        position: relative;
+        background: #002E44;
+        z-index: 0;
+        & .about__inner{
+            
+        }
+        & .about__content{
+            max-width: 650px;
+            margin-top: 120px;
+            margin-left: auto;
+            text-align: end;
+            padding-bottom: 160px;
+        }
+        & .about__position::before{
+            left: auto;
             right: 0;
         }
+        & .about__skills li{
+            padding-right: 40px;
+            &::after{
+                content:'';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 0;
+                right: 0;
+            }
+        }
+        & .about__skils-item1::after{
+            background-image:url(..//img/about/about-ico-4.png);
+        }
+        & .about__skils-item2::after{
+            background-image:url(..//img/about/about-ico-5.png);
+        }
+        & .about__text{
+            margin-left: auto;
+        }
+        & .about__img-wrapper{
+            max-width: 861px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: -133px;
+            z-index: -1;
+            & img{
+                width: 100%;
+            }
+        }
+        
     }
 }
 .statistic{
@@ -311,6 +383,7 @@ ul li {
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__column{
         max-width: 256px;
@@ -331,11 +404,8 @@ ul li {
 .work{
     background-color: #002E44;
     padding: 80px 0;
-    &__titile{
+    &__title{
         margin-bottom: 60px;
-    }
-    & .container{
-        // padding: 0 70px 0 70px;
     }
     &__item-wrapper{
         display: flex;
@@ -347,7 +417,7 @@ ul li {
     &__ico-1,
     &__ico-2,
     &__ico-3{
-        margin: 0 auto;
+        margin: 0 10px;
         width: 208px;
         height: 208px;
         background: #003F5D;
@@ -378,7 +448,7 @@ ul li {
         background-image: url(..//img/work/work-ico3.png);
     }
     &__line{
-        margin-top: 8%;
+        margin-top: 100px;
         width: 69px;
         height: 2px;
         background: #fff;
@@ -397,10 +467,11 @@ ul li {
     }
     &__wrapper{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
     &__block{
+        margin: 0 8px;
         background: #003F5D;
         border: 3px solid #FFFFFF;
         box-sizing: border-box;
@@ -411,7 +482,7 @@ ul li {
         margin-bottom: 80px;
     }
     &__title{
-        padding: 25px 218px;
+        padding: 25px 0;
         border-bottom: 3px solid #FFFFFF;
         font-size: 36px;
         line-height: 45px; 
@@ -454,6 +525,7 @@ ul li {
     &__order-old{
         font-size: 24px;
         line-height: 29px;
+        color: #EA3838;
         text-decoration-line: line-through;
     }
     &__order-new{
@@ -481,29 +553,35 @@ ul li {
 .feedback{
     background-color: #002E44;
     padding-bottom: 55px;
+    &__slider-item-wrappeR{
+        justify-content: center;
+    }
     &__title{
         margin-bottom: 60px;
     }
-    &__slider{
-        overflow: hidden;
-    }
     &__slider-item{
+        margin: 0 auto;
         max-width: 376px;
         min-height:500px;
+        height: 100%;
         padding: 30px 25px 20px 30px;
         background: #003F5D;
         border: 3px solid #FFFFFF;
+        margin: 0 8px;
     }
     //slider
     .slick-track{
         display: flex;
-        justify-content: space-between;
+    }
+    .slick-list{
+        overflow: hidden;
     }
     & .slick-dots{
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
+        min-width: 0;
     }
     & .slick-dots li {
         list-style: none;
@@ -524,14 +602,11 @@ ul li {
     & .slick-dots li.slick-active button{
         opacity: 1;
     }
-    & .feedback__slider-item{
-        outline:none;
-    }
-    //slider
     &__slider-top{
         display: flex;
         min-width: 0;
         margin-bottom: 30px;
+        min-width: 0;
     }
     &__slider-top--right{
         padding: 9px 10px;

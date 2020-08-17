@@ -1,3 +1,22 @@
+@media (max-width: 1197px){
+    .about{
+        &__item-right{
+            & .about__content{
+                max-width: 550px;
+            }
+            & .about__img-wrapper{
+                left: -258px;
+            }
+
+        }
+        &__item-left{
+            & .about__img-wrapper{
+                right: -171px;
+            }
+
+        } 
+    }   
+}
 @media (max-width: 1090px){
     .main{
         &__btn-lesson {
@@ -33,11 +52,7 @@
         }
     }
 }
-
-
-
-
-@media (max-width: 976px){
+@media (max-width: 980px){
     .main{
         &__left{
             flex: 0 0 354px;
@@ -78,13 +93,98 @@
             left: 37%;
         }
     }
-
+    .about{
+        &__name{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &__position{
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__skills li{
+            margin-bottom: 17px;
+            font-size: 20px;
+            line-height: 23px;  
+        }
+        &__text{
+            padding:20px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+        & .about__img-wrapper{
+            max-width: 600px;
+        }
+        &__item-right{
+            & .about__img-wrapper{
+                left: -200px;
+                
+            }
+            & .about__content{
+                margin-top: 44px;
+                padding-bottom: 96px;
+            }
+        }
+        &__item-left{
+            & .about__content{
+                margin-top: 21px;
+                padding-bottom: 72px;
+            }
+            & .about__img-wrapper{
+                right: -80px;
+                bottom: -4px;
+            }
+        } 
+    }
+    .statistic{
+        padding: 30px 0 10px;
+        &__wrapper{
+            justify-content: center;
+        }
+        &__column{
+            margin-bottom: 30px;
+        }
+    }
 }
-
-
-
-
+@media (max-width: 860px){
+    .about{
+        padding-top: 20px;
+        .about__content{
+            max-width: 460px;
+        }
+        &__item-right{
+            & .about__img-wrapper{
+                left: -200px;
+            }
+        }
+        &__item-left{
+            & .about__img-wrapper{
+                right: -150px;
+            }
+        } 
+    }
+    .footer{
+        &__copy{
+            max-width: 250px;
+            margin-left: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__copy-text{
+            display:block;
+            text-align: center;
+            max-width: 100%;
+            margin-right: 0px;
+        }
+    }
+}
 @media (max-width: 767px){
+    .header{
+        &__menu-item+&__menu-item{
+            margin-left: 50px;
+        }
+    }
     .main{
         position: relative;
         min-height: 547px;
@@ -175,12 +275,109 @@
             left: 44%;
         }
     }
+    .about__out-text{
+        position: relative;
+    }
+    .section__title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .about{
+        &__inner{
+            position: auto;
+        }
+        & .container{
+            padding: 0;
+        }
+        &__content{
+            padding: 0 15px;
+        }
+        &__section-title{
+            font-size: 30px;
+            line-height: 35px;
+        }
+        &__name{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__position{
+            padding-bottom: 7px;
+            margin-bottom: 30px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+        &__skills li{
+            margin-bottom: 17px;
+            font-size: 17px;
+            line-height: 20px;  
+        }
+        &__text{
+            padding:20px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+        & .about__img-wrapper{
+            max-width: 500px;
+        }
+        &__item-right{
+            & .about__img-wrapper{
+                left: -130px;
+                bottom: -4px;
+            }
+            & .about__content{
+                margin-top: 44px;
+                padding-bottom: 160px;
+            }
+        }
+        &__item-left{
+            & .about__img-wrapper{
+                right: -80px;
+                bottom: -4px;
+            }
+            & .about__content{
+                padding-bottom: 118px;
+            }
+        }
+    }
+    .work{
+        padding: 50px 0 50px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__item-wrapper{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin-bottom: 30px;
+        }
+        &__line{
+            display: none;
+        }
+        &__text{
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
 }
-
-
-
-
-
+@media (max-width: 685px){
+    .statistic{
+        .container{
+            padding: 0 15px;
+        }
+        &__column{
+            width: 222px;
+        }
+        &__count{
+            font-size: 72px;
+            line-height: 84px;
+        }
+        &__name{
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+}
 @media (max-width: 658px){
     .main{
         &__img-bg3 {
@@ -188,6 +385,48 @@
             height: 42%;
             top: 38%;
             left: 67%;
+        }
+    }
+    .about{
+        & .about__skills{
+            max-width: 250px;
+        }
+        &__item-right{
+            & .about__img-wrapper{
+                left: -145px;
+            }
+            & .about__skills{
+                margin-left: auto;
+                padding-left: 10px;
+            }
+        } 
+        
+    }
+    .course{
+        &__title{
+            font-size: 30px;
+            line-height: 37px;
+        }
+        &__offer-item{
+            font-size: 20px;
+            line-height: 24px;
+
+        }
+        &__offer-item+&__offer-item{
+            margin-top: 18px;
+        }
+        &__btn{
+            display: block;
+            text-align: center;
+            padding: 44px 15px;
+            background-color: #EA3838;
+            font-size: 36px;
+            line-height: 43px;
+            transition-duration: 800ms;
+            &:hover{
+                background-color: #fff;
+                color: #EA3838;
+            }
         }
     }
 }
@@ -200,12 +439,178 @@
             left: 58%;
         }
     }
+    .header{
+        &__menu-item+&__menu-item{
+            margin-left: 10px;
+        }
+    }
 }
+@media (min-width: 541px){
+    .header{
+        &__menu-hide{
+            display: none;
+        }
+    }   
+}
+@media (max-width: 540px){
+    .header{
+        &__menu{
+            display: none;
+        }
+        &__menu-hide{
+            display: block;
+            margin: 10px 10px;
+        }
+        &__menu-list{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .footer{
+        &__menu-item+&__menu-item{
+            margin-left: 40px;
+        }
+    }
+}
+@media (max-width: 520px){
+    .course{
+        &__title {
+            padding: 11px 0;
+        }
+        &__offer-item{
+            display: block;
+        }
+        &__inner{
+            flex-direction: column;
+        }
+        &__offer-list{
+            padding-top: 13px;
+            border: none;
+        }
+        &__order{
+            padding: 4px;
+            border-bottom: none;
+            border-top: 3px solid #FFFFFF;
+        }
+        &__btn{
+            border-top: 3px solid #FFFFFF;  
+        }
+        &__offer-item+&__offer-item{
+            margin-top: 11px;
+        }
+    }
+    .feedback{
+        &__slider-text{
+            font-size: 17px;
+            line-height: 20px;
+        }
+        &__slider-item{
+            padding:  20px 15px;
+            text-align: center;
+        }
+        &__slider-star + .feedback__slider-star {
+            margin-left: -5px;
+        }
+    }
+    .footer{
+        &__menu-item+&__menu-item{
+            margin-left: 30px;
+        }
+    }
+}
+@media (max-width: 477px){
+    .about{
+        &__inner{
+            position: auto;
+        }
+        & .container{
+            padding: 0;
+        }
+        &__content{
+            padding: 0 15px;
+            text-align: center;
+        }
+        &__section-title{
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &__name{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__position{
+            padding-bottom: 6px;
+            margin-bottom: 23px;
+            font-size: 17px;
+            line-height: 20px;
+            &::before{
+                width: 86px;
+                height: 2px;
+                left:50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__skills{
+            margin: 0 auto;
+            width: 224px;
+            padding: 0;
+            text-align: start;
+        }
+        &__skills li{
+            margin-bottom: 17px;
+            font-size: 17px;
+            line-height: 20px;  
+        }
+        &__text{
+            padding:20px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+        & .about__img-wrapper{
+            max-width: 350px;
+        }
+        &__item-right{
+            & .about__img-wrapper{
+                left: 50%;
+                transform: translateX(-50%);
 
+            }
+            & .about__content{
+                text-align: center;
+                margin-top: 20px;
+                padding-bottom: 263px;
+            }
+            & .about__position{
 
-
-
-
+                &::before{
+                    left:50%;
+                }
+            }
+            & .about__skills{
+                text-align: end;
+            }
+        }
+        &__item-left{
+            & .about__img-wrapper{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            & .about__content{
+                padding-bottom: 236px;
+            }
+        }
+    }
+    .footer{
+        &__menu-item{
+            display: block;
+            margin-bottom: 12px;
+        }
+        &__menu-item+&__menu-item{
+            margin-left: 0px;
+            
+        }
+    }
+}
 @media (max-width: 462px){
     .main{
         min-height: 495px;

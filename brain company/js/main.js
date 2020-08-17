@@ -37,9 +37,25 @@ $(document).ready(function () {
         autoplaySpeed: 3000,
         infinite: true,
         arrows: false,
+        adaptiveHeight: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        dots: true
-
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 707,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
-});
+}); 
