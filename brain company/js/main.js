@@ -11,25 +11,6 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
-
-// //animation button
-// let buttonPlay = document.querySelector('.main__video-link');
-// let playCircleOne = document.querySelector('.main__video-circle1');
-// let playCircleTwo = document.querySelector('.main__video-circle2');
-// let buttonAnimationPlay = () => {
-//     setTimeout(() => {
-//         playCircleOne.classList.toggle('main__video-circle-active');
-//         playCircleTwo.classList.toggle('main__video-circle-active');
-//     }, 1000)
-
-//     setInterval(() => {
-//         playCircleOne.classList.toggle('main__video-circle-active');
-//         playCircleTwo.classList.toggle('main__video-circle-active');
-//     }, 3000)
-// }
-// buttonPlay.addEventListener('click', buttonAnimationPlay);
-
-
 //slider
 $(document).ready(function () {
     $('.feedback__slider').slick({
@@ -58,4 +39,23 @@ $(document).ready(function () {
             },
         ]
     });
-}); 
+});
+//modal
+
+let btnReg = document.querySelector('.main__btn-registration');
+let btnLesson = document.querySelector('.main__btn-lesson');
+let btnCourse = document.querySelector('.course__btn')
+let modal = document.querySelector('.modal');
+let btnClose = document.querySelector('.modal__close');
+
+let openModal = (e) => {
+    e.preventDefault();
+    modal.classList.toggle('modal__active');
+}
+let closeModal = () => modal.classList.remove('modal__active');
+
+btnReg.addEventListener('click', openModal);
+btnLesson.addEventListener('click', openModal);
+btnCourse.addEventListener('click', openModal);
+
+btnClose.addEventListener('click', closeModal);
