@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, ul, li, form, input {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: 30px 13.5px;
+  min-width: 300px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 2.23%;
+  color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.16);
+}
+.button:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.45);
+}
+
+.button__offer {
+  background: #7252DC;
+}
+
+.button__whatsapp {
+  background: #77DC52;
+}
+
+.header {
+  z-index: -1;
+  background: url(../img/header-bg.png) no-repeat center top/cover;
+}
+.header .container {
+  position: relative;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 14px;
+  margin-bottom: 134px;
+}
+.header__menu-item {
+  display: inline-block;
+}
+.header__menu-item a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.header__menu-item a:hover {
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
+  color: #7252DC;
+}
+.header__menu-item + .header__menu-item {
+  margin-left: 60px;
+}
+.header__bg {
+  position: absolute;
+  max-width: 641px;
+  width: 100%;
+  top: 100px;
+  right: 0px;
+  z-index: 0;
+}
+.header__content {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  margin-bottom: 54px;
+}
+.header__subtitle-item {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #888B97;
+}
+.header__subtitle-item + .header__subtitle-item {
+  margin-left: 40px;
+}
+.header__title {
+  max-width: 500px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin-bottom: 49px;
+}
+.header__title span {
+  color: #7252DC;
+}
+.header__advantages {
+  margin-bottom: 50px;
+}
+.header__advantages-item {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #2C2D31;
+}
+.header .button__offer {
+  margin-right: 30px;
+}
+
+/*# sourceMappingURL=main.css.map */
