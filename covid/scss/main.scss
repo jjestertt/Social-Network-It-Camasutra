@@ -33,7 +33,7 @@ ul li{
   line-height: 1.6px;
   letter-spacing: 0.15px;
   border-radius: 30px;
-  transition-duration: 300ms;
+  transition-duration: 400ms;
 }
 .button__feel{
   background: #2E85FF;
@@ -85,9 +85,13 @@ ul li{
       transform: translateY(-50%);
     }
   }
+  &__menu-icon{
+    display: none;
+  }
   &__nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 28px 0 27px 0;
   }
   &__list-item{
@@ -106,10 +110,10 @@ ul li{
 .main{
   background: #F5F8FB;
   & .container{
-    position: relative;
   }
   &__wrapper{
     width: 100%;
+    position: relative;
    
   }
   &__content{
@@ -138,8 +142,8 @@ ul li{
   }
   &__img-text{
     position: absolute;
-    top: 375px;
-    right: -264px;
+    top: 410px;
+    right: -113px;
     max-width: 400px;
     width: 100%;
     padding: 26px 47px 22px 30px;   
@@ -150,6 +154,6 @@ ul li{
   &__img-text p{
     font-size: 16px;
     line-height: 1.5;
-    color: #FFFFFF;
+    color: #fff;
   }
 }
