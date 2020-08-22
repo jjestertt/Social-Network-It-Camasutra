@@ -49,6 +49,12 @@ ul li {
     background: #2E85FF;
     color: #FFFFFF; }
 
+.section__title {
+  font-size: 37px;
+  line-height: 1.2;
+  letter-spacing: 0.617px;
+  color: #112950; }
+
 .header {
   background: #F5F8FB; }
   .header__top {
@@ -141,5 +147,34 @@ ul li {
     font-size: 16px;
     line-height: 1.5;
     color: #fff; }
+
+.helps {
+  padding: 120px;
+  background: #F5F8FB; }
+  .helps__title {
+    margin-bottom: 75px; }
+  .helps__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .helps__column {
+    max-width: 295px; }
+    .helps__column-img {
+      margin-bottom: 30px; }
+    .helps__column-title {
+      font-size: 23px;
+      line-height: 1.2;
+      letter-spacing: 0.308px;
+      color: #112950;
+      margin-bottom: 20px; }
+    .helps__column-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.76;
+      letter-spacing: 0.15px;
+      color: #324B72; }
 
 /*# sourceMappingURL=main.css.map */
