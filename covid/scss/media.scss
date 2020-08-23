@@ -15,6 +15,57 @@
         }
     }
 }
+@media (max-width: 1013px){
+    .section{
+        &__title{
+            text-align: center;
+            font-size-adjust: 37px;
+        }
+    }
+    .helps{
+        padding: 72px 0;
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__row{
+          justify-content: center;
+        }
+        &__column{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__column-title {
+            font-size: 22px;
+        }
+        &__column-text {
+            font-size-adjust: 15px;
+        }
+    }
+    .use{
+        text-align: center;
+        &__text{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__cards{
+            justify-content: center;
+        }
+        &__card-item{
+            margin-bottom: 20px;
+        }
+        &__card-white{
+            & .use__card-buttons{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__row{
+            margin: 0 auto;
+            flex-direction: column-reverse;
+            max-width: 490px;
+        }
+    }
+}
 @media (max-width: 827px){
     .main{
         &__img{
@@ -71,6 +122,69 @@
     .main{
         &__title{
             font-size: 38px;
+        }
+    }
+}
+@media (max-width: 520px){
+    .use{
+        &__card-item{
+           &::before{
+               content: none;
+           }
+        }
+        &__card{
+            &-item{
+                min-height: 620px; 
+            }
+            &-img{
+                margin-bottom: 24px;
+            }
+            &-title{
+                font-size: 24px;
+                margin-bottom: 17px;
+            }
+            &-text{
+                font-size: 15px;
+                margin-bottom: 190px;
+            }
+            &-buttons{
+               left: 50%;
+               transform: translateX(-50%); 
+            }
+            &-button{
+                display: block;
+                margin-bottom: 25px;
+            }
+            &-link{
+                margin-left: 0;
+            }
+        }
+        &__row{
+            &-img{
+                width: 80%;
+                margin-bottom: 30px;
+            }
+            &-title{
+                font-size: 24px;
+            }
+            &-text{
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 358px){
+    .section{
+        &__title{
+            font-size-adjust: 37px;
+        }
+    }
+    .helps{
+        &__column-title {
+            font-size: 22px;
+        }
+        &__column-text {
+            font-size: 15px;
         }
     }
 }
