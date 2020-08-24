@@ -114,13 +114,14 @@
     .header{
         position: relative;
         &__menu{
-            display: none;
+            // display: none;
+            padding: 50px 0;
             position: absolute;
-            top: 196px;
+            top: 176px;
             left: 50%;
             transform: translateX(-50%);
             width: 100vw;
-            height: 75vh;
+            height: 80vh;
             background:  #112950e8;
             text-align: center;
             color: #fff;
