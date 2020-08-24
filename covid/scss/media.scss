@@ -1,7 +1,7 @@
 @media (max-width: 1244px){
     .main{
         &__img-text{
-            right: -51px;
+            right: -51px; 
         }
     }
 }
@@ -112,12 +112,34 @@
 }
 @media (max-width: 594px){
     .header{
+        position: relative;
         &__menu{
             display: none;
+            position: absolute;
+            top: 196px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 75vh;
+            background:  #112950e8;
+            text-align: center;
+            color: #fff;
+            z-index: 1;
         }
+        &__list-item{
+            display: block;
+            margin-bottom: 15px;
+        }
+        &__list-link{
+            font-size: 25px;
+        }
+        &__list-item+&__list-item{
+            margin-left: 0;
+          }
         &__menu-icon{
             display: block;
         }
+
     }
     .main{
         &__title{
