@@ -9,6 +9,9 @@
 body {
   font-family: 'Inter', sans-serif;
   }
+.overflow{
+  overflow: hidden;
+}
 a {
     text-decoration: none; 
     color: inherit;
@@ -81,9 +84,16 @@ ul li{
 }
 
 .header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
   background: #F5F8FB;
+  -webkit-box-shadow: 1px 5px 8px -6px rgba(92,159,255,1);
+  -moz-box-shadow: 1px 5px 8px -6px rgba(92,159,255,1);
+  box-shadow: 1px 5px 8px -6px rgba(92,159,255,1);
   &__top{
-    padding:18px 0;
+    padding:18px 15px;
     background: #112950;
     color: #ffffff;
     font-size: 16px;
@@ -98,10 +108,13 @@ ul li{
     display: none;
   }
   &__nav{
+    padding: 28px 0 27px 0;
+    background: #F5F8FB;
+  }
+  &__nav-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 0 27px 0;
   }
   &__list-item{
     display: inline-block;
@@ -117,6 +130,7 @@ ul li{
   }
 }
 .main{
+  margin-top: 150px;
   background: #F5F8FB;
   & .container{
   }
@@ -302,6 +316,72 @@ ul li{
       letter-spacing: 0.15px;
       color: #324B72;
       margin-bottom: 28px;
+    }
+  }
+}
+.trust{
+  padding: 123px 0px 126px 0px;
+  background: #F5F8FB;
+  &__title{
+    margin-bottom: 68px;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 128px;
+  }
+  &__column{
+    padding-left: 112px;
+    max-width: 485px;
+    padding-right: 15px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      top: 0;
+      left: 0;
+    }
+    &-one::before{
+      background-image: url(..//img/trust/col-bg-1.png);
+    }
+    &-two::before{
+      background-image: url(..//img/trust/col-bg-2.png);
+    }
+    &-title{
+      font-size: 23px;
+      line-height: 1.2;
+      letter-spacing: 0.308px;
+      color: #112950;
+      margin-bottom: 26px;
+    }
+    &-text{
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.59;
+      letter-spacing: 0.15px;
+      color: #324B72;
+    }
+  }
+  &__company{
+    &-title{
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1.2;
+      text-transform: uppercase;
+      color: #7B8BA5;
+    }
+    &-label{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &-link{
+      margin-top: 50px;
+      
     }
   }
 }
