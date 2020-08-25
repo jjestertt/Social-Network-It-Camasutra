@@ -64,6 +64,23 @@
             flex-direction: column-reverse;
             max-width: 490px;
         }
+        
+    }
+    .trust{
+        &__row{
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+        &__column{
+            margin-bottom: 80px;
+        }
+        &__company{
+            text-align: center;
+            &-title{
+                text-align: center;
+            }
+            
+        }
     }
 }
 @media (max-width: 827px){
@@ -107,6 +124,11 @@
             max-width: 100%;
             text-align: center;
             top: 0;
+        }
+    }
+    .trust{
+        &__company-label{
+            justify-content: center;
         }
     }
 }
