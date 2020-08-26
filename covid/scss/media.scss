@@ -97,6 +97,9 @@
             top: 382px;
         }
     } 
+    .use{
+        padding-top: 70px;
+    }
 }
 @media (max-width: 773px){
     .header{
@@ -229,7 +232,7 @@
 @media (max-width: 358px){
     .section{
         &__title{
-            font-size-adjust: 37px;
+            font-size: 37px;
         }
     }
     .helps{
