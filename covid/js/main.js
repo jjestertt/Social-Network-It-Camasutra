@@ -13,8 +13,27 @@ menuBtn.addEventListener('click', showMenu);
 //hidden top
 let topBar = document.querySelector('.header__top');
 let mainSection = document.querySelector('.main');
+let header = document.querySelector('.header__nav');
 
 let hideTopBar = setTimeout(() => {
     topBar.classList.add('hide');
-    mainSection.style.marginTop = "90px";
+    mainSection.style.marginTop = "47px";
+    header.style.padding = "6px 0";
 }, 6000)
+
+//hide modal
+let modal = document.querySelector('.modal');
+let modalClose = document.querySelector('.modal__close');
+let btnModalClose = document.querySelector('.modal__button');
+let modalOverlay = document.querySelector('.modal__wrapper');
+let demoLinks = document.querySelectorAll('.demo');
+
+modalClose.addEventListener('click', () => modal.classList.toggle('hide'));
+btnModalClose.addEventListener('click', () => modal.classList.toggle('hide'));
+
+
+for (let i = 0; i <= demoLinks.length; i++) {
+    demoLinks[i].addEventListener('click', () => {
+        modal.classList.toggle('hide');
+    })
+}
