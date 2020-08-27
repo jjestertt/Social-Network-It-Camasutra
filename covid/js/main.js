@@ -9,3 +9,12 @@ let showMenu = () => {
 }
 
 menuBtn.addEventListener('click', showMenu);
+
+//hidden top
+let topBar = document.querySelector('.header__top');
+let mainSection = document.querySelector('.main');
+
+let hideTopBar = setTimeout(() => {
+    topBar.classList.add('hide');
+    mainSection.style.marginTop = "90px";
+}, 6000)

@@ -82,6 +82,22 @@
             
         }
     }
+    .lang{
+        &__contribute-link{
+            display: block;
+        }
+    }
+}
+@media (max-width: 795px){
+    .footer{
+        &__contact{
+            text-align: center;
+        }
+        &__content{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
 }
 @media (max-width: 827px){
     .main{
@@ -99,6 +115,15 @@
     } 
     .use{
         padding-top: 70px;
+    }
+}
+@media (max-width: 795px){
+    .lang{
+        &__link-col{
+            flex: 1 1 50%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
     }
 }
 @media (max-width: 773px){
@@ -139,12 +164,12 @@
     .header{
         &__menu{
             // display: none;
-            padding: 91px 0;
+            padding:50vh 0;
             position: absolute;
-            top: 162px;
+            top: 0;
             left: 0;
             width: 100vw;
-            height: 80vh;
+            height: 100vh;
             background:  #112950e8;
             text-align: center;
             color: #fff;
@@ -178,6 +203,25 @@
         margin-top: 162px;
         &__title{
             font-size: 38px;
+        }
+    }
+    .footer{
+        &__links{
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__menu{
+            margin-bottom: 40px;
+        }
+        &__copy{
+            text-align: center;
+        }
+        &__links-title{
+            margin-bottom: 16px;
+        }
+        &__menu-item{
+            margin-bottom: 4px;
         }
     }
 }
@@ -226,6 +270,23 @@
             &-text{
                 font-size: 15px;
             }
+        }
+    }
+    .lang{
+        &__link-row{
+            margin-bottom: 0;
+        }
+        &__link-wrapp{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        &__link{
+            display: block;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__contribute-button{
+            margin: 0px 0px 10px 0px;
         }
     }
 }
