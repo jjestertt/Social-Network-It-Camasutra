@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>covid info</title>
+    <title>Info Covid Demo</title>
+
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- //animation -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,13 +24,14 @@
             <p class="header__info">COVID-19 Risk Assessment Tool is now available.</p>
             <a href="#" class="header__info-link info-link demo">Learn more</a>
         </div>
-        <div class="header__nav">
+        <div class="header__nav ">
             <div class="container">
                 <div class="header__nav-wrapper">
                     <div class="header__logo">
-                        <img src="img/header/logo.svg" alt="logo" class="header__logo-img">
+                        <a href="#" class="header__logo-link"><img src="img/header/logo.svg" alt="logo"
+                                class="header__logo-img"></a>
                     </div>
-                    <img src="img/menu.png" alt="menu" class="header__menu-icon">
+                    <div class="header__menu-icon"><span></span></div>
                     <nav class="header__menu">
                         <ul class="header__list">
                             <li class="header__list-item"><a href="#" class="header__list-link demo">Products</a></li>
@@ -48,12 +54,13 @@
         <div class="container">
             <div class="main__wrapper">
                 <div class="main__content">
-                    <h1 class="main__title">COVID-19 Risk Assessment Tool</h1>
-                    <div class="main__text">
+                    <h1 class="main__title" data-aos="fade-up" data-aos-delay="300">COVID-19 Risk Assessment Tool</h1>
+                    <div class="main__text" data-aos="fade-up" data-aos-delay="600">
                         <p class="main__text-item">A set of solutions designed to help quickly identify coronavirus
                             symptoms and get reliable information regarding COVID-19 concerns.</p>
                     </div>
-                    <a href="#" class="main__button button__feel demo">See how to use it</a>
+                    <a href="#" class="main__button button__feel demo" data-aos="fade-up" data-aos-delay="600">See how
+                        to use it</a>
                 </div>
                 <div class="main__img">
                     <img src="img/main/phone.png" alt="phone" class="main__img-bg">
@@ -103,8 +110,9 @@
 
     <section class="use">
         <div class="container">
-            <h1 class="section__title use__title">How to use it</h1>
-            <div class="use__text">We’ve created this tool for the benefit of both communities and individuals. We
+            <h1 class="section__title use__title" data-aos="fade-up">How to use it</h1>
+            <div class="use__text" data-aos="fade-up" data-aos-delay="300">We’ve created this tool for the benefit of
+                both communities and individuals. We
                 believe we can prevent panic and relieve health systems by providing quick access to credible and
                 medically correct information. No matter how you decide to use the tool, you can help many. Act now.
             </div>
@@ -147,7 +155,6 @@
 
     <!-- //section  use -->
 
-
     <!-- section trust -->
 
     <section class="trust">
@@ -156,13 +163,15 @@
                 <div class="trust__title section__title">Why you can trust this tool</div>
                 <div class="trust__row">
                     <div class="trust__column trust__column-one">
-                        <div class="trust__column-title">Based on reliable sources</div>
-                        <div class="trust__column-text">We want our tool to be safe and reliable, so its logic is based
+                        <div class="trust__column-title" data-aos="fade-up">Based on reliable sources</div>
+                        <div class="trust__column-text" data-aos="fade-up" data-aos-delay="300">We want our tool to be
+                            safe and reliable, so its logic is based
                             on the official global information provided by the WHO.</div>
                     </div>
                     <div class="trust__column trust__column-two">
-                        <div class="trust__column-title">Verified by doctors</div>
-                        <div class="trust__column-text">The content was meticulously implemented by Infermedica’s team
+                        <div class="trust__column-title" data-aos="fade-up">Verified by doctors</div>
+                        <div class="trust__column-text" data-aos="fade-up" data-aos-delay="300">The content was
+                            meticulously implemented by Infermedica’s team
                             of doctors. It is kept up to date with the latest WHO and CDC guidelines.</div>
                     </div>
                 </div>
@@ -197,38 +206,61 @@
 
     <section class="lang">
         <div class="container">
-            <div class="lang__title section__title">Available in multiple languages</div>
-            <p class="lang__text">To help as many people as we can, we’ve released the COVID-19 Risk Assessment tool in
+            <div class="lang__title section__title" data-aos="fade-up" data-aos-delay="100">Available in multiple
+                languages</div>
+            <p class="lang__text" data-aos="fade-up" data-aos-delay="300">To help as many people as we can, we’ve
+                released the COVID-19 Risk Assessment tool in
                 multiple languages. We couldn’t have done that in such a short time without our business partners from
                 all around the world. Thank you for all your help and support.</p>
             <div class="lang__link-row">
                 <div class="lang__link-col">
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Chinese simplified</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Croatian</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Czech</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Dutch</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">English</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Chinese
+                            simplified</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Croatian</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Czech</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Dutch</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">English</a></div>
                 </div>
                 <div class="lang__link-col">
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Estonian</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">French</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Georgian</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">German</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Malay</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Estonian</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">French</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Georgian</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">German</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Malay</a></div>
                 </div>
                 <div class="lang__link-col">
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Polish</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Portuguese (Brazil)</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Russian</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Slovak</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Spanish</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Polish</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Portuguese (Brazil)</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Russian</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Slovak</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Spanish</a></div>
                 </div>
                 <div class="lang__link-col">
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Spanish (Latin America)</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Spanish (Mexico)</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Turkish</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Tamil</a></div>
-                    <div class="lang__link-wrapp"><a href="#" class="lang__link demo">Ukrainian</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Spanish (Latin America)</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Spanish (Mexico)</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Turkish</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Tamil</a></div>
+                    <div class="lang__link-wrapp" data-aos="fade-in" data-aos-delay="350"><a href="#"
+                            class="lang__link demo">Ukrainian</a></div>
                 </div>
             </div>
             <div class="lang__contribute">
@@ -246,15 +278,16 @@
 
     <section class="contact">
         <div class="container">
-            <div class="contact__title section__title">Share your thoughts</div>
-            <p class="contact__text">If you have any questions or feedback, please let us know. We look forward to
+            <div class="contact__title section__title" data-aos="fade-up" data-aos-delay="100">Share your thoughts</div>
+            <p class="contact__text" data-aos="fade-up" data-aos-delay="300">If you have any questions or feedback,
+                please let us know. We look forward to
                 hearing from you.</p>
-            <a href="#" class="contact__button button__empty demo">Contact us</a>
+            <a href="#" class="contact__button button__empty demo" data-aos="fade-up" data-aos-delay="300">Contact
+                us</a>
         </div>
     </section>
 
     <!--// section contact -->
-
 
     <!-- footer -->
 
@@ -320,21 +353,33 @@
     <!-- //footer -->
 
     <!-- modal demo -->
+
     <div class="modal">
         <div class="modal__wrapper">
             <div class="modal__inner">
                 <div class="modal__close"></div>
-                <div class="modal__title">Опаньки</div>
-                <div class="modal__text">This is demo version of the site.<br>Моя первая работа в портфолио.<br> Этот
-                    макет пренадлежит талантливому автору, который любезно разрешил мне сверстать его, благодаря ему я
-                    практикую навыки HTML5/CSS3/JS </div>
+                <div class="modal__title">Hello:)</div>
+                <div class="modal__text">This is demo version of the site.<br><br>Это моя первая работа в портфолио.<br>
+                    Этот
+                    макет пренадлежит талантливому автору, который любезно предоставил его в свободный доступ, благодаря
+                    ему я
+                    практикую навыки HTML5/CSS3/JS</div>
+                <div class="modal__text">Отдельное спасибо телеграмм каналу <br> <a href="https://t.me/glo_academy"
+                        class="modal__ad-link">Glo
+                        academy</a></div>
                 <div class="modal__button button__empty">Вернуться на страницу</div>
             </div>
         </div>
     </div>
+
     <!-- //modal demo -->
 
+    <!-- script animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script animation -->
+
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

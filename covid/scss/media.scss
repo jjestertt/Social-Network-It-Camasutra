@@ -163,9 +163,8 @@
 @media (max-width: 594px){
     .header{
         &__menu{
-            // display: none;
-            padding:50vh 0;
-            position: absolute;
+            padding:30vh 0;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
@@ -173,7 +172,7 @@
             background:  #112950e8;
             text-align: center;
             color: #fff;
-            z-index: -1;
+            z-index: 1;
             visibility: hidden;
             opacity: 0;
             transform: translateY(-100%);
@@ -197,10 +196,8 @@
         &__menu-icon{
             display: block;
         }
-
     }
     .main{
-        margin-top: 162px;
         &__title{
             font-size: 38px;
         }
