@@ -242,3 +242,37 @@ ul li {
 .rooms__list-item span {
   font-weight: bold;
 }
+
+.galery {
+  padding: 95px 0;
+  background-color: #f8f8f8;
+}
+.galery__title {
+  margin-bottom: 60px;
+}
+.galery__wrapper {
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  text-align: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.galery__link {
+  margin: 15px 5px;
+}
+.galery__img {
+  -webkit-transition: -webkit-transform 400ms;
+          transition: transform 400ms;
+}
+.galery__img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
