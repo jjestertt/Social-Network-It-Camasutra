@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    .offer{
+        background-position-x: -664px;
+        &__content{
+            max-width: 500px;
+        }
+    }
+}
+@media (max-width: 576px){
+    .header{
+        &__phone{
+            font-size: 17px;
+        }
+    }
+    .offer{
+        background-position-x: -736px;
+        &__content{
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto 50px auto;
+        }
+        &__title{
+            font-size: 35px;
+        }
+        &__description{
+            font-size: 23px;
+        }
+        &__callback{
+            &-inner{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 421px){
+    .offer{
+        &__title{
+            font-size: 28px;
+        }
+        &__description{
+            font-size: 20px;
+        }
+    }
+}

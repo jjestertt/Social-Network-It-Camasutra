@@ -1,0 +1,220 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+$main-color: #ff2400;  
+$btn-color: #ff2400;
+$btn-color-hover: #ff4b2f;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+body {
+  font-family: 'Open Sans', sans-serif;
+  }
+a {
+    text-decoration: none; 
+    color: inherit;
+  }
+h1, h2, h3, h4, ul, li, form, input {
+    margin: 0;
+    padding: 0; 
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+}
+.section{
+  &__title{
+    font-size:32px;
+    font-weight: bold;
+  }
+}
+.container{
+  max-width: 1030px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header{
+  padding: 8px 0;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-item+&__menu-item{
+    margin-left: 30px;
+  }
+  &__menu-link{
+    font-size: 19px;
+    &:hover{
+      color: $main-color;
+      text-decoration-line: underline;
+    }
+  }
+  &__adress{
+    font-size: 19px;
+    display: block;
+    margin-bottom: 7px;
+  }
+  &__contact{
+    text-align: end;
+  }
+  &__phone{
+    font-size: 21px;
+    font-weight: 700;
+    & span {
+      color: $main-color;
+    }
+  }
+}
+.offer{
+  background-image: url(..//img/offer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #fff;
+  padding: 165px 0 165px 0;
+  &__content{
+    margin-left: auto;
+    max-width: 500px;
+    text-align: end ;
+  }
+  &__title{
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: 20px;  
+  }
+  &__list{
+    margin-bottom: 23px;
+  }
+  &__list-item{
+    font-size: 23px;
+    display: block;
+    margin-bottom: 9px;
+  }
+  &__button{
+    display: inline-block;
+    padding: 20px 42px;
+    background: $main-color;
+    border-radius: 50px;
+    font-size: 22px;
+    transition-duration: 300ms;
+    &:hover{
+      background: $btn-color-hover;
+    }
+  }
+}
+.about{
+  padding: 95px 0;
+  background-color: rgb(248, 248, 248);
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text{
+    max-width: 573px;
+  }
+  &__text p{
+    display: block;
+    padding: 0 15px 0 0;
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 9px;
+  }
+  &__list{
+    margin-top: 36px;
+  }
+  &__list-item{
+    display: block;
+    min-height: 50px;
+    font-size: 19px;
+    padding-left: 70px;
+    position: relative;
+    margin-bottom: 28px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -25%;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+  &__list-item1::before{
+    background-image: url(..//img/about/bus.png) ;
+  }
+  &__list-item2::before{
+    background-image: url(..//img/about/parking.png);
+  }
+  &__list-item3::before{
+    background-image: url(..//img/about/wifi.png);
+  }
+  &__list-item4::before{
+    background-image: url(..//img/about/pool.png);
+  }
+  &__list-item5::before{
+    background-image: url(..//img/about/billiards.png);
+  }
+}
+.rooms{
+  padding: 95px 0;
+  &__title{
+    margin-bottom: 60px;
+  }
+  &__wrapper{
+    display: flex;
+  }
+  &__bg{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+  }
+  &__content{
+    padding:20px 20px 0 88px;
+  }
+  &__content-title{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    transform: translateX(-29px);
+  }
+  &__guest{
+    font-size: 16px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url(..//img/rooms/person.png) no-repeat;
+    }
+  }
+  &__list-item{
+    font-size: 19px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 25px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url(..//img/rooms/bedroom.png) no-repeat;
+    }
+    & span{
+      font-weight: bold;
+    }
+  }
+}
