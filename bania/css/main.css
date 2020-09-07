@@ -41,15 +41,12 @@ ul li {
 }
 .header__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -61,8 +58,8 @@ ul li {
 }
 .header__menu-link:hover {
   color: #ff2400;
-  -moz-text-decoration-line: underline;
-       text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .header__adress {
   font-size: 19px;
@@ -128,11 +125,9 @@ ul li {
 }
 .about__content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -191,7 +186,6 @@ ul li {
 }
 .rooms__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -206,7 +200,6 @@ ul li {
   font-weight: 600;
   margin-bottom: 24px;
   -webkit-transform: translateX(-29px);
-      -ms-transform: translateX(-29px);
           transform: translateX(-29px);
 }
 .rooms__guest {
@@ -253,26 +246,36 @@ ul li {
 .galery__wrapper {
   padding: 0 30px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.galery__row {
+  margin-bottom: 15px;
 }
 .galery__link {
-  margin: 15px 5px;
+  margin: 7px;
 }
 .galery__img {
   -webkit-transition: -webkit-transform 400ms;
-          transition: transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
 }
 .galery__img:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+.galery__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

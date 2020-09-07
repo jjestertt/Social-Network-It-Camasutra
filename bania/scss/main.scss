@@ -231,13 +231,22 @@ ul li{
     text-align: center;
     flex-wrap: wrap;
   }
-  &__link{
-    margin: 15px 5px;
+  &__row{
+    margin-bottom: 15px;
   }
+  &__link{
+    margin: 7px;
+  }
+ 
   &__img{
     transition: transform 400ms;
     &:hover{
-      transform: scale(1.2);
+      transform: scale(1.1);
+      opacity: 0.9;
     }
+  }
+  &__wrap{
+    display: flex;
+    justify-content: center; 
   }
 }
