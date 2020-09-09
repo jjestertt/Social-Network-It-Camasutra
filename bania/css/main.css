@@ -28,6 +28,13 @@ ul li {
   font-size: 32px;
   font-weight: bold;
 }
+.section__content-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+.section__content-text {
+  font-size: 19px;
+}
 
 .container {
   max-width: 1030px;
@@ -38,17 +45,29 @@ ul li {
 
 .button {
   color: #fff;
+  min-width: 210px;
   display: inline-block;
-  padding: 19px 50px;
+  padding: 17px 21px;
   background: #ff2400;
   border-radius: 50px;
   font-size: 22px;
   font-weight: bold;
+  text-align: center;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
 }
 .button:hover {
   background: #ff4b2f;
+}
+
+.button-transperent {
+  background: transparent;
+  border: 1px solid #ff2400;
+  color: #ff2400;
+}
+.button-transperent:hover {
+  background: #ff2400;
+  color: #ffffff;
 }
 
 .header {
@@ -127,7 +146,7 @@ ul li {
 
 .about {
   padding: 95px 0;
-  background-color: #f8f8f8;
+  background-color: #f5f3f3;
 }
 .about__title {
   margin-bottom: 40px;
@@ -193,16 +212,17 @@ ul li {
   padding: 95px 0;
 }
 .rooms__title {
-  margin-bottom: 60px;
+  margin-bottom: 17px;
 }
 .rooms__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-.rooms__bg {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .rooms__content {
   padding: 20px 20px 0 88px;
@@ -249,9 +269,36 @@ ul li {
   font-weight: bold;
 }
 
+.pool {
+  background-color: #f5f3f3;
+  padding: 95px 0;
+}
+.pool__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pool__content {
+  max-width: 450px;
+  padding: 0 15px;
+}
+.pool__title {
+  margin-bottom: 24px;
+}
+.pool__content-title {
+  margin-bottom: 19px;
+}
+.pool__content-text {
+  margin-bottom: 30px;
+}
+
 .galery {
   padding: 95px 0;
-  background-color: #f8f8f8;
 }
 .galery__title {
   margin-bottom: 60px;
@@ -267,10 +314,11 @@ ul li {
           justify-content: center;
 }
 
-.pool {
+.transfer {
+  background-color: #f5f3f3;
   padding: 95px 0;
 }
-.pool__wrapper {
+.transfer__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,19 +327,96 @@ ul li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.pool__content {
-  max-width: 413px;
+.transfer__title {
+  margin-bottom: 30px;
 }
-.pool__title {
-  margin-bottom: 24px;
+.transfer__content {
+  max-width: 450px;
+  padding: 0 15px;
 }
-.pool__content-title {
-  font-size: 26px;
-  font-weight: 600;
+.transfer__content-title {
   margin-bottom: 19px;
 }
-.pool__content-text {
-  font-size: 19px;
+.transfer__content-text {
   margin-bottom: 30px;
+}
+
+.contacts {
+  width: 100%;
+  min-height: 407px;
+  position: relative;
+}
+.contacts__title {
+  margin-bottom: 30px;
+}
+.contacts__map-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 19px;
+}
+.contacts__content {
+  z-index: 1;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 70px;
+  max-width: 437px;
+  width: 100%;
+  padding: 28px;
+  background: #f5f3f3;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px 0px black;
+}
+.contacts__content-title {
+  margin-bottom: 19px;
+}
+.contacts__adress {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.contacts__tel {
+  display: block;
+  margin-bottom: 10px;
+}
+.contacts__tel:hover {
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
+}
+.contacts__mail {
+  display: block;
+  margin-bottom: 20px;
+}
+.contacts__mail:hover {
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
+}
+
+.footer {
+  background: #292727;
+  padding: 15px;
+}
+.footer__text {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
 }
