@@ -3,7 +3,6 @@
 $main-color: #ff2400;  
 $btn-color: #ff2400;
 $btn-color-hover: #ff4b2f;
-$bg-color:rgb(245, 243, 243);
 * {
     margin: 0;
     padding: 0;
@@ -29,13 +28,6 @@ ul li{
     font-size:32px;
     font-weight: bold;
   }
-  &__content-title{
-    font-size:26px;
-    font-weight: 600;
-  }
-  &__content-text{
-    font-size: 19px;
-  }
 }
 .container{
   max-width: 1030px;
@@ -45,26 +37,15 @@ ul li{
 }
 .button{
   color: #fff;
-  min-width: 210px;
   display: inline-block;
-  padding: 17px 21px;
+  padding: 19px 50px;
   background: $main-color;
   border-radius: 50px;
   font-size: 22px;
   font-weight: bold;
-  text-align: center;
   transition-duration: 300ms;
   &:hover{
     background: $btn-color-hover;
-  }
-}
-.button-transperent{
-  background: transparent;
-  border: 1px solid $btn-color;
-  color: $btn-color;
-  &:hover{
-    background: $btn-color;
-    color: #ffffff;
   }
 }
 .header{
@@ -131,7 +112,7 @@ ul li{
 }
 .about{
   padding: 95px 0;
-  background-color: $bg-color;
+  background-color: rgb(248, 248, 248);
   &__title{
     margin-bottom: 40px;
   }
@@ -189,11 +170,15 @@ ul li{
 .rooms{
   padding: 95px 0;
   &__title{
-    margin-bottom: 17px;
+    margin-bottom: 60px;
   }
   &__wrapper{
     display: flex;
-    align-items: center;
+  }
+  &__bg{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
   }
   &__content{
     padding:20px 20px 0 88px;
@@ -238,29 +223,10 @@ ul li{
     }
   }
 }
-.pool{
-  background-color: $bg-color;
-  padding: 95px 0;
-  &__wrapper{
-    display: flex;
-    justify-content: space-between;
-  }
-  &__content{
-    max-width: 450px;
-    padding: 0 15px;
-  }
-  &__title{
-    margin-bottom: 24px;
-  }
-  &__content-title{
-    margin-bottom: 19px;
-  }
-  &__content-text{
-    margin-bottom: 30px;
-  }
-}
+
 .galery{
   padding: 95px 0;
+  background-color: rgb(248, 248, 248);
   &__title{
     margin-bottom: 60px
   }
@@ -269,89 +235,28 @@ ul li{
     justify-content: center;
   }
 }
-.transfer{
-  background-color: $bg-color;
+.pool{
   padding: 95px 0;
   &__wrapper{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-  &__title{
-    margin-bottom: 30px;
   }
   &__content{
-    max-width: 450px;
-    padding: 0 15px;
+    max-width: 413px;
+  }
+  &__title{
+    margin-bottom: 24px;
   }
   &__content-title{
+    font-size:26px;
+    font-weight: 600;
     margin-bottom: 19px;
   }
   &__content-text{
-    margin-bottom: 30px;
-  }
-}
-.contacts{
-  width: 100%;
-  min-height: 407px;
-  position: relative;
-  &__title{
-    margin-bottom: 30px;
-  }
-  &__map-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  &__wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 19px;
+    margin-bottom: 30px;
   }
-  &__content{
-    z-index: 1;
-    text-align: center;
-    margin-left: auto;
-    margin-top: 70px;
-    max-width: 437px;
-    width: 100%;
-    padding: 28px;
-    background: $bg-color;
-    border-radius: 12px;
-    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
-      }
-  &__content-title{
-    margin-bottom: 19px;
-  }
-  &__adress{
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  &__tel{
-    display: block;
-    margin-bottom: 10px;
-    &:hover{
-      text-decoration-line: underline;
-    }
-  }
-  &__mail{
-    display: block;
-    margin-bottom: 20px;
-    &:hover{
-      text-decoration-line: underline;
-    }
-  }
-}
-.footer{
-  background: rgb(41, 39, 39);
-  padding: 15px;
-  &__text{
-    text-align: center;
-    font-size: 14px;
-    color: #ffffff;
+  &__img{
+
   }
 }
