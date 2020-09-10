@@ -79,12 +79,15 @@ ul li {
 }
 .header__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -96,8 +99,8 @@ ul li {
 }
 .header__menu-link:hover {
   color: #ff2400;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
 }
 .header__adress {
   font-size: 19px;
@@ -154,9 +157,11 @@ ul li {
 }
 .about__content {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -215,9 +220,11 @@ ul li {
 }
 .rooms__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -229,6 +236,7 @@ ul li {
   font-weight: 600;
   margin-bottom: 24px;
   -webkit-transform: translateX(-29px);
+      -ms-transform: translateX(-29px);
           transform: translateX(-29px);
 }
 .rooms__guest {
@@ -270,16 +278,22 @@ ul li {
   padding: 95px 0;
 }
 .pool__wrapper {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .pool__content {
   max-width: 450px;
-  padding: 0 15px;
+  padding: 0 15px 0 0;
 }
 .pool__title {
   margin-bottom: 24px;
@@ -299,9 +313,11 @@ ul li {
 }
 .galery__wrap {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -312,12 +328,15 @@ ul li {
 }
 .transfer__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -351,12 +370,15 @@ ul li {
 }
 .contacts__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 19px;
@@ -385,16 +407,16 @@ ul li {
   margin-bottom: 10px;
 }
 .contacts__tel:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
 }
 .contacts__mail {
   display: block;
   margin-bottom: 20px;
 }
 .contacts__mail:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+       text-decoration-line: underline;
 }
 
 .footer {
@@ -404,21 +426,28 @@ ul li {
 }
 .footer__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 15px;
 }
 .footer ul li a:hover {
   text-decoration: underline;
 }
-.footer__menu-item + .footer__menu-item {
-  margin-left: 30px;
+.footer__menu-item {
+  margin-left: 35px;
 }
 .footer__pay-title {
   margin-bottom: 5px;
+}
+.footer__copy {
+  text-align: center;
 }
