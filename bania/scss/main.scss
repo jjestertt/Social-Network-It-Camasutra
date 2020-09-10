@@ -35,19 +35,6 @@ ul li{
   padding: 0 15px;
   margin: 0 auto;
 }
-.button{
-  color: #fff;
-  display: inline-block;
-  padding: 19px 50px;
-  background: $main-color;
-  border-radius: 50px;
-  font-size: 22px;
-  font-weight: bold;
-  transition-duration: 300ms;
-  &:hover{
-    background: $btn-color-hover;
-  }
-}
 .header{
   padding: 8px 0;
   &__wrapper{
@@ -107,7 +94,15 @@ ul li{
     margin-bottom: 9px;
   }
   &__button{
+    display: inline-block;
     padding: 18px 42px;
+    background: $main-color;
+    border-radius: 50px;
+    font-size: 22px;
+    transition-duration: 300ms;
+    &:hover{
+      background: $btn-color-hover;
+    }
   }
 }
 .about{
@@ -223,7 +218,6 @@ ul li{
     }
   }
 }
-
 .galery{
   padding: 95px 0;
   background-color: rgb(248, 248, 248);
@@ -232,31 +226,6 @@ ul li{
   }
   &__wrap{
     display: flex;
-    justify-content: center;
-  }
-}
-.pool{
-  padding: 95px 0;
-  &__wrapper{
-    display: flex;
-    justify-content: space-between;
-  }
-  &__content{
-    max-width: 413px;
-  }
-  &__title{
-    margin-bottom: 24px;
-  }
-  &__content-title{
-    font-size:26px;
-    font-weight: 600;
-    margin-bottom: 19px;
-  }
-  &__content-text{
-    font-size: 19px;
-    margin-bottom: 30px;
-  }
-  &__img{
-
+    justify-content: center; 
   }
 }
