@@ -3,7 +3,12 @@
 $main-color: #ff2400;  
 $btn-color: #ff2400;
 $btn-color-hover: #ff4b2f;
-$bg-color:rgb(245, 243, 243);
+$bg-color:#fcf6f5;
+.shadow{
+  -webkit-box-shadow: 0px 0px 9px -2px rgba(255,75,47,1);
+-moz-box-shadow: 0px 0px 9px -2px rgba(255,75,47,1);
+box-shadow: 0px 0px 9px -2px rgba(255,75,47,1);
+}
 * {
     margin: 0;
     padding: 0;
@@ -132,6 +137,7 @@ ul li{
 .about{
   padding: 95px 0;
   background-color: $bg-color;
+  @extend .shadow;
   &__title{
     margin-bottom: 40px;
   }
@@ -240,6 +246,7 @@ ul li{
 }
 .pool{
   background-color: $bg-color;
+  @extend .shadow;
   padding: 95px 0;
   &__wrapper{
     display: flex;
@@ -271,6 +278,7 @@ ul li{
 }
 .transfer{
   background-color: $bg-color;
+  @extend .shadow;
   padding: 95px 0;
   &__wrapper{
     display: flex;
@@ -314,7 +322,7 @@ ul li{
     z-index: 1;
     text-align: center;
     margin-left: auto;
-    margin-top: 70px;
+    margin-top: 58px;
     max-width: 437px;
     width: 100%;
     padding: 28px;
@@ -350,15 +358,15 @@ ul li{
   background: rgb(41, 39, 39);
   padding: 15px;
   color: #fff;
-  // &__text{
-  //   text-align: center;
-  //   font-size: 14px;
-  //   color: #ffffff;
-  // }
   &__wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  & ul li a{
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__menu-item+&__menu-item{
     margin-left: 30px;
