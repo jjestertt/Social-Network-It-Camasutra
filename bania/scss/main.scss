@@ -349,9 +349,21 @@ ul li{
 .footer{
   background: rgb(41, 39, 39);
   padding: 15px;
-  &__text{
-    text-align: center;
-    font-size: 14px;
-    color: #ffffff;
+  color: #fff;
+  // &__text{
+  //   text-align: center;
+  //   font-size: 14px;
+  //   color: #ffffff;
+  // }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-item+&__menu-item{
+    margin-left: 30px;
+  }
+  &__pay-title{
+    margin-bottom: 5px;
   }
 }

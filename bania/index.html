@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Дом Баня</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-
     <!-- heeader -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__wrapper">
                 <a href="#" class="header__logo">
@@ -22,9 +20,11 @@
                 </a>
                 <nav class="header__nav">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">О нас</a></li>
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">Галерея</a></li>
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+                        <li class="header__menu-item"><a href="#about" class="header__menu-link">О нас</a>
+                        </li>
+                        <li class="header__menu-item"><a href="#galery" class="header__menu-link">Галерея</a>
+                        </li>
+                        <li class="header__menu-item"><a href="#contact" class="header__menu-link">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__contact">
@@ -54,8 +54,9 @@
         </div>
     </section>
     <!-- offer -->
+
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2 class="about__title section__title">
                 О нас
@@ -92,6 +93,7 @@
         </div>
     </section>
     <!-- /about -->
+
     <!-- rooms -->
     <section class="rooms">
         <div class="container">
@@ -114,6 +116,7 @@
         </div>
     </section>
     <!-- /rooms -->
+
     <!-- pool -->
     <section class="pool">
         <div class="container">
@@ -133,8 +136,9 @@
         </div>
     </section>
     <!-- /pool -->
+
     <!-- galery -->
-    <section class="galery">
+    <section class="galery" id="galery">
         <div class="container">
             <div class="section__title galery__title">Наш Гостевой дом</div>
             <div class="galery__wrap">
@@ -166,13 +170,12 @@
                             class="galery__fotorama-img"></a>
                     <a href="img/galery/13.jpg" class="galery__link"><img src="img/galery/13-min.jpg" alt="galery-img"
                             class="galery__fotorama-img"></a>
-                    <!-- <a href="img/galery/14.jpg" class="galery__link"><img src="img/galery/14-min.jpg" alt="galery-img"
-                            class="galery__fotorama-img"></a> -->
                 </div>
             </div>
         </div>
     </section>
     <!-- /galery-->
+
     <!-- transfer -->
     <section class="transfer">
         <div class="container">
@@ -190,8 +193,9 @@
         </div>
     </section>
     <!-- //transfer -->
+
     <!-- contacts -->
-    <section class="contacts">
+    <section class="contacts" id="contact">
         <div class="contacts__map-bg">
             <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d5da3ce473ce9d542c1e84ef6faf9bdc728ad73b6be860c8764b52b1005bd58&amp;source=constructor"
@@ -208,21 +212,41 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- /contacts -->
+
     <!-- footer -->
     <section class="footer">
         <div class="container">
-            <p class="footer__text">© Все права защищены</p>
+            <div class="footer__wrapper">
+                <a href="#header" class="footer__link"><img src="img/logo footer.png" alt="footer-logo"
+                        class="footer__logo"></a>
+                <nav class="footer__nav">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a href="#about" class="footer__menu-link">О нас</a>
+                        </li>
+                        <li class="footer__menu-item"><a href="#galery" class="footer__menu-link">Галерея</a>
+                        </li>
+                        <li class="footer__menu-item"><a href="#contact" class="footer__menu-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__pay">
+                    <div class="footer__pay-title">Мы принимаем</div>
+                    <img src="img/footer/payment_icon.png" alt="" class="footer__pay-icon">
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- //footer -->
+
+    <!--jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!--//jquery -->
 
     <!-- galery script -->
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <!-- //galery script -->
     <script src="js/main.js"></script>
 </body>
 
