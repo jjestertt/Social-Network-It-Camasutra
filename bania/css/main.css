@@ -367,6 +367,11 @@ ul li {
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
+}
+.contacts__map-static {
+  display: block;
+  margin: 0 auto;
 }
 .contacts__wrapper {
   display: -webkit-box;
@@ -452,6 +457,8 @@ ul li {
   text-align: center;
   font-size: 11px;
   color: #ccc;
+  border-top: 1px solid;
+  padding-top: 15px;
 }
 
 .popap {

@@ -28,6 +28,22 @@
     font-size: 15px;
   }
 }
+@media (max-width: 920px) {
+  .header__logo {
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  .header__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .header__contact {
+    width: 100%;
+    text-align: end;
+  }
+}
 @media (max-width: 838px) {
   .rooms__content {
     width: 100%;
@@ -87,24 +103,9 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .contacts__map-bg {
-    z-index: -1;
-  }
-}
-@media (max-width: 920px) {
-  .header__logo {
-    -webkit-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-  .header__wrapper {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  .header__contact {
-    width: 100%;
-    text-align: end;
+  .contacts__map-static {
+    display: block;
+    object-fit: none;
   }
 }
 @media (max-width: 840px) {

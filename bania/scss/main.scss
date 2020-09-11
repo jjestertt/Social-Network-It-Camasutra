@@ -312,7 +312,12 @@ ul li{
     top: 0;
     left: 0;
     width: 100%;
+    overflow: hidden;
   }
+  &__map-static{
+    display: block;
+    margin: 0 auto;
+}
   &__wrapper{
     display: flex;
     justify-content: space-between;
@@ -380,6 +385,8 @@ ul li{
     text-align: center;
     font-size: 11px;
     color: #ccc;
+    border-top: 1px solid;
+    padding-top: 15px;
   }
 }
 .popap{

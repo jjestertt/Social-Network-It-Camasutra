@@ -28,6 +28,20 @@
         }
     }
 }
+@media (max-width: 920px){
+    .header{
+        &__logo{
+            transform: translateY(50%);
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__contact{
+            width: 100%;
+            text-align: end;
+        }
+    }
+}
 @media (max-width: 838px){
     .rooms{
         &__content{
@@ -83,22 +97,9 @@
             margin-left: auto;
             margin-right: auto;
         }
-        &__map-bg{
-            z-index: -1;
-        }
-    }
-}
-@media (max-width: 920px){
-    .header{
-        &__logo{
-            transform: translateY(50%);
-        }
-        &__wrapper {
-            flex-wrap: wrap;
-        }
-        &__contact{
-            width: 100%;
-            text-align: end;
+        &__map-static{
+            display: block;
+            object-fit: none;
         }
     }
 }
