@@ -17,24 +17,24 @@ for (let smoothLink of smoothLinks) {
 let getPopapButton = document.querySelectorAll('.popap-btn');
 let closePopapButton = document.querySelector('.popap__button-close');
 let popapWindow = document.querySelector('.popap');
-
+let body = document.querySelector('body');
 //show popap
 let showPopap = (e) => {
     e.preventDefault();
     popapWindow.classList.remove('popap__hide');
+    body.classList.add('overflow');
 }
-
 //hide popap
 let hidePopap = (e) => {
     e.preventDefault();
     popapWindow.classList.add('popap__hide');
+    body.classList.remove('overflow');
 }
 
 for (i = 0; i < getPopapButton.length; i++) {
     getPopapButton[i].addEventListener('click', showPopap);
 }
 closePopapButton.addEventListener('click', hidePopap);
-
 //animation
 AOS.init({
     // Global settings:

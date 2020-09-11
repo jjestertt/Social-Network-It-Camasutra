@@ -28,6 +28,10 @@ ul li {
   display: inline-block;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 .section__title {
   font-size: 32px;
   font-weight: bold;
@@ -461,9 +465,6 @@ ul li {
   padding-top: 15px;
 }
 
-.popap {
-  z-index: 999;
-}
 .popap__wrapper {
   position: fixed;
   width: 100vw;
