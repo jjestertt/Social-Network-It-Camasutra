@@ -21,11 +21,12 @@
                 </a>
                 <nav class="header__nav">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="#about" class="header__menu-link">О нас</a>
+                        <li class="header__menu-item"><a href="#about" class="header__menu-link scroll-to">О нас</a>
                         </li>
-                        <li class="header__menu-item"><a href="#galery" class="header__menu-link">Галерея</a>
+                        <li class="header__menu-item"><a href="#galery" class="header__menu-link scroll-to">Галерея</a>
                         </li>
-                        <li class="header__menu-item"><a href="#contact" class="header__menu-link">Контакты</a></li>
+                        <li class="header__menu-item"><a href="#contact"
+                                class="header__menu-link scroll-to">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__contact">
@@ -50,7 +51,7 @@
                     <li class="offer__list-item">Бесплатный бильярд</li>
                     <li class="offer__list-item">Бассеин</li>
                 </ul>
-                <a href="#" class="offer__button button">Оставить заявку</a>
+                <a href="#" class="offer__button button popap-btn">Оставить заявку</a>
             </div>
         </div>
     </section>
@@ -124,14 +125,13 @@
             <div class="pool__title section__title">Бильярд</div>
             <div class="pool__wrapper">
                 <div class="pool__content">
-
                     <div class="pool__content-title section__content-title">В гостевом доме «Дом Баня»</div>
                     <div class="pool__content-text section__content-text">Вы можете приятно отдохнуть,
                         и поиграть в бильярд.
                         Это- прекрасный и несравненный
                         способ проведения досуга.
                     </div>
-                    <a href="#" class="pool__button button button-transperent">Поиграть</a>
+                    <a href="#" class="pool__button button button-transperent popap-btn">Поиграть</a>
                 </div>
                 <img src="img/pool/pool.jpg" alt="pool" class="pool__img">
             </div>
@@ -189,7 +189,7 @@
                     <div class="transfer__content-text section__content-text">Вы можете заказать трансфер, от аэропорта,
                         или обратно
                         в комфортабильном микроавтобусе</div>
-                    <a href="#" class="transfer__button button button-transperent">Оставить заявку</a>
+                    <a href="#" class="transfer__button button button-transperent popap-btn">Оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
                     <div class="contacts__adress">Калининград, Калининградская обл., 236034 ул. Пархоменко д.8</div>
                     <a href="#" class="contacts__tel"> Тел: 8 (800) - 555 - 65 - 65</a>
                     <a href="#" class="contacts__mail"> Email: lablabla@gmail.com</a>
-                    <a href="#" class="contacts__button button button-transperent">Остались вопросы</a>
+                    <a href="#" class="contacts__button button button-transperent popap-btn">Остались вопросы</a>
                 </div>
             </div>
         </div>
@@ -225,11 +225,12 @@
                         class="footer__logo"></a>
                 <nav class="footer__nav">
                     <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><a href="#about" class="footer__menu-link">О нас</a>
+                        <li class="footer__menu-item"><a href="#about" class="footer__menu-link scroll-to">О нас</a>
                         </li>
-                        <li class="footer__menu-item"><a href="#galery" class="footer__menu-link">Галерея</a>
+                        <li class="footer__menu-item"><a href="#galery" class="footer__menu-link scroll-to">Галерея</a>
                         </li>
-                        <li class="footer__menu-item"><a href="#contact" class="footer__menu-link">Контакты</a></li>
+                        <li class="footer__menu-item"><a href="#contact"
+                                class="footer__menu-link scroll-to">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="footer__pay">
@@ -241,23 +242,28 @@
         </div>
     </footer>
     <!-- //footer -->
-    <section class="popap">
-        <div class="popap__inner">
-            <div class="popap__button-close">
-                <span></span><span></span>
-            </div>
-            <div class="popap__title">
-                <h3 class="popap__title-title">Оставьте заявку</h3>
-                <p class="popap__title-text">и мы вам перезвоним в течении нескольких минут</p>
-            </div>
-            <form action="" class="popap__form">
-                <input class="popap__form-input" type="text" placeholder="Имя">
-                <input class="popap__form-input" type="phone" placeholder="Телефон">
-                <button class="popap__form-button" type="submit">Отправить</button>
-            </form>
 
+    <!-- popap -->
+    <section class="popap popap__hide">
+        <div class="popap__wrapper">
+            <div class="popap__inner">
+                <div class="popap__button-close">
+                    <span></span><span></span>
+                </div>
+                <div class="popap__title">
+                    <h3 class="popap__title-title">Оставьте заявку</h3>
+                    <p class="popap__title-text">и мы вам перезвоним в течении нескольких минут</p>
+                </div>
+                <form action="" class="popap__form">
+                    <input class="popap__form-input" type="text" placeholder="Имя">
+                    <input class="popap__form-input" type="phone" placeholder="Телефон">
+                    <button class="popap__form-button" type="submit">Отправить</button>
+                </form>
+            </div>
         </div>
     </section>
+    <!-- //popap -->
+
     <!--jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <!--//jquery -->
