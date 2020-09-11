@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 .shadow, .about, .pool, .transfer {
-  box-shadow: 0px 0px 9px -2px #ff4b2f;
+  box-shadow: 0px 0px 4px -2px #ff4b2f;
 }
 
 * {
@@ -79,15 +79,12 @@ ul li {
 }
 .header__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -99,8 +96,8 @@ ul li {
 }
 .header__menu-link:hover {
   color: #ff2400;
-  -moz-text-decoration-line: underline;
-       text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .header__adress {
   font-size: 19px;
@@ -150,18 +147,16 @@ ul li {
 
 .about {
   padding: 95px 0;
-  background-color: #fcf6f5;
+  background-color: #fcfafb;
 }
 .about__title {
   margin-bottom: 40px;
 }
 .about__content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -220,11 +215,9 @@ ul li {
 }
 .rooms__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -236,7 +229,6 @@ ul li {
   font-weight: 600;
   margin-bottom: 24px;
   -webkit-transform: translateX(-29px);
-      -ms-transform: translateX(-29px);
           transform: translateX(-29px);
 }
 .rooms__guest {
@@ -274,20 +266,17 @@ ul li {
 }
 
 .pool {
-  background-color: #fcf6f5;
+  background-color: #fcfafb;
   padding: 95px 0;
 }
 .pool__wrapper {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -313,30 +302,25 @@ ul li {
 }
 .galery__wrap {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .transfer {
-  background-color: #fcf6f5;
+  background-color: #fcfafb;
   padding: 95px 0;
 }
 .transfer__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -370,15 +354,12 @@ ul li {
 }
 .contacts__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 19px;
@@ -391,7 +372,7 @@ ul li {
   max-width: 437px;
   width: 100%;
   padding: 28px;
-  background: #fcf6f5;
+  background: #fcfafb;
   border-radius: 12px;
   box-shadow: 0px 0px 2px 0px black;
 }
@@ -407,16 +388,16 @@ ul li {
   margin-bottom: 10px;
 }
 .contacts__tel:hover {
-  -moz-text-decoration-line: underline;
-       text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .contacts__mail {
   display: block;
   margin-bottom: 20px;
 }
 .contacts__mail:hover {
-  -moz-text-decoration-line: underline;
-       text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .footer {
@@ -426,15 +407,12 @@ ul li {
 }
 .footer__wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
@@ -450,4 +428,93 @@ ul li {
 }
 .footer__copy {
   text-align: center;
+  font-size: 11px;
+  color: #ccc;
+}
+
+.popap__inner {
+  max-width: 320px;
+  min-height: 400px;
+  margin: 50px auto;
+  background: #fcfafb;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px 0px black;
+  position: relative;
+}
+.popap__button-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+.popap__button-close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 25px;
+  height: 2px;
+  background: #000;
+}
+.popap__button-close span:last-child {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popap__title {
+  padding: 20px 10px;
+  background: #ff2400;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 35px;
+}
+.popap__title-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.popap__title-text {
+  text-align: center;
+  font-size: 16px;
+}
+.popap__form {
+  text-align: center;
+  padding: 0 15px;
+}
+.popap__form-input {
+  display: block;
+  width: 85%;
+  min-height: 50px;
+  border-radius: 12px;
+  border: 1px solid black;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 15px;
+  outline: none;
+}
+.popap__form-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 36px;
+  width: 85%;
+  padding: 17px 21px;
+  background: #ff2400;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  outline: none;
+}
+.popap__form-button:hover {
+  background: #ff4b2f;
 }
