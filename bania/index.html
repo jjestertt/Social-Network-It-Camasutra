@@ -238,9 +238,9 @@
                     <h3 class="popap__title-title">Оставьте заявку</h3>
                     <p class="popap__title-text">и мы вам перезвоним в течении нескольких минут</p>
                 </div>
-                <form action="" class="popap__form">
-                    <input class="popap__form-input" type="text" placeholder="Имя">
-                    <input class="popap__form-input" type="phone" placeholder="Телефон">
+                <form action="mail.php" method="POST" class="popap__form">
+                    <input name="user_name" class="popap__form-input" type="text" placeholder="Имя">
+                    <input name="user_phone" class="popap__form-input" type="phone" placeholder="Телефон">
                     <button class="popap__form-button" type="submit">Отправить</button>
                 </form>
             </div>
