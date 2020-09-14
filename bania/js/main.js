@@ -17,24 +17,32 @@ for (let smoothLink of smoothLinks) {
 let getPopapButton = document.querySelectorAll('.popap-btn');
 let closePopapButton = document.querySelector('.popap__button-close');
 let popapWindow = document.querySelector('.popap');
+let popapWindowInner = document.querySelector('.popap__inner');
 let body = document.querySelector('body');
 //show popap
 let showPopap = (e) => {
     e.preventDefault();
-    popapWindow.classList.remove('popap__hide');
+    popapWindow.classList.add('popap-active');
+    popapWindowInner.classList.add('popap__inner-active');
     body.classList.add('overflow');
 }
 //hide popap
 let hidePopap = (e) => {
     e.preventDefault();
-    popapWindow.classList.add('popap__hide');
+    popapWindowInner.classList.remove('popap__inner-active');
     body.classList.remove('overflow');
+    setTimeout(() => {
+        popapWindow.classList.remove('popap-active');
+    }, 400)
 }
 
 for (i = 0; i < getPopapButton.length; i++) {
     getPopapButton[i].addEventListener('click', showPopap);
 }
 closePopapButton.addEventListener('click', hidePopap);
+
+
+
 //animation
 AOS.init({
     // Global settings:

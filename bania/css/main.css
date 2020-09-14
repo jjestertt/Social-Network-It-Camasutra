@@ -190,8 +190,7 @@ ul li {
   position: relative;
   margin-bottom: 28px;
 }
-.about__list-item::before {
-  content: "";
+.about__list-item span {
   position: absolute;
   top: -25%;
   left: 0;
@@ -200,19 +199,19 @@ ul li {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.about__list-item1::before {
+.about__list-item1 span {
   background-image: url(..//img/about/bus.png);
 }
-.about__list-item2::before {
+.about__list-item2 span {
   background-image: url(..//img/about/parking.png);
 }
-.about__list-item3::before {
+.about__list-item3 span {
   background-image: url(..//img/about/wifi.png);
 }
-.about__list-item4::before {
+.about__list-item4 span {
   background-image: url(..//img/about/pool.png);
 }
-.about__list-item5::before {
+.about__list-item5 span {
   background-image: url(..//img/about/billiards.png);
 }
 
@@ -249,14 +248,14 @@ ul li {
   position: relative;
   margin-bottom: 20px;
 }
-.rooms__guest::before {
-  content: "";
+.rooms__guest-icon {
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
   height: 30px;
-  background: url(..//img/rooms/person.png) no-repeat;
+  background-image: url(..//img/rooms/person.png);
+  background-repeat: no-repeat;
 }
 .rooms__list-item {
   font-size: 19px;
@@ -264,16 +263,16 @@ ul li {
   position: relative;
   margin-bottom: 25px;
 }
-.rooms__list-item::before {
-  content: "";
+.rooms__list-item_icon {
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
   height: 30px;
-  background: url(..//img/rooms/bedroom.png) no-repeat;
+  background-image: url(..//img/rooms/bedroom.png);
+  background-repeat: no-repeat;
 }
-.rooms__list-item span {
+.rooms__list-item_bold {
   font-weight: bold;
 }
 
@@ -465,6 +464,10 @@ ul li {
   padding-top: 15px;
 }
 
+.popap {
+  opacity: 0;
+  visibility: hidden;
+}
 .popap__wrapper {
   position: fixed;
   width: 100vw;
@@ -474,6 +477,7 @@ ul li {
   background: rgba(0, 0, 0, 0.85);
 }
 .popap__inner {
+  opacity: 0;
   min-width: 290px;
   max-width: 310px;
   min-height: 400px;
@@ -484,9 +488,11 @@ ul li {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -40%);
+      -ms-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 .popap__button-close {
   position: absolute;
@@ -574,6 +580,13 @@ ul li {
 .popap__form-button:hover {
   background: #ff4b2f;
 }
-.popap__hide {
-  display: none;
+.popap-active {
+  visibility: visible;
+  opacity: 1;
+}
+.popap__inner-active {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

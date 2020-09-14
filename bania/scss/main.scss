@@ -161,6 +161,7 @@ ul li{
   &__list{
     margin-top: 36px;
   }
+
   &__list-item{
     display: block;
     min-height: 50px;
@@ -168,30 +169,30 @@ ul li{
     padding-left: 70px;
     position: relative;
     margin-bottom: 28px;
-    &::before{
-      content: "";
-      position: absolute;
-      top: -25%;
-      left: 0;
-      width: 50px;
-      height: 50px;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-    }
   }
-  &__list-item1::before{
-    background-image: url(..//img/about/bus.png) ;
+  &__list-item span{
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
-  &__list-item2::before{
+
+  &__list-item1 span{
+    background-image: url(..//img/about/bus.png);
+  }
+  &__list-item2 span{
     background-image: url(..//img/about/parking.png);
   }
-  &__list-item3::before{
+  &__list-item3 span{
     background-image: url(..//img/about/wifi.png);
   }
-  &__list-item4::before{
+  &__list-item4 span{
     background-image: url(..//img/about/pool.png);
   }
-  &__list-item5::before{
+  &__list-item5 span{
     background-image: url(..//img/about/billiards.png);
   }
 }
@@ -217,15 +218,15 @@ ul li{
     font-size: 16px;
     padding-left: 40px;
     position: relative;
-    margin-bottom: 20px;
-    &::before{
-      content: "";
+    margin-bottom: 20px;  
+    &-icon{
       position: absolute;
       top: 0;
       left: 0;
       width: 30px;
       height: 30px;
-      background: url(..//img/rooms/person.png) no-repeat;
+      background-image: url(..//img/rooms/person.png);
+      background-repeat: no-repeat;
     }
   }
   &__list-item{
@@ -233,18 +234,18 @@ ul li{
     padding-left: 40px;
     position: relative;
     margin-bottom: 25px;
-    &::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      background: url(..//img/rooms/bedroom.png) no-repeat;
-    }
-    & span{
-      font-weight: bold;
-    }
+  }
+  &__list-item_icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(..//img/rooms/bedroom.png);
+    background-repeat: no-repeat;
+  }
+  &__list-item_bold{
+    font-weight: bold;
   }
 }
 .pool{
@@ -393,6 +394,8 @@ ul li{
   }
 }
 .popap{
+  opacity: 0;
+  visibility: hidden;
   &__wrapper{
     position: fixed;
     width: 100vw;
@@ -402,6 +405,7 @@ ul li{
     background: rgba(0,0,0,0.85);
   }
   &__inner{
+    opacity: 0;
     min-width: 290px;
     max-width: 310px;
     min-height:400px;
@@ -414,7 +418,8 @@ ul li{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
+    transition-duration: 400ms;
   }
   &__button-close{
     position: absolute;
@@ -501,7 +506,12 @@ ul li{
       background: $btn-color-hover;
     }
   }
-  &__hide{
-    display: none;
+  &-active{
+    visibility: visible;
+    opacity: 1;
+  }
+  &__inner-active{
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
