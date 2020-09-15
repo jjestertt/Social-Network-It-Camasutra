@@ -63,6 +63,9 @@
         &__wrapper{
             flex-wrap: wrap;
         }
+        &__wrapper:last-child{
+            flex-wrap: wrap-reverse;
+          }
         &__list, &__guest{
             max-width: 310px;
             margin: 0 auto;

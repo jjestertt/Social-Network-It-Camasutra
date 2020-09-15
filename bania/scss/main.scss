@@ -204,9 +204,14 @@ ul li{
   &__wrapper{
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  &__wrapper:last-child{
+    margin-top: 60px;
   }
   &__content{
-    padding:20px 20px 0 88px;
+    padding:20px 20px 0 50px;
+    max-width: 500px;
   }
   &__content-title{
     font-size: 26px;

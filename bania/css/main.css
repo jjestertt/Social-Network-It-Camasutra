@@ -230,9 +230,17 @@ ul li {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.rooms__wrapper:last-child {
+  margin-top: 60px;
 }
 .rooms__content {
-  padding: 20px 20px 0 88px;
+  padding: 20px 20px 0 50px;
+  max-width: 500px;
 }
 .rooms__content-title {
   font-size: 26px;

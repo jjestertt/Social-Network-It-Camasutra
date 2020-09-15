@@ -68,6 +68,11 @@
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+  .rooms__wrapper:last-child {
+    -webkit-flex-wrap: wrap-reverse;
+        -ms-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
+  }
   .rooms__list, .rooms__guest {
     max-width: 310px;
     margin: 0 auto;
