@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+a {
+    text-decoration: none; 
+    color: inherit;
+  }
+h1, h2, h3, h4, ul, li, form, input {
+    margin: 0;
+    padding: 0; 
+}
+ul li{
+  list-style: none;
+}
+.container{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.header{
+  padding: 15px 0;
+  &-wrapper{
+    padding: 15px;
+    background: rgb(100, 100, 100);
+    color: darkorange;
+    text-align: center;
+  }
+}
+
+.section{
+  &__inner{
+      background: rgb(235, 235, 235);
+      padding: 20px;
+    }
+    &__title{
+      -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+  }
+  .add-task{
+    &__form{
+      &-text{
+        width: 100%;
+        padding: 15px;
+      }
+      &-help{
+        display: block;
+        color: rgb(129, 129, 129);
+        margin-bottom: 15px;
+      }
+      &-button{
+        padding: 15px 30px;
+        border: none;
+        -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        background-color: dodgerblue;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+  .tasks{
+    &__title{
+      margin-bottom: 10px;
+    }
+    margin-bottom: 10px;
+    &-list__item {
+      -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        padding: 7px 15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    &-list__buttons{
+      display: flex;
+      min-width: 70px;
+      justify-content: space-between;
+    }
+    & .button {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      &:hover{
+       background-color: #ccc;
+      }
+    }
+  }
+ 
