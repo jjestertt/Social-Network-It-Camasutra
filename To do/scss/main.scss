@@ -98,10 +98,26 @@ ul li{
     & .button {
       width: 30px;
       height: 30px;
-      border: 1px solid #ccc;
       cursor: pointer;
+      border: 1px solid #ccc;
+      transition: 600ms;
       &:hover{
-       background-color: #ccc;
+        border-radius: 50%;
+      }
+    }
+    &-list__item-delete{
+      position: relative;
+      & span{
+        width: 25px;
+        height: 1px;
+        background: #ccc;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      & span:last-child{
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
     }
   }

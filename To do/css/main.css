@@ -86,7 +86,23 @@ ul li {
   .tasks .button {
     width: 30px;
     height: 30px;
+    cursor: pointer;
     border: 1px solid #ccc;
-    cursor: pointer; }
+    -webkit-transition: 600ms;
+    transition: 600ms; }
     .tasks .button:hover {
-      background-color: #ccc; }
+      border-radius: 50%; }
+  .tasks-list__item-delete {
+    position: relative; }
+    .tasks-list__item-delete span {
+      width: 25px;
+      height: 1px;
+      background: #ccc;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg); }
+    .tasks-list__item-delete span:last-child {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+              transform: translate(-50%, -50%) rotate(-45deg); }
