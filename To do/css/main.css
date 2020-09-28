@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
+body, html {
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif; }
 
 a {
@@ -17,6 +18,10 @@ h1, h2, h3, h4, ul, li, form, input {
 ul li {
   list-style: none; }
 
+.wrapper {
+  min-height: 100%;
+  background-color: #38361f29; }
+
 .container {
   max-width: 1000px;
   width: 100%;
@@ -28,7 +33,7 @@ ul li {
   padding: 15px 0; }
   .header-wrapper {
     padding: 15px;
-    background: #646464;
+    background: #191919;
     color: darkorange;
     text-align: center; }
 
@@ -41,24 +46,32 @@ ul li {
   display: block;
   font-weight: bold;
   font-size: 17px;
-  margin-bottom: 7px; }
+  margin-bottom: 10px; }
 
-.add-task__form-text {
-  width: 100%;
-  padding: 15px; }
-.add-task__form-help {
-  display: block;
-  color: #818181;
-  margin-bottom: 15px; }
-.add-task__form-button {
-  padding: 15px 30px;
-  border: none;
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  background-color: dodgerblue;
-  color: white;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold; }
+.add-task {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.33%;
+          flex: 1 1 33.33%; }
+  .add-task__form-text {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    margin-bottom: 3px;
+    height: 60px; }
+  .add-task__form-help {
+    display: block;
+    color: #818181;
+    margin-bottom: 15px;
+    font-size: 14px; }
+  .add-task__form-button {
+    padding: 15px 30px;
+    border: none;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    background-color: dodgerblue;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold; }
 
 .tasks {
   margin-bottom: 10px; }
@@ -73,6 +86,9 @@ ul li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 15px;
     margin-bottom: 5px; }
   .tasks-list__buttons {
@@ -83,26 +99,31 @@ ul li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .tasks .button .icon-checkmark:before, .tasks .button .icon-cross:before {
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    font-size: 20px;
+    color: #636363; }
   .tasks .button {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid #383838;
+    outline: none;
     -webkit-transition: 600ms;
     transition: 600ms; }
-    .tasks .button:hover {
-      border-radius: 50%; }
-  .tasks-list__item-delete {
-    position: relative; }
-    .tasks-list__item-delete span {
-      width: 25px;
-      height: 1px;
-      background: #ccc;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%) rotate(45deg);
-              transform: translate(-50%, -50%) rotate(45deg); }
-    .tasks-list__item-delete span:last-child {
-      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-              transform: translate(-50%, -50%) rotate(-45deg); }
+  .tasks-list__item-empty {
+    padding: 24px 15px; }
+  .tasks-list__item-text--complete {
+    text-decoration: line-through; }
+  .tasks .icon-checkmark--complete:before {
+    content: "\e984"; }
+
+@media (min-width: 992px) {
+  .tasks .button:hover {
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 6px; }
+    .tasks .button:hover .icon-checkmark:before, .tasks .button:hover .icon-cross:before {
+      color: white; } }
