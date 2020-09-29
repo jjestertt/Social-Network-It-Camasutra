@@ -1,30 +1,32 @@
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 body, html {
-  height: 100vh;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif; }
 
 a {
   text-decoration: none;
   color: inherit; }
 
+ul li {
+  list-style: none; }
+
 h1, h2, h3, h4, ul, li, form, input {
   margin: 0;
   padding: 0; }
 
-ul li {
-  list-style: none; }
-
 .wrapper {
+  position: relative;
   min-height: 100%;
+  padding-bottom: 245px;
+  width: 100%;
   background-color: #38361f29; }
 
 .container {
   max-width: 1000px;
-  width: 100%;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px; }
@@ -41,84 +43,81 @@ ul li {
   background: #ebebeb;
   padding: 20px; }
 .section__title {
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid #ccc;
   padding: 10px 15px;
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 17px;
   margin-bottom: 10px; }
 
+.tasks__title {
+  margin-bottom: 10px; }
+.tasks-list {
+  max-height: 40vh;
+  overflow: auto; }
+.tasks-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 15px;
+  margin-bottom: 5px; }
+.tasks-list__item-text {
+  line-height: 30px;
+  padding-right: 15px; }
+.tasks-list__item-empty {
+  padding: 24px 15px; }
+.tasks-list__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.tasks .button .icon-checkmark:before, .tasks .button .icon-cross:before {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  font-size: 20px;
+  color: #636363; }
+.tasks .button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #383838;
+  outline: none;
+  -webkit-transition: 600ms;
+  transition: 600ms; }
+  .tasks .button:last-child {
+    margin-left: 10px; }
+.tasks-list__item-text--complete {
+  text-decoration: line-through; }
+.tasks .icon-checkmark--complete:before {
+  content: "\e984"; }
+
 .add-task {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.33%;
-          flex: 1 1 33.33%; }
+  position: absolute;
+  bottom: 10px;
+  width: 100%; }
   .add-task__form-text {
     width: 100%;
-    padding: 8px;
+    padding: 8px 15px;
     outline: none;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     height: 60px; }
-  .add-task__form-help {
-    display: block;
-    color: #818181;
-    margin-bottom: 15px;
-    font-size: 14px; }
   .add-task__form-button {
     padding: 15px 30px;
     border: none;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    border: 1px solid #ccc;
     background-color: dodgerblue;
     color: white;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold; }
-
-.tasks {
-  margin-bottom: 10px; }
-  .tasks__title {
-    margin-bottom: 10px; }
-  .tasks-list__item {
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-    padding: 7px 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 15px;
-    margin-bottom: 5px; }
-  .tasks-list__buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-width: 70px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .tasks .button .icon-checkmark:before, .tasks .button .icon-cross:before {
-    display: block;
-    text-align: center;
-    line-height: 28px;
-    font-size: 20px;
-    color: #636363; }
-  .tasks .button {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 1px solid #383838;
-    outline: none;
-    -webkit-transition: 600ms;
-    transition: 600ms; }
-  .tasks-list__item-empty {
-    padding: 24px 15px; }
-  .tasks-list__item-text--complete {
-    text-decoration: line-through; }
-  .tasks .icon-checkmark--complete:before {
-    content: "\e984"; }
 
 @media (min-width: 992px) {
   .tasks .button:hover {
