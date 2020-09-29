@@ -44,6 +44,7 @@ h1, h2, h3, h4, ul, li, form, input {
   padding: 20px; }
 .section__title {
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px 15px;
   display: block;
   font-weight: normal;
@@ -63,6 +64,7 @@ h1, h2, h3, h4, ul, li, form, input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 5px 15px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -107,12 +109,16 @@ h1, h2, h3, h4, ul, li, form, input {
     width: 100%;
     padding: 8px 15px;
     outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     margin-bottom: 10px;
     height: 60px; }
   .add-task__form-button {
     padding: 15px 30px;
     border: none;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
     background-color: dodgerblue;
     color: white;
     font-size: 14px;

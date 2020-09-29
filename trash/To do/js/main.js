@@ -1,19 +1,35 @@
 const form = document.querySelector('.add-task__form');
 const input = document.querySelector('.add-task__form-text');
-const inputEmpty = document.querySelector('.tasks-list__item-empty');
 const formList = document.querySelector('.tasks-list');
 
 // Проверка пустого списка
-let checkListEmpty = () => {
+const checkListEmpty = () => {
+   const inputEmpty = document.querySelector('.tasks-list__item-empty');
    if (formList.children.length > 1) {
       inputEmpty.style.display = "none";
    }
-   else {
+   else if (formList.children.length <= 1) {
       inputEmpty.style.display = "block";
+      //Очистка Local Storage при обнулении списка;
+      localStorage.clear();
+
    }
 }
+// Добавление эллемента в local Storage
+const setToStorage = () => {
+   localStorage.setItem('formList', formList.innerHTML);
+}
+//Вызов эллемента из Local Storage
+const getFromStorage = () => {
+   const formListHTML = localStorage.getItem('formList');
+   if (formListHTML != null) {
+      formList.innerHTML = formListHTML;
+   }
+}
+//Запуск функции вызова
+getFromStorage();
 
-// Добавление задачи на страницу
+//Добавление задачи на страницу
 form.addEventListener('submit', (event) => {
    event.preventDefault();
    //Получаем значение формы
@@ -32,6 +48,8 @@ form.addEventListener('submit', (event) => {
    checkListEmpty();
    //Обнуляем форму
    input.value = '';
+   // Lобавление эллемента в local Storage
+   setToStorage();
 });
 
 //Инициализация кнопки
@@ -39,9 +57,11 @@ formList.addEventListener('click', (event) => {
    //Удалить задание
    if (event.target.getAttribute('id') == 'task-delete') {
       event.target.closest('li').remove();
+      // Lобавление эллемента в local Storage
+      setToStorage();
+      //Проверяем, пустой ли список
       checkListEmpty();
    }
-
    //Выполнить задание
    else if (event.target.getAttribute('id') == 'task-check') {
       const checkParentLi = event.target.closest('li');
@@ -51,6 +71,8 @@ formList.addEventListener('click', (event) => {
       //Присваиваем класc
       iconCheck.classList.toggle('icon-checkmark--complete');
       paragraph.classList.toggle('tasks-list__item-text--complete');
+      // Lобавление эллемента в local Storage
+      setToStorage();
    }
 });
 
