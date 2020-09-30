@@ -21,7 +21,7 @@ h1, h2, h3, h4, ul, li, form, input {
 .wrapper {
   position: relative;
   min-height: 100%;
-  padding-bottom: 245px;
+  padding-bottom: 255px;
   width: 100%;
   background-color: #38361f29; }
 
@@ -57,7 +57,14 @@ h1, h2, h3, h4, ul, li, form, input {
   margin-bottom: 10px; }
 .tasks-list {
   max-height: 40vh;
-  overflow: auto; }
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
 .tasks-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
