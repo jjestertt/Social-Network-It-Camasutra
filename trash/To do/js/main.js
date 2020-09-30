@@ -38,8 +38,8 @@ form.addEventListener('submit', (event) => {
    const htmlTask = `<li class="tasks-list__item">
                         <p class="tasks-list__item-text">${dataTask}</p>
                         <div class="tasks-list__buttons">
-                           <button  class="button tasks-list__item-check"><span id='task-check' class="icon-checkmark"></button>
-                           <button class="button tasks-list__item-delete"><span id='task-delete' class="icon-cross"></button>
+                           <button class="button tasks-list__item-check"><span id='task-check' class="tasks-list__icon-check"></button>
+                           <button class="button tasks-list__item-delete"><span id='task-delete' class="icon-delete"></button>
                         </div>
                      </li>`;
    //Добавляем код на страницу
@@ -66,11 +66,11 @@ formList.addEventListener('click', (event) => {
    else if (event.target.getAttribute('id') == 'task-check') {
       const checkParentLi = event.target.closest('li');
       const paragraph = checkParentLi.querySelector('.tasks-list__item-text');
-      const iconCheck = checkParentLi.querySelector('.icon-checkmark');
-
+      const buttonCheck = checkParentLi.querySelector('.tasks-list__icon-check');
       //Присваиваем класc
-      iconCheck.classList.toggle('icon-checkmark--complete');
+      checkParentLi.classList.toggle('tasks-list__item--complete');
       paragraph.classList.toggle('tasks-list__item-text--complete');
+      buttonCheck.classList.toggle('tasks-list__icon-check--complete');
       // Lобавление эллемента в local Storage
       setToStorage();
    }
