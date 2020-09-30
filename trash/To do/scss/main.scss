@@ -20,7 +20,7 @@ h1, h2, h3, h4, ul, li, form, input {
 .wrapper{
   position: relative;
   min-height: 100%;
-  padding-bottom:245px;
+  padding-bottom:255px;
   width: 100%;
   background-color: #38361f29;
 }
@@ -61,6 +61,8 @@ h1, h2, h3, h4, ul, li, form, input {
     &-list{
       max-height: 40vh;
       overflow: auto;
+      display: flex;
+      flex-direction: column-reverse;
     }
     &-list__item {
         display: flex;
@@ -110,7 +112,7 @@ h1, h2, h3, h4, ul, li, form, input {
   }
   .add-task{
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     width: 100%;
     &__form{
       &-text{
