@@ -2,12 +2,18 @@
 const cartWrapper = document.querySelector('.cart-wrapper');
 
 //Проверка путой корзины
-// let checkEmptyCart = () => {
-//    let dataCartEmpty = document.querySelector('[data-cart-empty]');
-//    if (cartWrapper.children > 0) {
-//       ``    dataCartEmpty.style
-//    }
-// }
+let checkEmptyCart = () => {
+   //Находим текст "Корзина пуста"
+   let dataCartEmpty = document.querySelector('[data-cart-empty]');
+   //Если эллементы есть вкорзине, то скрываем надпись
+   if (cartWrapper.childElementCount > 0) {
+      dataCartEmpty.style.display = 'none';
+   }
+   //Иначе показываем ее
+   else {
+      dataCartEmpty.style.display = 'block';
+   }
+}
 
 //Навешиваем событие клика на страницу
 window.addEventListener('click', function (event) {
@@ -19,46 +25,47 @@ window.addEventListener('click', function (event) {
       //Ищем карту товара по которой произошел клик
       const curentCard = event.target.closest('.card');
 
-      //Подтягиваем информацию с карты товара по которой произошел клик
-      const currentProductId = curentCard.dataset.id;
-      const currentProductImg = curentCard.querySelector('.product-img');
-      const currentItemTitle = curentCard.querySelector('.item-title');
-      const currentTextMuted = curentCard.querySelector('.text-muted');
-      const currentPriceWeight = curentCard.querySelector('.price__weight');
-      const currentDataCounter = curentCard.querySelector('.items__current');
-      const currentPriceCurrency = curentCard.querySelector('.price__currency');
-
+      //Подтягиваем информацию с карты товара по которой произошел клик в обьект
+      const currentCardItem = {
+         id: curentCard.dataset.id,
+         productImgSrc: curentCard.querySelector('.product-img').src,
+         title: curentCard.querySelector('.item-title').innerText,
+         textMuted: curentCard.querySelector('.text-muted').innerText,
+         priceWeight: curentCard.querySelector('.price__weight').innerText,
+         dataCounter: curentCard.querySelector('.items__current').innerText,
+         priceCurrency: curentCard.querySelector('.price__currency').innerText
+      }
 
       //Создаем проверку есть ли товар с таким id в корзине
-      let currentCartItem = cartWrapper.querySelector(`[data-id = '${currentProductId}']`);
+      let currentCartItem = cartWrapper.querySelector(`[data-id = '${currentCardItem.id}']`);
       console.log(currentCartItem);
       if (currentCartItem) {
          //Находим количество товара эллемента который уже есть в корзине
          let currentCartCounter = currentCartItem.querySelector('[data-counter]');
 
          //Добавляем к нему количество товара которое мы выбрали
-         currentCartCounter.innerText = parseInt(currentCartCounter.innerText) + parseInt(currentDataCounter.innerText);
+         currentCartCounter.innerText = parseInt(currentCartCounter.innerText) + parseInt(currentCardItem.dataCounter);
       }
 
       //Если товара нет, то мы его просто добавляем
       else {
          //Создаем HTML элемент для корзины
-         const cartItem = `<div class="cart-item" data-id="${currentProductId}">
+         const cartItem = `<div class="cart-item" data-id="${currentCardItem.id}">
                               <div class="cart-item__top">
                                  <div class="cart-item__img">
-                                    <img src="${currentProductImg.src}" alt="">
+                                    <img src="${currentCardItem.productImgSrc}" alt="">
                                  </div>
                                  <div class="cart-item__desc">
-                                    <div class="cart-item__title">${currentItemTitle.innerText}</div>
-                                    <div class="cart-item__weight">${currentTextMuted.innerText} / ${currentPriceWeight.innerText}</div>
+                                    <div class="cart-item__title">${currentCardItem.title}</div>
+                                    <div class="cart-item__weight">${currentCardItem.textMuted} / ${currentCardItem.priceWeight}</div>
                                     <div class="cart-item__details">
                                        <div class="items items--small counter-wrapper">
                                           <div class="items__control" data-action="minus">-</div>
-                                          <div class="items__current" data-counter="">${currentDataCounter.innerText}</div>
+                                          <div class="items__current" data-counter="">${currentCardItem.dataCounter}</div>
                                           <div class="items__control" data-action="plus">+</div>
                                        </div>
                                        <div class="price">
-                                          <div class="price__currency">${currentPriceCurrency.innerText}</div>
+                                          <div class="price__currency">${currentCardItem.priceCurrency}</div>
                                        </div>
                                     </div>
                                  </div>
@@ -67,6 +74,9 @@ window.addEventListener('click', function (event) {
          //Добавлляем в корзину полученую карточку товара
          cartWrapper.insertAdjacentHTML('beforeend', cartItem);
       }
-      currentDataCounter.innerText = '1';
+      //Проверяем корзину на пустоту
+      checkEmptyCart()
+      //Обнуляем счетчик карточки
+      currentCardItem.dataCounter = '1';
    }
 })
