@@ -1,7 +1,15 @@
 //Находим обертку корзины
 const cartWrapper = document.querySelector('.cart-wrapper');
-//Навешиваем событие клика на страницу
 
+//Проверка путой корзины
+// let checkEmptyCart = () => {
+//    let dataCartEmpty = document.querySelector('[data-cart-empty]');
+//    if (cartWrapper.children > 0) {
+//       ``    dataCartEmpty.style
+//    }
+// }
+
+//Навешиваем событие клика на страницу
 window.addEventListener('click', function (event) {
 
    //Если произошел клик по кнопке добавить в корзину
@@ -20,12 +28,16 @@ window.addEventListener('click', function (event) {
       const currentDataCounter = curentCard.querySelector('.items__current');
       const currentPriceCurrency = curentCard.querySelector('.price__currency');
 
+
       //Создаем проверку есть ли товар с таким id в корзине
-      if (cartWrapper.querySelector(`[data-id = '${currentProductId}']`) != null) {
+      let currentCartItem = cartWrapper.querySelector(`[data-id = '${currentProductId}']`);
+      console.log(currentCartItem);
+      if (currentCartItem) {
          //Находим количество товара эллемента который уже есть в корзине
+         let currentCartCounter = currentCartItem.querySelector('[data-counter]');
 
          //Добавляем к нему количество товара которое мы выбрали
-
+         currentCartCounter.innerText = parseInt(currentCartCounter.innerText) + parseInt(currentDataCounter.innerText);
       }
 
       //Если товара нет, то мы его просто добавляем
@@ -55,5 +67,6 @@ window.addEventListener('click', function (event) {
          //Добавлляем в корзину полученую карточку товара
          cartWrapper.insertAdjacentHTML('beforeend', cartItem);
       }
+      currentDataCounter.innerText = '1';
    }
 })
