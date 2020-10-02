@@ -5,13 +5,20 @@ const cartWrapper = document.querySelector('.cart-wrapper');
 let checkEmptyCart = () => {
    //Находим текст "Корзина пуста"
    let dataCartEmpty = document.querySelector('[data-cart-empty]');
-   //Если эллементы есть вкорзине, то скрываем надпись
+   let cartTotal = document.querySelector('.cart-total');
+   let orderForm = document.querySelector('#order-form');
+
+   //Если эллементы есть вкорзине, то скрываем надпись и показываем форму заказа
    if (cartWrapper.childElementCount > 0) {
       dataCartEmpty.style.display = 'none';
+      cartTotal.style.display = 'block';
+      orderForm.style.display = 'block';
    }
    //Иначе показываем ее
    else {
       dataCartEmpty.style.display = 'block';
+      cartTotal.style.display = 'none';
+      orderForm.style.display = 'none';
    }
 }
 
@@ -35,10 +42,8 @@ window.addEventListener('click', function (event) {
          dataCounter: curentCard.querySelector('.items__current').innerText,
          priceCurrency: curentCard.querySelector('.price__currency').innerText
       }
-
       //Создаем проверку есть ли товар с таким id в корзине
       let currentCartItem = cartWrapper.querySelector(`[data-id = '${currentCardItem.id}']`);
-      console.log(currentCartItem);
       if (currentCartItem) {
          //Находим количество товара эллемента который уже есть в корзине
          let currentCartCounter = currentCartItem.querySelector('[data-counter]');
@@ -74,9 +79,10 @@ window.addEventListener('click', function (event) {
          //Добавлляем в корзину полученую карточку товара
          cartWrapper.insertAdjacentHTML('beforeend', cartItem);
       }
+
+      //Обнуляем счетчик карточки
+      curentCard.querySelector('.items__current').innerText = '1';
       //Проверяем корзину на пустоту
       checkEmptyCart()
-      //Обнуляем счетчик карточки
-      currentCardItem.dataCounter = '1';
    }
 })
