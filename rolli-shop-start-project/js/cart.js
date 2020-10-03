@@ -22,7 +22,7 @@ let checkEmptyCart = () => {
    }
 }
 
-//Навешиваем событие клика на страницу
+//Добавляем эллемент в корзину
 window.addEventListener('click', function (event) {
 
    //Если произошел клик по кнопке добавить в корзину
@@ -84,5 +84,21 @@ window.addEventListener('click', function (event) {
       curentCard.querySelector('.items__current').innerText = '1';
       //Проверяем корзину на пустоту
       checkEmptyCart()
+   }
+})
+
+
+//Удаление товаров из корзины
+cartWrapper.addEventListener('click', (event) => {
+   if (event.target.dataset.action === 'minus') {
+      //Ищем ближайшего родителя (карту)
+      const curentCartItem = event.target.closest('.cart-item');
+      let curentCartItemCounter = curentCartItem.querySelector('[data-counter]');
+      if (curentCartItemCounter.innerText === '1') {
+         //Удаляем товар
+         curentCartItem.remove();
+         //Проверяем корзину на пустоту
+         checkEmptyCart();
+      }
    }
 })
