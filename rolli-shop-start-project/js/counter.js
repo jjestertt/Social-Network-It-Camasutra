@@ -10,6 +10,7 @@ window.addEventListener('click', function (event) {
       if (event.target.dataset.action === 'plus') {
          // Увеличиваем счетчик
          dataCounter.innerText = ++dataCounter.innerText;
+         counterPrise();
       }
 
       //Если - Уменьшаем значение счетчика
@@ -17,6 +18,7 @@ window.addEventListener('click', function (event) {
          // Уменьшаем счетчик если он больше 1 
          if (dataCounter.innerText > 1) {
             dataCounter.innerText = --dataCounter.innerText;
+            counterPrise();
          }
       }
    }

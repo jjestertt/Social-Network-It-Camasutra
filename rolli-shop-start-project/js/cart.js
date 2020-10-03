@@ -20,6 +20,7 @@ let checkEmptyCart = () => {
       cartTotal.style.display = 'none';
       orderForm.style.display = 'none';
    }
+   counterPrise();
 }
 
 //Добавляем эллемент в корзину
@@ -30,17 +31,17 @@ window.addEventListener('click', function (event) {
       console.log('Rolls has been added to cart');
 
       //Ищем карту товара по которой произошел клик
-      const curentCard = event.target.closest('.card');
+      const currentCard = event.target.closest('.card');
 
       //Подтягиваем информацию с карты товара по которой произошел клик в обьект
       const currentCardItem = {
-         id: curentCard.dataset.id,
-         productImgSrc: curentCard.querySelector('.product-img').src,
-         title: curentCard.querySelector('.item-title').innerText,
-         textMuted: curentCard.querySelector('.text-muted').innerText,
-         priceWeight: curentCard.querySelector('.price__weight').innerText,
-         dataCounter: curentCard.querySelector('.items__current').innerText,
-         priceCurrency: curentCard.querySelector('.price__currency').innerText
+         id: currentCard.dataset.id,
+         productImgSrc: currentCard.querySelector('.product-img').src,
+         title: currentCard.querySelector('.item-title').innerText,
+         textMuted: currentCard.querySelector('.text-muted').innerText,
+         priceWeight: currentCard.querySelector('.price__weight').innerText,
+         dataCounter: currentCard.querySelector('.items__current').innerText,
+         priceCurrency: currentCard.querySelector('.price__currency').innerText
       }
       //Создаем проверку есть ли товар с таким id в корзине
       let currentCartItem = cartWrapper.querySelector(`[data-id = '${currentCardItem.id}']`);
@@ -67,7 +68,7 @@ window.addEventListener('click', function (event) {
                                        <div class="items items--small counter-wrapper">
                                           <div class="items__control" data-action="minus">-</div>
                                           <div class="items__current" data-counter="">${currentCardItem.dataCounter}</div>
-                                          <div class="items__control" data-action="plus">+</div>
+                                          <div class="items__control" data-action="plus" >+</div>
                                        </div>
                                        <div class="price">
                                           <div class="price__currency">${currentCardItem.priceCurrency}</div>
@@ -81,7 +82,7 @@ window.addEventListener('click', function (event) {
       }
 
       //Обнуляем счетчик карточки
-      curentCard.querySelector('.items__current').innerText = '1';
+      currentCard.querySelector('.items__current').innerText = '1';
       //Проверяем корзину на пустоту
       checkEmptyCart()
    }
@@ -92,13 +93,37 @@ window.addEventListener('click', function (event) {
 cartWrapper.addEventListener('click', (event) => {
    if (event.target.dataset.action === 'minus') {
       //Ищем ближайшего родителя (карту)
-      const curentCartItem = event.target.closest('.cart-item');
-      let curentCartItemCounter = curentCartItem.querySelector('[data-counter]');
-      if (curentCartItemCounter.innerText === '1') {
+      const currentCartItem = event.target.closest('.cart-item');
+      let currentCartItemCounter = currentCartItem.querySelector('[data-counter]');
+      if (currentCartItemCounter.innerText === '1') {
          //Удаляем товар
-         curentCartItem.remove();
+         currentCartItem.remove();
          //Проверяем корзину на пустоту
          checkEmptyCart();
       }
    }
 })
+
+
+
+//Функция пересчета цен
+//Слушаем нажатия на кнопки + - у айтема корзины
+function counterPrise() {
+   //Создаем переменную цены со значением 0
+   let totalPrise = 0;
+   //Ищем все карточки товара в корзине
+   let currentItem = cartWrapper.querySelectorAll('.cart-item');
+   //Методом forEach перебираем все карточки товара
+   currentItem.forEach(function (item) {
+      //Цена 1 айтема
+      let itemPrice = item.querySelector('.price__currency').innerText;
+      //Количество товара
+      let itemCounter = item.querySelector('[data-counter]').innerText;
+      //Сумма 1го айтема(Зависит от количества)
+      let prise = parseInt(itemPrice) * parseInt(itemCounter);
+      // Прибавляем сумму 1 айтема к общей сумме
+      totalPrise += prise;
+   });
+   //Записываем общуюю сумму в корзине
+   document.querySelector('.total-price').innerText = totalPrise;
+}
