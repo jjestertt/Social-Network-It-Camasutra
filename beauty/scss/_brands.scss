@@ -1,0 +1,22 @@
+.brands {
+   background-color: #efefef;
+   &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      background-color: #fff;
+      flex: 0 0 25%;
+      height: 118px;
+      border: 1px solid #EFEFEF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 400ms;
+      &:hover{
+      transform: scale(1.02);
+      }
+   }
+}

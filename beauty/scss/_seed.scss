@@ -1,0 +1,24 @@
+.seed {
+   background-color: #EFEFEF;
+   padding: 80px 0 100px 0;
+}
+.section-card__title {
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 28px;
+}
+.seed-title {
+   margin-bottom: 38px;
+}
+.seed-card {
+		&__wrapper {
+         display: flex;
+         justify-content: space-between;
+		}
+
+		&__item {
+         &:not(:last-child){
+            margin-right: 15px;
+         }
+		}
+}

@@ -1,0 +1,20 @@
+.footer-copy {
+   padding: 25px 0;
+   background: #EFEFEF;
+   font-size: 12px;
+   line-height: 14px;
+   color: #828282;
+}
+.footer-copy-wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+.footer-copytext {
+
+}
+.footer-copy-politic {
+   transition: 300px;
+   &:hover{
+      text-decoration: underline;
+   }
+}

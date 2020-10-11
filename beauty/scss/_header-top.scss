@@ -1,0 +1,24 @@
+.header-top{
+   padding: 16px 0;
+   background: #E5E5E5;
+}
+.header-top__menu-list {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+}
+.header-top__menu-item {
+
+   &:not(:last-child){
+      margin-right: 30px;
+   }
+}
+.header-top__menu-link {
+   font-size: 14px;
+   line-height: 16px;
+   transition: 300ms;
+   color: #333333;
+   &:hover{
+      text-decoration: underline;
+   }
+}
