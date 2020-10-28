@@ -1,0 +1,43 @@
+.post{
+  padding: 20px 15px 15px 0;
+}
+.photo{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius:50%;
+}
+.person{
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  
+}
+.text{
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+
+/* like */
+.like{
+  display: flex;
+  justify-content: flex-end;
+}
+.button{
+margin-right: 5px;
+}
+.counter{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff7979;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+}
+

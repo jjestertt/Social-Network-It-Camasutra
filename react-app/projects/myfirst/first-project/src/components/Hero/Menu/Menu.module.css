@@ -1,0 +1,40 @@
+.menu{
+   flex: 0 0 17%;
+   padding:15px;
+  }
+ .item{
+   display: block;
+  }
+ .item:not(:last-child){
+  margin-bottom: 10px;
+  }
+  .item:last-child{
+    margin-top: 30px;
+  }
+ .link{
+   font-size: 16px;
+     position: relative;
+     overflow: hidden;
+  }
+ .link:before{
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 1px;
+     background: #ff7979;
+     transition: width 300ms;
+ }
+
+ .link:hover:before{
+     width: 100%;
+     transition: width 300ms;
+ }
+.active {
+    color: #ff7979;
+}
+
+ 
+
+ 

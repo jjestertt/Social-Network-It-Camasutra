@@ -1,0 +1,29 @@
+.item{
+    display: block;
+
+}
+.item:not(:last-child){
+    margin-bottom: 60px;
+}
+.link{
+    width: 100%;
+    padding-left: 60px;
+    display: block;
+    transition: transform 300ms;
+    position: relative;
+}
+.link::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #cccccc;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.link_active{
+    color: #ff7979;
+    transform: scale(1.1);
+}
