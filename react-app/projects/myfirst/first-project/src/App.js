@@ -5,12 +5,14 @@ import Hero from './components/Hero/Hero.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
 
-
-const App = () => {
+const App = (props) => {
   return (
     <div className="App">
       <Header />
-      <Hero />
+      <Hero
+          dialogs={props.dialogs}
+          messages={props.messages}
+          posts={props.posts}/>
       <Footer />
     </div>
   );

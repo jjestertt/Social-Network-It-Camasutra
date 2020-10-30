@@ -9,7 +9,7 @@ import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 
 
-const Hero = () => {
+const Hero = (props) => {
     return (
         <BrowserRouter>
             <section className={style.hero}>
@@ -17,8 +17,8 @@ const Hero = () => {
                     <div className={style.wrapper}>
                         <Menu/>
                         <div className={style.content}>
-                            <Route path="/profile" component={Profile}/>
-                            <Route path="/messages" component={Messages}/>
+                            <Route path="/profile" render={() => <Profile posts={props.posts}/> }/>
+                            <Route path="/messages" render={() => <Messages dialogs={props.dialogs} messages={props.messages} />}/>
                             <Route path="/news" component={News}/>
                             <Route path="/music" component={Music}/>
                             <Route path="/settings" component={Settings}/>

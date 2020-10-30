@@ -4,11 +4,11 @@ import {NavLink} from "react-router-dom";
 import Dialogs from "./Dialogs/Dialogs";
 import Message from "./Message/Message";
 
-const Messages = () => {
+const Messages = (props) => {
     return (
         <div className={style.wrapper}>
-            <Dialogs />
-            <Message />
+            <Dialogs dialogs={props.dialogs} />
+            <Message messages={props.messages} />
         </div>
     );
 }
