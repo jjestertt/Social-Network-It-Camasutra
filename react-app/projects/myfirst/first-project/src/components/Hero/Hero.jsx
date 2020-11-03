@@ -8,19 +8,35 @@ import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 
-
 const Hero = (props) => {
     return (
         <BrowserRouter>
             <section className={style.hero}>
                 <div className="container">
                     <div className={style.wrapper}>
-                        <Menu/>
+                        <Menu friends={props.state.friends}/>
                         <div className={style.content}>
-                            <Route path="/profile" render={() => <Profile posts={props.posts}/> }/>
-                            <Route path="/messages" render={() => <Messages dialogs={props.dialogs} messages={props.messages} />}/>
+                            {/*ProfilePage*/}
+                            <Route path="/profile" render={() => <Profile
+                                addPost={props.addPost}
+                                newPostText={props.state.profilePage.newPostText}
+                                updateNewPostText={props.updateNewPostText}
+                                posts={props.state.profilePage.posts}/>
+                            }/>
+
+                            {/*MessagePage*/}
+                            <Route path="/messages" render={() => <Messages
+                                dialogs={props.state.messagesPage.dialogs}
+                                messages={props.state.messagesPage.messages}/>}
+                            />
+
+                            {/*NewsPage*/}
                             <Route path="/news" component={News}/>
+
+                            {/*MusicPage*/}
                             <Route path="/music" component={Music}/>
+
+                            {/*SettingsPage*/}
                             <Route path="/settings" component={Settings}/>
                         </div>
                     </div>

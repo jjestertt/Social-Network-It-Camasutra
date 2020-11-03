@@ -1,8 +1,9 @@
 import React from 'react';
 import style from './Menu.module.css';
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
 
-const Menu = () => {
+const Menu = (props) => {
     return (
         <aside className={style.menu}>
             <ul className={style.list}>
@@ -12,6 +13,8 @@ const Menu = () => {
                 <li className={style.item}><NavLink to="/music" activeClassName={style.active} className={style.link}>Music</NavLink></li>
                 <li className={style.item}><NavLink to="/settings" activeClassName={style.active} className={style.link}>Settings</NavLink></li>
             </ul>
+
+            <Friends friends={props.friends}/>
         </aside>
     );
 }

@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c93e184c-ddd4-47f5-947a-25d4edd5f38f" name="Default Changelist" comment="" />
+    <list default="true" id="c93e184c-ddd4-47f5-947a-25d4edd5f38f" name="Default Changelist" comment="123" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -50,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Menu/Friends/FriendItem" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -63,13 +64,34 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends\FriendItem" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message\MessageItem" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Dialogs\dialog_item" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Contacts" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.eject" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,6 +107,11 @@
       <workItem from="1603911174828" duration="11796000" />
       <workItem from="1603995816500" duration="2792000" />
       <workItem from="1604076133929" duration="3881000" />
+      <workItem from="1604096831796" duration="3525000" />
+      <workItem from="1604182918527" duration="7093000" />
+      <workItem from="1604340676827" duration="3166000" />
+      <workItem from="1604355764608" duration="4889000" />
+      <workItem from="1604391397087" duration="5618000" />
     </task>
     <servers />
   </component>
@@ -103,11 +130,34 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="550" y="255" key="#ESLint" timestamp="1603833560134">
+    <state x="550" y="255" key="#ESLint" timestamp="1604359340009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="550" y="255" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1603833560134" />
+    <state x="550" y="255" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1604359340009" />
+    <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604397911383">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604397911383" />
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1604398015783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604398015783" />
+    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1604398015783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604398015783" />
+    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1604398015783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604398015783" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1604398015783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604398015783" />
     <state x="171" y="0" key="SettingsEditor" timestamp="1603833360835">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -116,9 +166,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1042" height="500" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1604076282359" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1604081122654">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1604397827393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604081122654" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604397827393" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604397824518">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604397824518" />
   </component>
 </project>

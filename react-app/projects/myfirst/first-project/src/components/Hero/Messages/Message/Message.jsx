@@ -1,11 +1,12 @@
 import React from 'react';
 import style from './Message.module.css';
 import MessageItem from "./MessageItem/MessageItem";
+import AddMessage from "./AddMessage/AddMessage";
 
 
 const Messages = (props) => {
 
-    let dialogItem = props.messages.map(el => <MessageItem id={el.id} message={el.message} />);
+    let dialogItem = props.messages.map(el => <MessageItem key={el.id} id={el.id} message={el.message} />);
 
     return (
             <div className={style.message}>
@@ -13,6 +14,7 @@ const Messages = (props) => {
                 <ul className={style.list}>
                     {dialogItem}
                 </ul>
+                <AddMessage />
             </div>
     );
 }

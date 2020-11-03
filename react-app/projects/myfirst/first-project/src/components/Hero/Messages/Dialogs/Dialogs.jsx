@@ -5,7 +5,7 @@ import DialogItem from "./dialog_item/Dialog_item";
 
 const Dialogs = (props) => {
 
-    let dialogItem = props.dialogs.map( el => <DialogItem id={el.id} name={el.name} /> );
+    let dialogItem = props.dialogs.map( el => <DialogItem key={el.id} id={el.id} name={el.name} /> );
 
     return (
             <div className={style.contacts}>

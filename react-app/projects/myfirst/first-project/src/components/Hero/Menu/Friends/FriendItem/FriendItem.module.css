@@ -1,0 +1,16 @@
+.friendItem{
+    flex: 0 0 33%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.photo{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.name{
+    font-size: 13px;
+}
