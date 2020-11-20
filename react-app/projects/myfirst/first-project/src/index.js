@@ -1,11 +1,20 @@
-import state from "./redux/state";
-import {rerenderEntireTree} from "./render";
+import React from 'react';
+import ReactDOM from "react-dom";
+import App from "./App";
+import {store} from "./redux/state";
 
-//Первая отрисовка дерева
-rerenderEntireTree(state);
+//Функция отрисовки документа на странице
+export let rerenderEntireTree = () => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App
+                dispatch={store.dispatch.bind(store)}
+                state={store.getState()}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
 
+rerenderEntireTree();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
+store.subscribe(rerenderEntireTree);

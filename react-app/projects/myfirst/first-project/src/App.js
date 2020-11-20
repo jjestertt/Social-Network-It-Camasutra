@@ -11,10 +11,8 @@ const App = (props) => {
     <div className="App">
       <Header />
       <Hero
-          state={props.state}
-          addPost={props.addPost}
-          updateNewPostText={props.updateNewPostText}
-      />
+          dispatch={props.dispatch}
+          state={props.state}/>
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const FriendItem = (props) => {
     return(
         <NavLink to={`/profile/${props.id}`} className={style.friendItem}>
-            <img src={props.photo} className={style.photo}></img>
+            <img src={props.photo} className={style.photo} alt="This is me"/>
             <p className={style.name}>{props.name}</p>
         </NavLink>
     )

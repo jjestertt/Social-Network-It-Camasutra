@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -112,6 +112,14 @@
       <workItem from="1604340676827" duration="3166000" />
       <workItem from="1604355764608" duration="4889000" />
       <workItem from="1604391397087" duration="5618000" />
+      <workItem from="1604442210721" duration="4031000" />
+      <workItem from="1604490072146" duration="6000" />
+      <workItem from="1604509615410" duration="8391000" />
+      <workItem from="1604701485696" duration="2680000" />
+      <workItem from="1604739833066" duration="817000" />
+      <workItem from="1605823690855" duration="146000" />
+      <workItem from="1605824978280" duration="3165000" />
+      <workItem from="1605904452228" duration="3953000" />
     </task>
     <servers />
   </component>
@@ -142,6 +150,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604397911383" />
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605904590548">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605904590548" />
+    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604446044615">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604446044615" />
     <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1604398015783">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
