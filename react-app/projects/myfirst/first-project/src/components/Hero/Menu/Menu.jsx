@@ -14,7 +14,7 @@ const Menu = (props) => {
                 <li className={style.item}><NavLink to="/settings" activeClassName={style.active} className={style.link}>Settings</NavLink></li>
             </ul>
 
-            <Friends friends={props.friends}/>
+            <Friends friends={props.friends.friendsItem}/>
         </aside>
     );
 }

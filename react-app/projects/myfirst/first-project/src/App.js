@@ -12,6 +12,7 @@ const App = (props) => {
       <Header />
       <Hero
           dispatch={props.dispatch}
+          store={props.store}
           state={props.state}/>
       <Footer />
     </div>

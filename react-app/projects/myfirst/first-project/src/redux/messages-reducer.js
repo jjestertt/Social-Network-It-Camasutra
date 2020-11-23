@@ -1,7 +1,22 @@
 const ADD_MESSAGE = 'ADD_MESSAGE';
 const ADD_NEW_MESSAGE_TEXT ='ADD_NEW_MESSAGE_TEXT';
 
-const messagesReducer = (state, action) =>{
+let initialState = {
+        //Массив диалогов
+        dialogs: [
+            {id: 1, name: 'Макс'},
+            {id: 2, name: 'Саша'},
+            {id: 3, name: 'Лера'},
+            {id: 4, name: 'Инокентий'},
+            {id: 5, name: 'Днепро'},
+        ],
+        //Массив сообщений
+        messages: [],
+        newMessageText: '',
+        messageId: 1
+}
+
+const messagesReducer = (state = initialState, action) =>{
     switch (action.type){
         case ADD_MESSAGE:
             let message = {
@@ -15,13 +30,12 @@ const messagesReducer = (state, action) =>{
             state.newMessageText = '';
             return state;
         case ADD_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.text;
+            state.newMessageText = action.value;
             return state;
         default:
             return state;
     }
 }
-
 
 export const addMessageCreator = () =>{
     return {type: ADD_MESSAGE}

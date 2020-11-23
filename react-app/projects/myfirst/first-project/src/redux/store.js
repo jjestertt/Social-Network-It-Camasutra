@@ -2,7 +2,7 @@
 import profileReducer from "./profile-reducer";
 import messagesReducer from "./messages-reducer";
 
-export const store = {
+const store = {
     //Function rerender will run if everything subscribe on it
     _subscriber(){
         console.log('Нет подписчиков');
@@ -51,5 +51,4 @@ export const store = {
     },
 }
 
-
-
+export default store;

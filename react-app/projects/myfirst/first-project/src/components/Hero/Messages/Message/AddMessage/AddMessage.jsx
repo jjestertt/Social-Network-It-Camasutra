@@ -1,19 +1,17 @@
 import React from 'react';
 import style from "./AddMessage.module.css";
-import {addMessageCreator, onMessageChangeCreator} from "../../../../../redux/messages-reducer";
+
 
 const AddMessage = (props) => {
     //Добовляем новое сообщение и записываем его в массив state.messagePage.messages
-    const addMessage = (e) => {
+    const onAddMessage = (e) => {
         e.preventDefault();
-        //Send to dispatch function ActionCreator
-        props.dispatch(addMessageCreator());
+        props.addMessage();
     }
-
     //Обновляем текст введенный в textarea в сообщениях и записываем его в переменную state.messagePage.newMessageText
     const onMessageChange = (event) => {
         let text = event.target.value;
-        props.dispatch(onMessageChangeCreator(text));
+        props.messageChange(text)
     }
 
     return (
@@ -24,7 +22,7 @@ const AddMessage = (props) => {
                 placeholder="Add message"
                 value={props.newMessageText}
             />
-            <button onClick={addMessage} type="submit">Send</button>
+            <button onClick={onAddMessage} type="submit">Send</button>
         </form>
     )
 }

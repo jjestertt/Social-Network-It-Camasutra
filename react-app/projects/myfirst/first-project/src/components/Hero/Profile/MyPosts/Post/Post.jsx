@@ -1,7 +1,14 @@
 import React from 'react';
 import style from './Post.module.css';
 
+
+
 const Post = (props) => {
+
+    let onLike = () => {
+
+    }
+
    return (
       <div className={style.post}>
          <div className={style.person}>
@@ -10,7 +17,7 @@ const Post = (props) => {
          </div>
          <p className={style.text}>{props.postText}</p>
          <div className={style.like}>
-            <button className={style.button}>Лайк</button>
+            <button className={style.button} onClick={onLike}>Лайк</button>
             <span className={style.counter}>{props.likeCounter}</span>
          </div>
       </div >

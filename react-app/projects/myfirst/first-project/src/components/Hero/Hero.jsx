@@ -18,17 +18,12 @@ const Hero = (props) => {
                         <div className={style.content}>
                             {/*ProfilePage*/}
                             <Route path="/profile" render={() => <Profile
-                                dispatch={props.dispatch}
-                                profilePage={props.state.profilePage}
-
+                                store={props.store}
                             />
                             }/>
-
                             {/*MessagePage*/}
                             <Route path="/messages" render={() => <Messages
-                                dispatch={props.dispatch}
-                                dialogs={props.state.messagesPage.dialogs}
-                                messagePage={props.state.messagesPage}
+                                store={props.store}
                             />}
                             />
 
