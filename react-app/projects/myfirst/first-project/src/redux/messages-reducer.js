@@ -18,20 +18,26 @@ let initialState = {
 
 const messagesReducer = (state = initialState, action) =>{
     switch (action.type){
-        case ADD_MESSAGE:
+        case ADD_MESSAGE: {
+            let copyState = {...state};
+            copyState.messages = [...state.messages]
             let message = {
-                id: state.messageId,
-                message: state.newMessageText
+                id: copyState.messageId,
+                message: copyState.newMessageText
             }
-            state.messages.push(message);
+            copyState.messages.push(message);
             //Прибавляем значение id сообщения
-            state.messageId++;
+            copyState.messageId++;
             //Очищаем textarea
-            state.newMessageText = '';
-            return state;
-        case ADD_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.value;
-            return state;
+            copyState.newMessageText = '';
+            return copyState;
+        }
+        case ADD_NEW_MESSAGE_TEXT:{
+            let copyState = {...state}
+            copyState.newMessageText = action.value;
+            return copyState;
+        }
+
         default:
             return state;
     }
@@ -40,7 +46,7 @@ const messagesReducer = (state = initialState, action) =>{
 export const addMessageCreator = () =>{
     return {type: ADD_MESSAGE}
 }
-export const onMessageChangeCreator = (text) =>{
+export const messageChangeCreator = (text) =>{
     return({
         type: ADD_NEW_MESSAGE_TEXT,
         value: text

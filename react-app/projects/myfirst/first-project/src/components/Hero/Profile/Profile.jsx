@@ -12,9 +12,7 @@ const Profile = (props) => {
                 imgURL="https://school298.spb.ru/images/400/DSC100485581.jpg"
             />
 
-            <MyPostsContainer
-                store={props.store}
-            />
+            <MyPostsContainer />
         </div>
     );
 }
