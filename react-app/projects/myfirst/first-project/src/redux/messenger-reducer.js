@@ -16,7 +16,7 @@ let initialState = {
         messageId: 1
 }
 
-const messagesReducer = (state = initialState, action) =>{
+const messengerReducer = (state = initialState, action) =>{
     switch (action.type){
         case ADD_MESSAGE: {
             let copyState = {...state};
@@ -52,4 +52,4 @@ export const messageChangeCreator = (text) =>{
         value: text
     })
 }
-export default messagesReducer;
+export default messengerReducer;

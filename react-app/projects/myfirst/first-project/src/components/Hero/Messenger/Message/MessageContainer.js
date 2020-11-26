@@ -1,11 +1,11 @@
 import {connect} from "react-redux";
 import Message from "./Message";
-import {addMessageCreator, messageChangeCreator} from "../../../../redux/messages-reducer";
+import {addMessageCreator, messageChangeCreator} from "../../../../redux/messenger-reducer";
 
 const mapStateToProps = (state) => {
     return ({
-        messages: state.messagesPage.messages,
-        newMessageText: state.messagesPage.newMessageText
+        messages: state.messengerPage.messages,
+        newMessageText: state.messengerPage.newMessageText
     });
 }
 const mapDispatchToProps = (dispatch) => {

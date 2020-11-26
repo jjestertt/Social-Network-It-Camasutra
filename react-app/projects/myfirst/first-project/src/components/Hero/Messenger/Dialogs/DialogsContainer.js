@@ -3,7 +3,7 @@ import Dialogs from './Dialogs';
 
 const mapStateToProps = (state) => {
     return {
-        dialogs: state.messagesPage.dialogs
+        dialogs: state.messengerPage.dialogs
     }
 }
 const mapDispatchToProps = (dispatch) => {

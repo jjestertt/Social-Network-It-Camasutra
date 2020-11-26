@@ -1,6 +1,6 @@
 //Create constants for actionCreators
 import profileReducer from "./profile-reducer";
-import messagesReducer from "./messages-reducer";
+import messengerReducer from "./messenger-reducer";
 
 const store = {
     //Function rerender will run if everything subscribe on it
@@ -46,7 +46,7 @@ const store = {
     },
     dispatch(action){
         this._state.profilePage = profileReducer(this._state.profilePage, action);
-        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._state.messagesPage = messengerReducer(this._state.messagesPage, action);
         this._subscriber();
     },
 }

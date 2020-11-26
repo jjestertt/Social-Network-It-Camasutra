@@ -10,10 +10,7 @@ const App = (props) => {
   return (
     <div className="App">
       <Header />
-      <Hero
-          dispatch={props.dispatch}
-          store={props.store}
-          state={props.state}/>
+      <Hero />
       <Footer />
     </div>
   );
