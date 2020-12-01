@@ -7,6 +7,8 @@ import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 import Messenger from "./Messenger/Messenger";
+import UsersPageContainer from "./Users/UsersPageContainer";
+
 
 
 const Hero = (props) => {
@@ -18,6 +20,8 @@ const Hero = (props) => {
                     <div className={style.content}>
                         {/*ProfilePage*/}
                         <Route path="/profile" component={Profile} />
+                        {/*UsersPage*/}
+                        <Route path="/users"  component={UsersPageContainer}/>
                         {/*MessagePage*/}
                         <Route path="/messenger" component={Messenger} />
                         {/*NewsPage*/}

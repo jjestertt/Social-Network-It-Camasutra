@@ -5,7 +5,7 @@ import Post from './Post/Post';
 const MyPosts = (props) => {
     //Пребираем элементы из массива posts state и создаем и добавляем на страницу компоненты на его основе;
     const postItem = props.posts
-        .map(el => <Post key={el.id} id={el.id} userName={el.userName} postText={el.postText} likeCounter={el.likeCounter} />);
+        .map(el => <Post key={el.id} id={el.id} userName={el.userName} postText={el.postText} likeCounter={el.likeCounter}  />);
 
     //Add post to wall
     const onAddPost = (e) => {

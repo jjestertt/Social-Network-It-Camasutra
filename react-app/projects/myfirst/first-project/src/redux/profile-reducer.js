@@ -4,7 +4,7 @@ let initialState = {
     //Массив записей на стене
     posts: [],
     newPostText: '',
-    postId: 1
+    postId: 1,
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -15,20 +15,18 @@ const profileReducer = (state = initialState, action) => {
                 userName: 'Сивак Максим',
                 likeCounter: 0,
                 postText: state.newPostText
+            }
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: '',
             };
-            let copyState = { ...state };
-            copyState.posts = [...state.posts];
-            copyState.posts.push(newPost);
-            //Прибавляем значение id поста на 1
-            copyState.postId++;
-            //Очищаем textarea
-            copyState.newPostText = '';
-            return copyState;
         }
         case UPDATE_NEW_POST_TEXT: {
-            let copyState = { ...state };
-            copyState.newPostText = action.value;
-            return copyState;
+            return {
+                ...state,
+                newPostText: action.value
+            };
         }
         default:
             return state;
@@ -37,11 +35,10 @@ const profileReducer = (state = initialState, action) => {
 
 //Action Creator on addPost
 export const addPostCreator = () => {
-    return ({ type: ADD_POST });
+    return ({type: ADD_POST});
 }
 //Action Creator onPostChange
 export const postChangeCreator = (text) => {
-    return ({ type: UPDATE_NEW_POST_TEXT, value: text });
+    return ({type: UPDATE_NEW_POST_TEXT, value: text});
 }
-
 export default profileReducer;

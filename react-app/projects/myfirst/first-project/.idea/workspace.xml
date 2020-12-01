@@ -65,16 +65,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger\Dialogs" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message\AddMessage" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\MyPosts" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends\FriendItem" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.AddMessageContainer.jsx">
@@ -144,6 +144,29 @@
       <workItem from="1606410940615" duration="4898000" />
       <workItem from="1606415927431" duration="2580000" />
       <workItem from="1606432050854" duration="292000" />
+      <workItem from="1606505816595" duration="408000" />
+      <workItem from="1606506264000" duration="127000" />
+      <workItem from="1606550495733" duration="374000" />
+      <workItem from="1606682611539" duration="268000" />
+      <workItem from="1606685280745" duration="1622000" />
+      <workItem from="1606724033246" duration="47000" />
+      <workItem from="1606754615871" duration="1768000" />
+      <workItem from="1606756432375" duration="1763000" />
+      <workItem from="1606758252676" duration="1764000" />
+      <workItem from="1606760067155" duration="1766000" />
+      <workItem from="1606761951619" duration="270000" />
+      <workItem from="1606770405942" duration="1287000" />
+      <workItem from="1606812697865" duration="1766000" />
+      <workItem from="1606814526688" duration="1537000" />
+      <workItem from="1606817551123" duration="1441000" />
+      <workItem from="1606819377921" duration="1360000" />
+      <workItem from="1606823084592" duration="1354000" />
+      <workItem from="1606824914025" duration="595000" />
+      <workItem from="1606827451107" duration="1463000" />
+      <workItem from="1606829278215" duration="1777000" />
+      <workItem from="1606831127469" duration="1404000" />
+      <workItem from="1606845993501" duration="1788000" />
+      <workItem from="1606847874364" duration="464000" />
     </task>
     <servers />
   </component>
@@ -174,10 +197,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604397911383" />
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606415338538">
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606830768703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1606415338538" />
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1606830768703" />
     <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606415437576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -206,10 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1068" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605981299993" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1606428889290">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606758803476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606428889290" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606758803476" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606412641889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
