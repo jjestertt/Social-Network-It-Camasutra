@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Messenger/Dialogs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Users" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -70,11 +70,11 @@
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Users" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger\Dialogs" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message\AddMessage" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\MyPosts" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends\FriendItem" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.AddMessageContainer.jsx">
@@ -167,6 +167,10 @@
       <workItem from="1606831127469" duration="1404000" />
       <workItem from="1606845993501" duration="1788000" />
       <workItem from="1606847874364" duration="464000" />
+      <workItem from="1606860199901" duration="1902000" />
+      <workItem from="1606862148334" duration="1772000" />
+      <workItem from="1606866802698" duration="718000" />
+      <workItem from="1606929862212" duration="119000" />
     </task>
     <servers />
   </component>
@@ -205,22 +209,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606415437576" />
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1606428779077">
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1606867525333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606428779077" />
-    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1606428779076">
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606867525333" />
+    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1606867525333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606428779076" />
-    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1606428779076">
+    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606867525333" />
+    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1606867525333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606428779076" />
-    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1606428779076">
+    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606867525333" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1606867525333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606428779076" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606867525333" />
     <state x="171" y="0" key="SettingsEditor" timestamp="1603833360835">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

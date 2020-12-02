@@ -6,13 +6,14 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-    <React.StrictMode>
+    //If we use strict mode components render happened several times... why it happen?
+     // <React.StrictMode>
         <Provider store={store}>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
-        </Provider>
-    </React.StrictMode>,
+        </Provider>,
+     // </React.StrictMode>,
     document.getElementById('root')
 );
 
