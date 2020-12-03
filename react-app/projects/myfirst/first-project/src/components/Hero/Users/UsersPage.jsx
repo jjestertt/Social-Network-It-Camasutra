@@ -4,19 +4,47 @@ import * as axios from "axios";
 import userPhoto from "../../../assets/image/user.png";
 
 class UsersPage extends React.Component {
-componentDidMount() {
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+    componentDidMount() {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+            .then(response => {
+                // this.props.setTotalUsersCount(response.data.totalCount);
+                this.props.setTotalUsersCount(100);
+                this.props.onSetUsers(response.data.items);
+            });
+    }
+
+    onSetCurrentPage = (page) => {
+        this.props.setCurrentPage(page);
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
             .then(response => {
                 this.props.onSetUsers(response.data.items);
             });
     }
 
     render() {
+        let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
+
+        let pages = [];
+        for (let i = 1; i <= pagesCount; i++) {
+            pages.push(i);
+        }
+
         return (
             <div className={style.wrapper}>
+                <div className={style.pagination}>
+                    {pages.map((page) => {
+                        return (
+                            <span key={page} onClick={() => {
+                                this.onSetCurrentPage(page)
+                            }}
+                                  className={`${this.props.currentPage === page && style.activePage} ${style.pages}`}>{page}
+                            </span>
+                        )
+                    })}
+                </div>
                 {this.props.users.map(user => {
                     return (
-                        <div className={style.user}>
+                        <div key={user.id} className={style.user}>
                             <img src={user.photos.small === null ? userPhoto : user.photos.small}
                                  alt="" className={style.photo}/>
                             <div className={style.description}>
@@ -27,7 +55,8 @@ componentDidMount() {
                                         : user.status}
                                 </p>
                                 <p className={style.location}>"user.location"</p>
-                                {user.isFollow
+                                <p className={style.userId}>id: {user.id}</p>
+                                {user.followed
                                     ? <button className={style.button} onClick={() => {
                                         this.props.onUnFollow(user.id)
                                     }}>Un Follow</button>

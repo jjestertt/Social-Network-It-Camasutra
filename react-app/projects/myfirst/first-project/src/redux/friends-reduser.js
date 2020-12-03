@@ -7,7 +7,7 @@ let initialState = {
 const friendsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_FRIENDS:
-            return { ...state, friends: [...state.friends, ...action.friends] }
+            return { ...state, friends: [...action.friends] }
         default:
             return state;
     }
