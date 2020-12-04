@@ -2,12 +2,12 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import style from './Hero.module.css';
 import Menu from './Menu/Menu.jsx';
-import Profile from './Profile/Profile.jsx';
 import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 import Messenger from "./Messenger/Messenger";
 import UsersContainer from "./Users/UsersContainer";
+import ProfileContainer from "./Profile/ProfileContainer";
 
 
 
@@ -19,7 +19,7 @@ const Hero = (props) => {
                     <Menu />
                     <div className={style.content}>
                         {/*ProfilePage*/}
-                        <Route path="/profile" component={Profile} />
+                        <Route path="/profile" component={ProfileContainer} />
                         {/*UsersPage*/}
                         <Route path="/users"  component={UsersContainer}/>
                         {/*MessagePage*/}

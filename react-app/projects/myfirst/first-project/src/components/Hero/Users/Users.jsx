@@ -2,6 +2,8 @@ import style from "./Users.module.css";
 import userPhoto from "../../../assets/image/user.png";
 import React from "react";
 import preloader from "./../../../assets/image/preloader.svg"
+import Preloader from "../../General/Preloader";
+import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
     
@@ -14,9 +16,7 @@ const Users = (props) => {
 
     return (
         <div className={style.wrapper}>
-            {props.isFetch ? <div className="preloader">
-                <img src={preloader} style={ {position: 'absolute', top: '50%', left: '50%', zIndex: '1'}} alt=""/>
-            </div>
+            {props.isFetch ? <Preloader />
             : null}
 
             <div className={style.pagination}>
@@ -33,8 +33,8 @@ const Users = (props) => {
             {props.users.map(user => {
                 return (
                     <div key={user.id} className={style.user}>
-                        <img src={user.photos.small === null ? userPhoto : user.photos.small}
-                             alt="" className={style.photo}/>
+                        <NavLink to={`/profile/${user.id}`}><img src={user.photos.small === null ? userPhoto : user.photos.small}
+                                      alt="" className={style.photo}/></NavLink>
                         <div className={style.description}>
                             <h3 className={style.userName}>{user.name}</h3>
                             <p className={style.status}>{
@@ -46,10 +46,10 @@ const Users = (props) => {
                             <p className={style.userId}>id: {user.id}</p>
                             {user.followed
                                 ? <button className={style.button} onClick={() => {
-                                    props.onUnFollow(user.id)
+                                    props.unFollow(user.id)
                                 }}>Unfollow</button>
                                 : <button className={style.button} onClick={() => {
-                                    props.onFollow(user.id)
+                                    props.follow(user.id)
                                 }}>Follow</button>
                             }
                         </div>

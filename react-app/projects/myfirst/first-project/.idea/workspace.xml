@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Menu/Friends" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Profile" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -65,16 +65,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Users" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger\Dialogs" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message\AddMessage" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\MyPosts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.AddMessageContainer.jsx">
@@ -177,6 +177,11 @@
       <workItem from="1606988393794" duration="1772000" />
       <workItem from="1606990208377" duration="1947000" />
       <workItem from="1606996731479" duration="1610000" />
+      <workItem from="1607004476786" duration="1317000" />
+      <workItem from="1607006306243" duration="1312000" />
+      <workItem from="1607035954941" duration="1778000" />
+      <workItem from="1607037768542" duration="1783000" />
+      <workItem from="1607039591467" duration="1150000" />
     </task>
     <servers />
   </component>
@@ -215,37 +220,37 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606415437576" />
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1606998352855">
+    <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1607006640299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606998352855" />
-    <state width="1343" height="172" key="GridCell.Tab.0.center" timestamp="1606998352855">
+    <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607006640299" />
+    <state width="1343" height="172" key="GridCell.Tab.0.center" timestamp="1607006640299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606998352855" />
-    <state width="1343" height="172" key="GridCell.Tab.0.left" timestamp="1606998352855">
+    <state width="1343" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607006640299" />
+    <state width="1343" height="172" key="GridCell.Tab.0.left" timestamp="1607006640283">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606998352855" />
-    <state width="1343" height="172" key="GridCell.Tab.0.right" timestamp="1606998352855">
+    <state width="1343" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607006640283" />
+    <state width="1343" height="172" key="GridCell.Tab.0.right" timestamp="1607006640299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606998352855" />
+    <state width="1343" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607006640299" />
     <state x="171" y="0" key="SettingsEditor" timestamp="1603833360835">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="171" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603833360835" />
-    <state x="0" y="0" width="1068" height="713" key="dock-window-1" timestamp="1605981299993">
+    <state x="0" y="0" width="1088" height="713" key="dock-window-1" timestamp="1607036312273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="1068" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605981299993" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1606990997177">
+    <state x="0" y="0" width="1088" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607036312273" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1607038573487">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606990997177" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606412641889">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607038573487" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607006860905">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606412641889" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607006860905" />
   </component>
 </project>

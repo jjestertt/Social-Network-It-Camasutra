@@ -1,10 +1,12 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
+
 let initialState = {
-    //Массив записей на стене
     posts: [],
     newPostText: '',
     postId: 1,
+    userProfile: null,
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -28,6 +30,12 @@ const profileReducer = (state = initialState, action) => {
                 newPostText: action.value
             };
         }
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                userProfile: action.userProfile
+            }
+        }
         default:
             return state;
     }
@@ -41,4 +49,8 @@ export const addPostCreator = () => {
 export const postChangeCreator = (text) => {
     return ({type: UPDATE_NEW_POST_TEXT, value: text});
 }
+export const setUserProfile = (userProfile) => {
+    return ({type: SET_USER_PROFILE, userProfile});
+}
+
 export default profileReducer;

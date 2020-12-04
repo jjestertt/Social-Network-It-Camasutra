@@ -12,7 +12,7 @@ let initialState = {
     currentPage : 1,
     isFetch: false
 }
-
+//Reducer
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
@@ -52,22 +52,24 @@ const usersReducer = (state = initialState, action) => {
     }
 }
 
-export const followAC = (userId) => {
+
+//Action creators
+export const follow = (userId) => {
     return ({type: FOLLOW, userId: userId});
 }
-export const unFollowAC = (userId) => {
+export const unFollow = (userId) => {
     return ({type: UNFOLLOW, userId: userId})
 }
-export const setUsersAC = (users) => {
+export const setUsers = (users) => {
     return ({type: SET_USERS, users: users})
 }
-export const setCurrentPageAC = (currentPage) => {
+export const setCurrentPage = (currentPage) => {
     return ({ type: SET_CURRENT_PAGE, currentPage})
 }
-export const setTotalUsersCountAC = (totalUsersCount) => {
+export const setTotalUsersCount = (totalUsersCount) => {
     return ({ type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 }
-export const toggleIsFetchAC = (isFetch) => {
+export const toggleIsFetch = (isFetch) => {
     return ({ type: TOGGLE_IS_FETCH, isFetch})
 }
 

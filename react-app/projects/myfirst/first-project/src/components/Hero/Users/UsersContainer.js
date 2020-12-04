@@ -1,10 +1,10 @@
 import {connect} from "react-redux";
 import {
-    followAC,
-    setCurrentPageAC,
-    setTotalUsersCountAC,
-    setUsersAC, toggleIsFetchAC,
-    unFollowAC
+    follow,
+    unFollow,
+    setCurrentPage,
+    setTotalUsersCount,
+    setUsers, toggleIsFetch
 } from "../../../redux/users-reducer";
 import React from "react";
 import * as axios from "axios";
@@ -18,18 +18,20 @@ class UsersPage extends React.Component {
                 this.props.toggleIsFetch(false);
                 // this.props.setTotalUsersCount(response.data.totalCount);
                 this.props.setTotalUsersCount(100);
-                this.props.onSetUsers(response.data.items);
+                this.props.setUsers(response.data.items);
             });
     }
+
     onSetCurrentPage = (page) => {
         this.props.setCurrentPage(page);
         this.props.toggleIsFetch(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
             .then(response => {
                 this.props.toggleIsFetch(false);
-                this.props.onSetUsers(response.data.items);
+                this.props.setUsers(response.data.items);
             });
     }
+
     render() {
         return (
             <Users
@@ -38,8 +40,8 @@ class UsersPage extends React.Component {
                 currentPage={this.props.currentPage}
                 users={this.props.users}
                 onSetCurrentPage={this.onSetCurrentPage}
-                onUnFollow={this.props.onUnFollow}
-                onFollow={this.props.onFollow}
+                unFollow={this.props.unFollow}
+                follow={this.props.follow}
                 isFetch={this.props.isFetch}
             />
 
@@ -56,27 +58,32 @@ const mapStateToProps = (state) => {
         isFetch: state.usersPage.isFetch
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onFollow: (userId) => {
-            dispatch(followAC(userId))
-        },
-        onUnFollow: (userId) => {
-            dispatch(unFollowAC(userId))
-        },
-        onSetUsers: (users) => {
-            dispatch(setUsersAC(users));
-        },
-        setCurrentPage: (currentPage) => {
-            dispatch(setCurrentPageAC(currentPage));
-        },
-        setTotalUsersCount: (totalUsersCount) => {
-            dispatch(setTotalUsersCountAC(totalUsersCount));
-        },
-        toggleIsFetch: (isFetch) => {
-            dispatch(toggleIsFetchAC(isFetch));
-        }
-    }
-}
+//mapDispatchToProps можно передать как обьект прямо в коннект...
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         onFollow: (userId) => {
+//             dispatch(followAC(userId))
+//         },
+//         onUnFollow: (userId) => {
+//             dispatch(unFollowAC(userId))
+//         },
+//         onSetUsers: (users) => {
+//             dispatch(setUsersAC(users));
+//         },
+//         setCurrentPage: (currentPage) => {
+//             dispatch(setCurrentPageAC(currentPage));
+//         },
+//         setTotalUsersCount: (totalUsersCount) => {
+//             dispatch(setTotalUsersCountAC(totalUsersCount));
+//         },
+//         toggleIsFetch: (isFetch) => {
+//             dispatch(toggleIsFetchAC(isFetch));
+//         }
+//     }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersPage);
+export default connect(mapStateToProps, {
+    follow, unFollow, setUsers,
+   setCurrentPage, setTotalUsersCount, toggleIsFetch
+})
+(UsersPage);
