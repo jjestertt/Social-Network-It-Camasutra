@@ -1,0 +1,12 @@
+.auth {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.auth:hover {
+    border-bottom: 1px solid #fff;
+}
+.preloaderWrapper{
+    width: 40px;
+    height: 40px;
+}

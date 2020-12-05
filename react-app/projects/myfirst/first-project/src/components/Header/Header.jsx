@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import style from './Header.module.css';
+import LogIn from "./LogIn/LogIn";
+import LogInContainer from "./LogIn/LogInContainer";
 
 const Header = () => {
    return (
@@ -11,7 +13,7 @@ const Header = () => {
                   {/* <img src="" alt="" className={style.logo_img} logo-img">  */}
                   <p className={style.logo_text}>Втантанте</p>
                </NavLink>
-               <div className={style.contacts}><a href="tel:8000000000" className={style.tel}>8(800)-555-65-65</a></div>
+               <LogInContainer />
             </div>
          </div>
       </header>

@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header/LogIn" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -65,16 +65,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Header\LogIn" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\redux" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Users" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger\Dialogs" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messages\Message\AddMessage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.AddMessageContainer.jsx">
@@ -182,6 +182,16 @@
       <workItem from="1607035954941" duration="1778000" />
       <workItem from="1607037768542" duration="1783000" />
       <workItem from="1607039591467" duration="1150000" />
+      <workItem from="1607077042649" duration="1765000" />
+      <workItem from="1607078862996" duration="1773000" />
+      <workItem from="1607080678446" duration="564000" />
+      <workItem from="1607106424354" duration="736000" />
+      <workItem from="1607122597594" duration="273000" />
+      <workItem from="1607193955841" duration="1760000" />
+      <workItem from="1607195758180" duration="1771000" />
+      <workItem from="1607197573257" duration="1773000" />
+      <workItem from="1607199404242" duration="1777000" />
+      <workItem from="1607201252324" duration="1342000" />
     </task>
     <servers />
   </component>
@@ -212,10 +222,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604397911383" />
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606830768703">
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607194158390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1606830768703" />
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607194158390" />
     <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606415437576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -244,13 +254,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1088" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607036312273" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1607038573487">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607080812707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607038573487" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607006860905">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607080812707" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607196395343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607006860905" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607196395343" />
   </component>
 </project>

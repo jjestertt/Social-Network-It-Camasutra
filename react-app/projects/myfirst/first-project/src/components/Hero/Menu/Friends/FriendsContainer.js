@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import Friends from './Friends'
-import {setFriends} from "../../../../redux/friends-reduser";
+import {setFriends} from "../../../../redux/friends-reduсer";
 
 const mapStateToProps = (state) => {
     return {

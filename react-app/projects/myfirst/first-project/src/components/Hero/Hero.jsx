@@ -19,7 +19,7 @@ const Hero = (props) => {
                     <Menu />
                     <div className={style.content}>
                         {/*ProfilePage*/}
-                        <Route path="/profile" component={ProfileContainer} />
+                        <Route path="/profile/:userId?" component={ProfileContainer} />
                         {/*UsersPage*/}
                         <Route path="/users"  component={UsersContainer}/>
                         {/*MessagePage*/}

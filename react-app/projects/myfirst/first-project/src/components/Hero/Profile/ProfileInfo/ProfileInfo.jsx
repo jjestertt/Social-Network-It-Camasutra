@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './ProfileInfo.module.css';
 import user from './../../../../assets/image/user.png'
+
 const ProfileInfo = (props) => {
     return (
         <div className={style.ProfileInfo}>
@@ -14,11 +15,11 @@ const ProfileInfo = (props) => {
                         <span>Имя:</span> {props.userProfile.fullName}
                     </p>
                     <p className={style.description}>
-                        <p>Обо мне: </p> {props.userProfile.aboutMe}
+                       Обо мне:{props.userProfile.aboutMe ? props.userProfile.aboutMe : ' Не могу рассказать о себе'}
                     </p>
                     <p className={style.lookJob}>{props.userProfile.lookingForAJob
                         ? 'Работу ' + props.userProfile.lookingForAJobDescription
-                        : ' не предлагать'}</p>
+                        : 'Работу не предлагать'}</p>
                 </div>
             </div>
         </div>

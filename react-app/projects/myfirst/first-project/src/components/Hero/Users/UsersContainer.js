@@ -58,29 +58,6 @@ const mapStateToProps = (state) => {
         isFetch: state.usersPage.isFetch
     }
 }
-//mapDispatchToProps можно передать как обьект прямо в коннект...
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         onFollow: (userId) => {
-//             dispatch(followAC(userId))
-//         },
-//         onUnFollow: (userId) => {
-//             dispatch(unFollowAC(userId))
-//         },
-//         onSetUsers: (users) => {
-//             dispatch(setUsersAC(users));
-//         },
-//         setCurrentPage: (currentPage) => {
-//             dispatch(setCurrentPageAC(currentPage));
-//         },
-//         setTotalUsersCount: (totalUsersCount) => {
-//             dispatch(setTotalUsersCountAC(totalUsersCount));
-//         },
-//         toggleIsFetch: (isFetch) => {
-//             dispatch(toggleIsFetchAC(isFetch));
-//         }
-//     }
-// }
 
 export default connect(mapStateToProps, {
     follow, unFollow, setUsers,

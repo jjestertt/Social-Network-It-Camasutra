@@ -1,12 +1,11 @@
 import style from "./Users.module.css";
 import userPhoto from "../../../assets/image/user.png";
 import React from "react";
-import preloader from "./../../../assets/image/preloader.svg"
 import Preloader from "../../General/Preloader";
 import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
-    
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
@@ -16,8 +15,8 @@ const Users = (props) => {
 
     return (
         <div className={style.wrapper}>
-            {props.isFetch ? <Preloader />
-            : null}
+            {props.isFetch ? <div className={style.preloaderWrapper}><Preloader /></div>
+                : null}
 
             <div className={style.pagination}>
                 {pages.map((page) => {
@@ -33,8 +32,9 @@ const Users = (props) => {
             {props.users.map(user => {
                 return (
                     <div key={user.id} className={style.user}>
-                        <NavLink to={`/profile/${user.id}`}><img src={user.photos.small === null ? userPhoto : user.photos.small}
-                                      alt="" className={style.photo}/></NavLink>
+                        <NavLink to={`/profile/${user.id}`}><img
+                            src={user.photos.small === null ? userPhoto : user.photos.small}
+                            alt="" className={style.photo}/></NavLink>
                         <div className={style.description}>
                             <h3 className={style.userName}>{user.name}</h3>
                             <p className={style.status}>{
