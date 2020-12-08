@@ -46,14 +46,14 @@ const Users = (props) => {
                             <p className={style.location}>"user.location"</p>
                             <p className={style.userId}>id: {user.id}</p>
                             {user.followed
-                                ? <button className={style.button} onClick={() => {
+                                ? <button className={style.button} style={{color: 'red'}} onClick={() => {
                                     usersApi.unFollowUser(user.id).then(data => {
                                         if(data.resultCode === 0) {
                                             props.unFollow(user.id)
                                         }
                                     });
                                 }}>Unfollow</button>
-                                : <button className={style.button} onClick={() => {
+                                : <button className={style.button}  onClick={() => {
                                     usersApi.followUser(user.id).then(data => {
                                         if(data.resultCode === 0) {
                                             props.follow(user.id)
@@ -65,6 +65,17 @@ const Users = (props) => {
                     </div>
                 );
             })}
+            <div className={style.pagination}>
+                {pages.map((page) => {
+                    return (
+                        <span key={page} onClick={() => {
+                            props.onSetCurrentPage(page)
+                        }}
+                              className={`${props.currentPage === page && style.activePage} ${style.pages}`}>{page}
+                            </span>
+                    )
+                })}
+            </div>
         </div>
     );
 }

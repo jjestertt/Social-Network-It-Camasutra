@@ -17,7 +17,7 @@ class UsersPage extends React.Component {
             .then(data => {
                 this.props.toggleIsFetch(false);
                 // this.props.setTotalUsersCount(data.totalCount); Покажет реальное количество пользователей
-                this.props.setTotalUsersCount(100);
+                this.props.setTotalUsersCount(400);
                 this.props.setUsers(data.items);
             });
     }
