@@ -60,21 +60,21 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Header\LogIn" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\redux" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Menu\Friends" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Users" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.AddMessageContainer.jsx">
@@ -192,6 +192,8 @@
       <workItem from="1607197573257" duration="1773000" />
       <workItem from="1607199404242" duration="1777000" />
       <workItem from="1607201252324" duration="1342000" />
+      <workItem from="1607465928313" duration="1765000" />
+      <workItem from="1607467738222" duration="466000" />
     </task>
     <servers />
   </component>
@@ -246,18 +248,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607006640299" />
-    <state x="171" y="0" key="SettingsEditor" timestamp="1603833360835">
+    <state x="171" y="0" key="SettingsEditor" timestamp="1607466444870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="171" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603833360835" />
+    <state x="171" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607466444870" />
     <state x="0" y="0" width="1088" height="713" key="dock-window-1" timestamp="1607036312273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1088" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607036312273" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607080812707">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1607468037006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607080812707" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607468037006" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607196395343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
