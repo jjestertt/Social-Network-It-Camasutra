@@ -3,12 +3,10 @@ import userPhoto from "../../../assets/image/user.png";
 import React from "react";
 import Preloader from "../../General/Preloader";
 import {NavLink} from "react-router-dom";
-import usersApi from "../../../api/usersApi";
 
 const Users = (props) => {
-
+    //Обязательно нужно округлить пагинацию в большую сторону
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
@@ -16,20 +14,25 @@ const Users = (props) => {
 
     return (
         <div className={style.wrapper}>
-            {props.isFetch ? <div className={style.preloaderWrapper}><Preloader /></div>
-                : null}
-
+            {/*Прелоадер*/}
+            {props.isFetch
+                ? <div className={style.preloaderWrapper}><Preloader/></div>
+                : null
+            }
+            {/*Пагинация*/}
             <div className={style.pagination}>
                 {pages.map((page) => {
                     return (
-                        <span key={page} onClick={() => {
-                            props.onSetCurrentPage(page)
-                        }}
-                              className={`${props.currentPage === page && style.activePage} ${style.pages}`}>{page}
+                        <span key={page} className={`${props.currentPage === page && style.activePage} ${style.pages}`}
+                              onClick={() => {
+                                  props.onSetCurrentPage(page)
+                              }}>
+                            {page}
                             </span>
                     )
                 })}
             </div>
+            {/*Перебираем масив с юзерами из аякс запроса и возвращаем разметку*/}
             {props.users.map(user => {
                 return (
                     <div key={user.id} className={style.user}>
@@ -46,36 +49,21 @@ const Users = (props) => {
                             <p className={style.location}>"user.location"</p>
                             <p className={style.userId}>id: {user.id}</p>
                             {user.followed
-                                ? <button className={style.button} style={{color: 'red'}} onClick={() => {
-                                    usersApi.unFollowUser(user.id).then(data => {
-                                        if(data.resultCode === 0) {
-                                            props.unFollow(user.id)
-                                        }
-                                    });
-                                }}>Unfollow</button>
-                                : <button className={style.button}  onClick={() => {
-                                    usersApi.followUser(user.id).then(data => {
-                                        if(data.resultCode === 0) {
-                                            props.follow(user.id)
-                                        }
-                                    });
-                                }}>Follow</button>
+                                ? <button className={style.button} style={{color: 'red'}}
+                                          disabled={props.followingProgress.some(id => id === user.id)}
+                                          onClick={() => {
+                                              props.unFollow(user.id);
+                                          }}>Unfollow</button>
+                                : <button className={style.button}
+                                          disabled={props.followingProgress.some(id => id === user.id)}
+                                          onClick={() => {
+                                              props.follow(user.id);
+                                          }}>Follow</button>
                             }
                         </div>
                     </div>
                 );
             })}
-            <div className={style.pagination}>
-                {pages.map((page) => {
-                    return (
-                        <span key={page} onClick={() => {
-                            props.onSetCurrentPage(page)
-                        }}
-                              className={`${props.currentPage === page && style.activePage} ${style.pages}`}>{page}
-                            </span>
-                    )
-                })}
-            </div>
         </div>
     );
 }

@@ -1,3 +1,5 @@
+import friendsApi from "../api/friendsApi";
+
 const SET_FRIENDS = 'SET_FRIENDS';
 
 let initialState = {
@@ -7,7 +9,7 @@ let initialState = {
 const friendsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_FRIENDS:
-            return { ...state, friends: [...action.friends] }
+            return {...state, friends: [...action.friends]}
         default:
             return state;
     }
@@ -17,5 +19,11 @@ export const setFriends = (users) => {
         type: SET_FRIENDS,
         friends: users
     }
+}
+//thunk
+export const getFriends = () => (dispatch) => {
+    friendsApi.getFriends().then(data => {
+        dispatch(setFriends(data.items));
+    });
 }
 export default friendsReducer;

@@ -2,7 +2,6 @@ import React from 'react';
 import style from './Post.module.css';
 
 
-
 const Post = (props) => {
 
    return (
@@ -14,6 +13,7 @@ const Post = (props) => {
          <p className={style.text}>{props.postText}</p>
          <div className={style.like}>
             <button className={style.button} >Лайк</button>
+             <button className={style.button} >Delete</button>
             <span  className={style.counter}>{props.likeCounter}</span>
          </div>
       </div >

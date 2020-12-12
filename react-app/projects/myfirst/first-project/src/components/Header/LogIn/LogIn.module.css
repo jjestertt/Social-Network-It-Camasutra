@@ -2,9 +2,10 @@
     color: white;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 .auth:hover {
-    border-bottom: 1px solid #fff;
+    text-decoration: underline;
 }
 .preloaderWrapper{
     width: 40px;

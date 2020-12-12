@@ -1,7 +1,7 @@
 .header{
     flex: 0 0 auto;
    padding: 15px 0;
-   background-color: #ff7979;
+   background-color: #330066;
  }
  .wrapper{
    display: flex;
@@ -12,5 +12,5 @@
    margin-left: 15px;
    font-size: 30px;
    font-weight: bold;
-   color: white;
+   color: #999900	;
  }
