@@ -5,9 +5,10 @@ import Menu from './Menu/Menu.jsx';
 import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
-import Messenger from "./Messenger/Messenger";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
+import LoginPage from "./LoginPage/LoginPage";
+import MessengerContainer from "./Messenger/MessengerContainer";
 
 
 
@@ -18,12 +19,14 @@ const Hero = (props) => {
                 <div className={style.wrapper}>
                     <Menu />
                     <div className={style.content}>
+                        {/*loginPage*/}
+                        <Route path="/login" component={LoginPage}/>
                         {/*ProfilePage*/}
                         <Route path="/profile/:userId?" component={ProfileContainer} />
                         {/*UsersPage*/}
                         <Route path="/users"  component={UsersContainer}/>
                         {/*MessagePage*/}
-                        <Route path="/messenger" component={Messenger} />
+                        <Route path="/messenger" component={MessengerContainer} />
                         {/*NewsPage*/}
                         <Route path="/news" component={News} />
                         {/*MusicPage*/}

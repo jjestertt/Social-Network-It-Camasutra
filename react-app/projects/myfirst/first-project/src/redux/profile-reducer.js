@@ -1,15 +1,18 @@
 import profileApi from "../api/profileApi";
+import ProfileApi from "../api/profileApi";
 
 const ADD_POST = 'ADD_POST';
 const DELETE_POST = 'DELETE_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
+const SET_USER_PROFILE_STATUS = 'SET_USER_PROFILE_STATUS';
 
 let initialState = {
     posts: [],
     newPostText: '',
     postId: 1,
     userProfile: null,
+    userProfileStatus: ''
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -46,6 +49,12 @@ const profileReducer = (state = initialState, action) => {
                 userProfile: action.userProfile
             }
         }
+        case SET_USER_PROFILE_STATUS: {
+            return {
+                ...state,
+                userProfileStatus: action.userProfileStatus
+            }
+        }
         default:
             return state;
     }
@@ -65,6 +74,10 @@ export const postChange = (text) => {
 export const setUserProfile = (userProfile) => {
     return ({type: SET_USER_PROFILE, userProfile});
 }
+export const setUserProfileStatus = (userProfileStatus) => {
+    return ({type: SET_USER_PROFILE_STATUS, userProfileStatus});
+}
+
 //Замыкание thunk
 export const getUsersProfile = (userId) => {
     return dispatch => {
@@ -76,6 +89,9 @@ export const getUsersProfile = (userId) => {
         })
     }
 }
-
-
+export const getUserProfileStatus = (userId) => dispatch => {
+    ProfileApi.getUserProfileStatus(userId).then(data => {
+        debugger
+    });
+}
 export default profileReducer;

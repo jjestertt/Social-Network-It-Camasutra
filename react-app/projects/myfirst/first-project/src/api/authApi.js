@@ -7,7 +7,7 @@ const authApi = {
         }).then(response => {
             return response.data;
         });
-    }
+    },
 }
 
 export default authApi;

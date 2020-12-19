@@ -19,6 +19,7 @@ let mapStateToProps = (state) => {
         login: state.auth.login,
         email: state.auth.email,
         isFetch: state.auth.isFetch,
+        isAuth: state.auth.isAuth
     }
 }
 

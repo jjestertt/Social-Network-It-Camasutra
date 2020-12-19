@@ -11,12 +11,29 @@
   object-fit: none;
   object-position: center;
  }
+ .userName{
+     font-size: 25px;
+     margin-bottom: 2px;
+ }
+ .userName:first-letter{
+     text-transform: uppercase;
+ }
  .information{
    margin-bottom: 15px;
  }
 .description{
     display: flex;
+
 }
+.statusText{
+    font-size: 13px;
+    margin-bottom: 7px;
+    color: #3b3b3b;
+}
+ .lookJob{
+     font-size: 18px;
+
+ }
  .name_wrapper{
      padding: 20px;
  }

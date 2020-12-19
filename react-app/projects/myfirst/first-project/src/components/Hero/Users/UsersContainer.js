@@ -2,11 +2,12 @@ import {connect} from "react-redux";
 import {
     follow,
     unFollow,
-    setFollowingProgress,
     getUsers
 } from "../../../redux/users-reducer";
 import React from "react";
 import Users from "./Users";
+import withAuthRedirect from "../../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 class UsersPage extends React.Component {
     componentDidMount() {
@@ -55,7 +56,16 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {
-    follow, unFollow, getUsers
-})
-(UsersPage);
+//**********************************************************************************************************
+export default compose(
+    connect(mapStateToProps, {follow, unFollow, getUsers}),
+    withAuthRedirect
+)(UsersPage);
+
+// Тоже самое
+// let usersPageRedirect = withAuthRedirect(UsersPage);
+// export default  connect(mapStateToProps, {
+//     follow, unFollow, getUsers
+// })
+// (usersPageRedirect);
+//**********************************************************************************************************

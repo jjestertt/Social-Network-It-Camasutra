@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import style from './Header.module.css';
-import LogIn from "./LogIn/LogIn";
 import LogInContainer from "./LogIn/LogInContainer";
 
 const Header = () => {
