@@ -1,31 +1,18 @@
 import React from 'react';
 import style from './MyPosts.module.css';
 import Post from './Post/Post';
-import {deletePost} from "../../../../redux/profile-reducer";
-import {reduxForm} from "redux-form";
+import {Field, reduxForm, reset} from "redux-form";
 
 const PostForm = (props) => {
-    //Add post to wall
-    const onAddPost = (e) => {
-        e.preventDefault();
-        //Send to dispatch function ActionCreator
-        props.addPost();
-    }
-    // Refresh post of state
-    const onPostChange = (event) => {
-        let text = event.target.value;
-        //Send to dispatch function ActionCreator
-        props.postChange(text);
-    }
     return (
-        <form className="form" action="">
-            <textarea
-                onChange={onPostChange}
+        <form className="form" onSubmit={props.handleSubmit} action="">
+            <Field
                 className={style.textarea}
+                name="postText"
+                component="textarea"
                 placeholder="Add post"
-                value={props.newPostText}
             />
-            <button onClick={onAddPost} type="submit" className={style.new_post}>New post</button>
+            <button type="submit" className={style.new_post}>New post</button>
         </form>
     )
 }
@@ -44,9 +31,14 @@ const MyPosts = (props) => {
                          likeCounter={el.likeCounter}
                          deletePost={props.deletePost}
         />);
+
+    let onSubmit = (formData, dispatch) => {
+        props.addPost(formData.postText);
+        dispatch(reset('post'))
+    }
     return (
         <div className={style.my_posts}>
-            <PostReduxForm addPost={props.addPost} postChange={props.postChange} newPostText={props.newPostText}/>
+            <PostReduxForm onSubmit={onSubmit}/>
             {postItem}
         </div>
     );

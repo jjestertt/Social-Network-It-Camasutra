@@ -1,5 +1,5 @@
 const ADD_MESSAGE = 'ADD_MESSAGE';
-const ADD_NEW_MESSAGE_TEXT = 'ADD_NEW_MESSAGE_TEXT';
+
 
 let initialState = {
     //Массив диалогов
@@ -12,7 +12,6 @@ let initialState = {
     ],
     //Массив сообщений
     messages: [],
-    newMessageText: '',
     messageId: 1
 }
 
@@ -21,7 +20,7 @@ const messengerReducer = (state = initialState, action) => {
         case ADD_MESSAGE: {
             let message = {
                 id: state.messageId,
-                message: state.newMessageText
+                message: action.messageText
             }
             return {
                 ...state,
@@ -30,25 +29,12 @@ const messengerReducer = (state = initialState, action) => {
                 newMessageText: ''
             }
         }
-        case ADD_NEW_MESSAGE_TEXT: {
-            return {
-                ...state,
-                newMessageText: action.value
-            }
-        }
-
         default:
             return state;
     }
 }
 
-export const addMessageCreator = () => {
-    return {type: ADD_MESSAGE}
-}
-export const messageChangeCreator = (text) => {
-    return ({
-        type: ADD_NEW_MESSAGE_TEXT,
-        value: text
-    })
+export const addMessage = (messageText) => {
+    return {type: ADD_MESSAGE, messageText}
 }
 export default messengerReducer;
