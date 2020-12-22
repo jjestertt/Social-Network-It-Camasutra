@@ -1,37 +1,48 @@
 import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getUsersProfile} from "../../../redux/profile-reducer";
+import {
+    getUserProfileStatusFromSever,
+    getUsersProfile,
+    setUserProfileStatusToServer
+} from "../../../redux/profile-reducer";
 import {withRouter} from "react-router-dom";
 import withAuthRedirect from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        this.props.getUsersProfile(this.props.match.params.userId);
+        let userId = this.props.match.params.userId;
+        if (!userId){
+            userId = this.props.authUserId;
+        }
+
+        this.props.getUsersProfile(userId);
+        this.props.getUserProfileStatusFromSever(userId);
     }
 
     componentDidUpdate() {
-        this.props.getUsersProfile(this.props.match.params.userId);
     }
 
     render() {
         return (
-            <Profile {...this.props} userProfile={this.props.userProfile}/>
+            <Profile {...this.props} />
         );
     }
 }
 
 let mapStateToProps = (state) => {
     return {
+        authUserId : state.auth.id,
         userProfile: state.profilePage.userProfile,
+        userStatus: state.profilePage.userProfileStatus,
     }
 }
 
 
 //**********************************************************************************************************
 export default compose(
-    connect(mapStateToProps, {getUsersProfile}),
+    connect(mapStateToProps, {getUsersProfile, getUserProfileStatusFromSever, setUserProfileStatusToServer }),
     withRouter,
     withAuthRedirect
 )(ProfileContainer);

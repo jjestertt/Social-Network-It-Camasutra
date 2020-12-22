@@ -1,5 +1,5 @@
 import profileApi from "../api/profileApi";
-import ProfileApi from "../api/profileApi";
+
 
 const ADD_POST = 'ADD_POST';
 const DELETE_POST = 'DELETE_POST';
@@ -74,24 +74,28 @@ export const postChange = (text) => {
 export const setUserProfile = (userProfile) => {
     return ({type: SET_USER_PROFILE, userProfile});
 }
-export const setUserProfileStatus = (userProfileStatus) => {
+export const updateUserProfileStatus = (userProfileStatus) => {
     return ({type: SET_USER_PROFILE_STATUS, userProfileStatus});
 }
 
 //Замыкание thunk
 export const getUsersProfile = (userId) => {
     return dispatch => {
-        if (!userId) {
-            userId = '13007';
-        }
         profileApi.getUserProfile(userId).then(data => {
             dispatch(setUserProfile(data));
-        })
+        });
     }
 }
-export const getUserProfileStatus = (userId) => dispatch => {
-    ProfileApi.getUserProfileStatus(userId).then(data => {
-        debugger
+export const getUserProfileStatusFromSever = (userId) => dispatch => {
+    profileApi.getUserProfileStatusFromServer(userId).then(data => {
+        dispatch(updateUserProfileStatus(data));
+    });
+}
+export const setUserProfileStatusToServer = (userProfileStatus) => dispatch => {
+    profileApi.setUserProfileStatusToServer(userProfileStatus).then(data => {
+        if(data.resultCode === 0){
+            dispatch(updateUserProfileStatus(userProfileStatus));
+        }
     });
 }
 export default profileReducer;

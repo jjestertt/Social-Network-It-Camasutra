@@ -20,11 +20,11 @@ const Hero = (props) => {
                     <Menu />
                     <div className={style.content}>
                         {/*loginPage*/}
-                        <Route path="/login" component={LoginPage}/>
+                        <Route path="/login" component={LoginPage} />
                         {/*ProfilePage*/}
                         <Route path="/profile/:userId?" component={ProfileContainer} />
                         {/*UsersPage*/}
-                        <Route path="/users"  component={UsersContainer}/>
+                        <Route path="/users" component={UsersContainer} />
                         {/*MessagePage*/}
                         <Route path="/messenger" component={MessengerContainer} />
                         {/*NewsPage*/}

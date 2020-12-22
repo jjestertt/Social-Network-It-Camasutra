@@ -4,7 +4,14 @@ import style from "../ProfileInfo.module.css";
 class ProfileStatus extends React.Component {
     state = {
         inEdit: false,
+        status: this.props.userStatus
     }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.userStatus !== this.props.userStatus){
+             this.setState({status: this.props.userStatus})
+        }
+    }
+
     setInEdit = () => {
         if (this.state.inEdit) {
             this.setState({inEdit: false});
@@ -12,34 +19,45 @@ class ProfileStatus extends React.Component {
             this.setState({inEdit: true});
         }
     }
+    setUserStatusToServer = () => {
+        this.props.setUserProfileStatusToServer(this.state.status);
+    }
+    changeStatusText = (e) => {
+        this.setState({status: e.target.value})
+    }
 
     render() {
         return (
             <div> {
-                this.state.inEdit
+                this.state.inEdit && this.props.authUserId === this.props.currentUserId
                     ? <div>
                         <form action="" onSubmit={(e) => {
-                            e.preventDefault();
-                            this.setInEdit();
-                        }}>
-                            <input className={style.statusInput} type="text" value={this.props.userProfileStatus}
+                                  e.preventDefault();
+                                  this.setInEdit();
+                                  this.setUserStatusToServer();
+                              }}>
+                            <input className={style.statusInput} type="text" autoFocus={true}
                                    placeholder='Твой статус'
                                    onChange={(e) => {
-                                       this.props.setUserProfileStatus(e.target.value);
+                                       this.changeStatusText(e)
                                    }}
-                                   autoFocus={true}
-                                   onBlur={this.setInEdit}
+                                   value={this.state.status}
                             />
+                            <button type={"submit"}>Баттон</button>
                         </form>
+
                     </div>
                     :
-                    <div onDoubleClick={this.setInEdit}><p
-                        className={style.statusText}>{
-                        this.props.userProfileStatus.length <= 0
-                            ? 'Введите статус'
-                            : this.props.userProfileStatus
-                    }
-                    </p></div>
+                    <div onClick={this.setInEdit}>
+                        <p className={style.statusText}>
+                            {
+                                !this.props.userStatus
+                                    ? 'Нет статуса'
+                                    : this.props.userStatus
+                            }
+                        </p>
+
+                    </div>
             }
             </div>
         );

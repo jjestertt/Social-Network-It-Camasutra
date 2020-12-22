@@ -1,42 +1,58 @@
- .ProfileInfo{
-     margin-bottom: 25px;
- }
-.img{
-  height: 100px;
-  margin-bottom: 20px;
- }
- .img_bg{
-  width: 100%;
-  height: 100%;
-  object-fit: none;
-  object-position: center;
- }
- .userName{
-     font-size: 25px;
-     margin-bottom: 2px;
- }
- .userName:first-letter{
-     text-transform: uppercase;
- }
- .information{
-   margin-bottom: 15px;
- }
-.description{
+.ProfileInfo {
+    margin-bottom: 25px;
+}
+
+.img {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.img_bg {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: center;
+}
+
+.userName {
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+.userName:first-letter {
+    text-transform: uppercase;
+}
+
+.information {
+    margin-bottom: 15px;
+}
+
+.description {
     display: flex;
 
 }
-.statusText{
+
+.statusText {
     font-size: 13px;
     margin-bottom: 7px;
     color: #3b3b3b;
+    transition: 300ms;
+    cursor: pointer;
 }
- .lookJob{
-     font-size: 18px;
 
- }
- .name_wrapper{
-     padding: 20px;
- }
- .photo{
-  max-height: 150px;
- }
+.statusText:hover {
+    background: #e9e9e9;
+    transition: 300ms;
+}
+
+.lookJob {
+    font-size: 18px;
+}
+
+.name_wrapper {
+    padding: 20px;
+}
+
+.photo {
+    max-height: 150px;
+}

@@ -8,9 +8,9 @@ const Header = () => {
       <header className={style.header}>
          <div className="container">
             <div className={style.wrapper}>
-               <NavLink to="/profile" className={style.logo}>
+               <NavLink to="/#s" className={style.logo}>
                   {/* <img src="" alt="" className={style.logo_img} logo-img">  */}
-                  <p className={style.logo_text}>Втантанте</p>
+                  <p className={style.logo_text}>&#9731; SocialNetwork</p>
                </NavLink>
                <LogInContainer />
             </div>

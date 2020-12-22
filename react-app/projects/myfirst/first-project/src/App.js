@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="App">
       <Header />
