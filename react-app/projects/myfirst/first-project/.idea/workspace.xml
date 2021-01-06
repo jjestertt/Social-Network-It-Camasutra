@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileStatus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/LoginPage" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -65,17 +65,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo\ProfileStatus" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Header\LogIn" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\redux" />
-      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo\ProfileStatus" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src" />
       <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\redux" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\LoginPage" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Profile\ProfileInfo\ProfileStatus" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Hero\Messenger" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\components\Header\LogIn" />
+      <recent name="C:\myOwnFiles\react-app\projects\myfirst\first-project\src\redux" />
     </key>
   </component>
   <component name="RunManager" selected="npm.eject">
@@ -250,7 +250,18 @@
       <workItem from="1608587198452" duration="1654000" />
       <workItem from="1608589787615" duration="584000" />
       <workItem from="1608675197714" duration="1746000" />
-      <workItem from="1608676989857" duration="753000" />
+      <workItem from="1608676989857" duration="899000" />
+      <workItem from="1609711985153" duration="1575000" />
+      <workItem from="1609866498499" duration="1755000" />
+      <workItem from="1609868301990" duration="1648000" />
+      <workItem from="1609870117771" duration="1763000" />
+      <workItem from="1609871925667" duration="1770000" />
+      <workItem from="1609873738749" duration="1811000" />
+      <workItem from="1609924332942" duration="1760000" />
+      <workItem from="1609926138215" duration="1769000" />
+      <workItem from="1609927954053" duration="4000" />
+      <workItem from="1609953998147" duration="5217000" />
+      <workItem from="1609968516072" duration="2282000" />
     </task>
     <servers />
   </component>
@@ -285,10 +296,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607194158390" />
-    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606415437576">
+    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609871160437">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606415437576" />
+    <state x="412" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609871160437" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609870638595">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609870638595" />
     <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1607006640299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -317,13 +332,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1088" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607036312273" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1608572328075">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1609955578905">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608572328075" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607196395343">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609955578905" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609713287648">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607196395343" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609713287648" />
   </component>
 </project>

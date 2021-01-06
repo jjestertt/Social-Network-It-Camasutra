@@ -54,3 +54,7 @@
     font-weight: bold;
     border-bottom: 3px solid #000000;
 }
+.totalUsersCount{
+    display: block;
+    text-align: end;
+}

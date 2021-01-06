@@ -4,6 +4,7 @@ import React from "react";
 import Preloader from "../../General/Preloader";
 import {NavLink} from "react-router-dom";
 
+
 const Users = (props) => {
     //Обязательно нужно округлить пагинацию в большую сторону
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -64,6 +65,7 @@ const Users = (props) => {
                     </div>
                 );
             })}
+            <span className={style.totalUsersCount}>Всего Пользователей: {props.totalUsersCountReally}</span>
         </div>
     );
 }

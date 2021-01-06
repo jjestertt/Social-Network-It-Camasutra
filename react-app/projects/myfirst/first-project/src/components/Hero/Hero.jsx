@@ -7,8 +7,8 @@ import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
-import LoginPage from "./LoginPage/LoginPage";
 import MessengerContainer from "./Messenger/MessengerContainer";
+import LoginPage from "./LoginPage/LoginPage";
 
 
 

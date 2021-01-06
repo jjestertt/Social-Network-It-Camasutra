@@ -4,8 +4,8 @@ import {Redirect} from "react-router-dom";
 
 
 const withAuthRedirect = (Component) => {
-   let withAuthRedirectComponent = (props) => {
-           return props.isAuth ? <Component {...props}/> : <Redirect to="/login"/>
+    let withAuthRedirectComponent = (props) => {
+        return props.isAuth ? <Component {...props}/> : <Redirect to="/login"/>
     };
     let mapStateToProps = (state) => ({isAuth: state.auth.isAuth});
     let connectedWithAuthRedirect = connect(mapStateToProps)(withAuthRedirectComponent);

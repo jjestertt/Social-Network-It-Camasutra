@@ -12,6 +12,7 @@ let initialState = {
     users: [],
     pageSize: 20,
     totalUsersCount: 0,
+    totalUsersCountReally: 0,
     currentPage: 1,
     isFetch: false,
     followingProgress: []
@@ -57,7 +58,7 @@ const usersReducer = (state = initialState, action) => {
         }
         case
         SET_TOTAL_USERS_COUNT: {
-            return {...state, totalUsersCount: action.totalUsersCount}
+            return {...state, totalUsersCount: action.totalUsersCount, totalUsersCountReally: action.totalUsersCountReally}
         }
         case
         TOGGLE_IS_FETCH: {
@@ -85,8 +86,8 @@ export const setUsers = (users) => {
 export const setCurrentPage = (currentPage) => {
     return ({type: SET_CURRENT_PAGE, currentPage})
 }
-export const setTotalUsersCount = (totalUsersCount) => {
-    return ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
+export const setTotalUsersCount = (totalUsersCount, totalUsersCountReally) => {
+    return ({type: SET_TOTAL_USERS_COUNT, totalUsersCount, totalUsersCountReally})
 }
 export const toggleIsFetch = (isFetch) => {
     return ({type: TOGGLE_IS_FETCH, isFetch})
@@ -98,8 +99,7 @@ export const getUsers = (currentPage, pageSize) => (dispatch) => {
     usersApi.getUsers(currentPage, pageSize)
         .then(data => {
             dispatch(toggleIsFetch(false));
-            // dispatch(setTotalUsersCount(data.totalCount)); Покажет реальное количество пользователей
-            dispatch(setTotalUsersCount(400));
+            dispatch(setTotalUsersCount(400 , data.totalCount)); //first its not really total count
             dispatch(setCurrentPage(currentPage));
             dispatch(setUsers(data.items));
         });

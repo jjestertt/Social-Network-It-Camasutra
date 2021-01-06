@@ -31,6 +31,7 @@ class UsersPage extends React.Component {
         return (
             <Users
                 totalUsersCount={this.props.totalUsersCount}
+                totalUsersCountReally={this.props.totalUsersCountReally}
                 pageSize={this.props.pageSize}
                 currentPage={this.props.currentPage}
                 users={this.props.users}
@@ -53,6 +54,7 @@ const mapStateToProps = (state) => {
         currentPage: state.usersPage.currentPage,
         isFetch: state.usersPage.isFetch,
         followingProgress: state.usersPage.followingProgress,
+        totalUsersCountReally: state.usersPage.totalUsersCountReally
     }
 }
 
