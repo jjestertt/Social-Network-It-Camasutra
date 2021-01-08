@@ -8,7 +8,7 @@ const Header = () => {
       <header className={style.header}>
          <div className="container">
             <div className={style.wrapper}>
-               <NavLink to="/#s" className={style.logo}>
+               <NavLink to="/profile" className={style.logo}>
                   <p className={style.logo_text}>&#9731; MyNet</p>
                </NavLink>
                <LogInContainer />

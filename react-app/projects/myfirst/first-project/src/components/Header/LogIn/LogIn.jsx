@@ -5,13 +5,10 @@ import {NavLink} from "react-router-dom";
 const LogIn = (props) => {
     if (props.isAuth) {
         return <div>
-            {/*<NavLink to={`/profile/${props.id}`} className={style.auth}>*/}
-            {/*    <p className={style.signin}>login: {props.login} <br/> id: {props.id}<br/> email: {props.email}</p>*/}
-            {/*</NavLink>*/}
             <a href="#" onClick={(e) => {
                 e.preventDefault();
                 props.logout();
-            }} className={style.logout}>Logout</a>
+            }} className={style.auth}>Logout</a>
         </div>
 
     }

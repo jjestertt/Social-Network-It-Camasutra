@@ -2,7 +2,7 @@ import React from "react";
 import style from "./LoginPage.module.css"
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import {userLogin} from "../../../redux/auth-reduscer";
+import {userLogin} from "../../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import {CustomInput} from "../../General/CustomInput/CustomTextarea";
 import {maxLengthCreator, requiredForm} from "../../../utils/validate";
@@ -22,12 +22,16 @@ const LoginForm = (props) => {
                 <Field type="password" name="password" placeholder={"Password"}
                        validate={[requiredForm]} component={CustomInput}  />
             </div>
+            <div className={style.remember}>
+                <label className={style.rememberLabel}>
+                    <Field name="rememberMe" component="input" className={style.rememberCheckbox} type="checkbox"/>
+                    <span className={style.rememberCheckboxText}>Remember me</span>
+                </label>
+                <a className={style.signUp} href="https://social-network.samuraijs.com/signUp">SignUp</a>
+            </div>
 
-            <label className={style.rememberLabel}>
-                <Field name="rememberMe" component="input" className={style.rememberCheckbox} type="checkbox"/>
-                <span className={style.rememberCheckboxText}>Remember me</span>
-            </label>
 
+            <div className={style.formError}>{props.error}</div>
             <button type={"submit"} className={style.submitButton}>Login</button>
         </form>)
 }

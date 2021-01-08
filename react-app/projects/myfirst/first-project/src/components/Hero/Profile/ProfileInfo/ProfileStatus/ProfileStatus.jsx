@@ -43,7 +43,7 @@ class ProfileStatus extends React.Component {
                                    }}
                                    value={this.state.status}
                             />
-                            <button type={"submit"}>Баттон</button>
+                            <button type={"submit"}>Отправить</button>
                         </form>
 
                     </div>

@@ -1,4 +1,5 @@
 import authApi from "../api/authApi";
+import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 const CLEAR_USER_DATA = 'CLEAR_USER_DATA';
@@ -44,17 +45,15 @@ const clearUserData = () => {
     }
 }
 
-
 //thunk
 export const getAuth = () => (dispatch) => {
-    authApi.getAuth().then(data => {
+    return  authApi.getAuth().then(data => {
         if (data.resultCode === 0) {
-            console.log(data.data.id, data.data.login, data.data.email)
             dispatch(setUserData(data.data.id, data.data.login, data.data.email));
         }
-
     });
 }
+
 export const logout = () => (dispatch) => {
     authApi.logout().then(data => {
         if (data.resultCode === 0) {
@@ -68,7 +67,8 @@ export const userLogin = (email, password, rememberMe = false) => (dispatch) => 
             dispatch(getAuth())
         }
         else {
-            alert('Error mail or password')
+            let action = stopSubmit('login', {_error: data.messages.map(el => el)});
+            dispatch(action);
         }
     });
 }
