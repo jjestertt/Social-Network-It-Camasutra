@@ -1,4 +1,5 @@
 import * as axios from "axios";
+import getApiKey from "./ApiKey";
 
 const ProfileApi = {
     getUserProfile: (userId) => {
@@ -15,7 +16,7 @@ const ProfileApi = {
         return axios.put(`https://social-network.samuraijs.com/api/1.0/profile/status`, {status: userStatus}, {
             withCredentials: true,
             headers: {
-                'API-KEY': 'c1ce2ea2-c228-4281-91e3-625c74c5b290'
+                'API-KEY': getApiKey()
             }
         }).then(response => {
             return response.data

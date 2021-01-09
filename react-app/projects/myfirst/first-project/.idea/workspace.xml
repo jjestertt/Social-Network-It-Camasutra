@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Hero/LoginPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -265,6 +265,8 @@
       <workItem from="1609968516072" duration="2282000" />
       <workItem from="1610034836938" duration="2392000" />
       <workItem from="1610096777216" duration="6848000" />
+      <workItem from="1610193155696" duration="146000" />
+      <workItem from="1610193312534" duration="8337000" />
     </task>
     <servers />
   </component>
@@ -295,10 +297,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="136" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604397911383" />
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607194158390">
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610229226620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607194158390" />
+    <state x="433" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1610229226620" />
     <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1610127194874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -343,9 +345,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610098252339" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610125875248">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610224386424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610125875248" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610224386424" />
   </component>
 </project>

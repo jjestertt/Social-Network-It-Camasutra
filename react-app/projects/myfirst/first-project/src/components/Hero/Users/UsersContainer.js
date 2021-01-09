@@ -2,37 +2,34 @@ import {connect} from "react-redux";
 import {
     follow,
     unFollow,
-    getUsers
+    responseUsers
 } from "../../../redux/users-reducer";
 import React from "react";
 import Users from "./Users";
 import withAuthRedirect from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getCurrentPage,
+    getFollowingProgress,
+    getIsFetch, getPagesCount,
+    getTotalUsersCountReally,
+    getUsers
+} from "../../../redux/users-reselect";
 
 class UsersPage extends React.Component {
     componentDidMount() {
-        // this.props.toggleIsFetch(true);
-        // usersApi.getUsers(this.props.currentPage, this.props.pageSize)
-        //     .then(data => {
-        //         this.props.toggleIsFetch(false);
-        //         // this.props.setTotalUsersCount(data.totalCount); Покажет реальное количество пользователей
-        //         this.props.setTotalUsersCount(400);
-        //         this.props.setUsers(data.items);
-        //     });
-        //Заменяем на thunk
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        this.props.responseUsers(this.props.currentPage, this.props.pageSize);
     }
 
     onSetCurrentPage = (page) => {
-        this.props.getUsers(page, this.props.pageSize);
+        this.props.responseUsers(page, this.props.pageSize);
     }
+
 
     render() {
         return (
             <Users
-                totalUsersCount={this.props.totalUsersCount}
                 totalUsersCountReally={this.props.totalUsersCountReally}
-                pageSize={this.props.pageSize}
                 currentPage={this.props.currentPage}
                 users={this.props.users}
                 isFetch={this.props.isFetch}
@@ -40,6 +37,7 @@ class UsersPage extends React.Component {
                 onSetCurrentPage={this.onSetCurrentPage}
                 unFollow={this.props.unFollow}
                 follow={this.props.follow}
+                pages={this.props.pages}
             />
 
         )
@@ -48,26 +46,16 @@ class UsersPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetch: state.usersPage.isFetch,
-        followingProgress: state.usersPage.followingProgress,
-        totalUsersCountReally: state.usersPage.totalUsersCountReally
+        isFetch: getIsFetch(state),
+        users: getUsers(state),
+        totalUsersCountReally: getTotalUsersCountReally(state),
+        pages: getPagesCount(state),
+        currentPage: getCurrentPage(state),
+        followingProgress: getFollowingProgress(state),
     }
 }
 
-//**********************************************************************************************************
 export default compose(
-    connect(mapStateToProps, {follow, unFollow, getUsers}),
+    connect(mapStateToProps, {follow, unFollow, responseUsers}),
     withAuthRedirect
 )(UsersPage);
-
-// Тоже самое
-// let usersPageRedirect = withAuthRedirect(UsersPage);
-// export default  connect(mapStateToProps, {
-//     follow, unFollow, getUsers
-// })
-// (usersPageRedirect);
-//**********************************************************************************************************

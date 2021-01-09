@@ -1,4 +1,5 @@
 import * as axios from "axios";
+import getApiKey from "./ApiKey";
 
 const usersApi = {
     getUsers: (currentPage, pageSize) => {
@@ -13,7 +14,7 @@ const usersApi = {
         return axios.post('https://social-network.samuraijs.com/api/1.0/follow/' + userId, {}, {
             withCredentials: true,
             headers: {
-                "API-KEY": "c1ce2ea2-c228-4281-91e3-625c74c5b290"
+                "API-KEY": getApiKey()
             }
         }).then(response => {
             return response.data;
@@ -24,7 +25,7 @@ const usersApi = {
         return axios.delete('https://social-network.samuraijs.com/api/1.0/follow/' + userId, {
             withCredentials: true,
             headers: {
-                "API-KEY": "c1ce2ea2-c228-4281-91e3-625c74c5b290"
+                "API-KEY": getApiKey()
             }
         }).then(response => {
             return response.data;

@@ -94,7 +94,7 @@ export const toggleIsFetch = (isFetch) => {
 }
 
 //thunk
-export const getUsers = (currentPage, pageSize) => (dispatch) => {
+export const responseUsers = (currentPage, pageSize) => (dispatch) => {
     dispatch(toggleIsFetch(true));
     usersApi.getUsers(currentPage, pageSize)
         .then(data => {

@@ -6,23 +6,15 @@ import {NavLink} from "react-router-dom";
 
 
 const Users = (props) => {
-    //Обязательно нужно округлить пагинацию в большую сторону
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
+    /*Прелоадер*/
+    if(props.isFetch){
+        return <Preloader/>
     }
-
     return (
         <div className={style.wrapper}>
-            {/*Прелоадер*/}
-            {props.isFetch
-                ? <div className={style.preloaderWrapper}><Preloader/></div>
-                : null
-            }
             {/*Пагинация*/}
             <div className={style.pagination}>
-                {pages.map((page) => {
+                {props.pages.map((page) => {
                     return (
                         <span key={page} className={`${props.currentPage === page && style.activePage} ${style.pages}`}
                               onClick={() => {
