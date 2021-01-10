@@ -1,7 +1,8 @@
 .header{
     width: 100%;
-    padding: 3px 15px;
-    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+    padding: 7px 15px;
+    /*background: repeating-linear-gradient(45deg, #000000, #515151 10px, #0a0a0c 10px, #252525 20px);*/
+    background: repeating-linear-gradient(45deg, #000000, #28292a 138px, #0a0a0c 10px, #252525 20px);
     color: #fff	;
     border-radius: 0 0 5px 5px ;
  }

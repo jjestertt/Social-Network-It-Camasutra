@@ -5,9 +5,11 @@ import { connect } from "react-redux";
 import MyPosts from "./MyPosts";
 import {addPost, deletePost} from "../../../../redux/profile-reducer";
 
+
 const mapStateToProps = (state) => {
     return {
         posts: state.profilePage.posts,
+        userPhoto: state.profilePage.userProfile.photos.large,
     }
 };
 

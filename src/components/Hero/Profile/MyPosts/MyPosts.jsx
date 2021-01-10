@@ -34,6 +34,7 @@ const MyPosts = (props) => {
     const postItem = props.posts
         .map(el => <Post key={el.id}
                          id={el.id}
+                         userPhoto={props.userPhoto}
                          userName={el.userName}
                          postText={el.postText}
                          likeCounter={el.likeCounter}
