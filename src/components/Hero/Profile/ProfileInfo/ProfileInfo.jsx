@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './ProfileInfo.module.css';
-import user from './../../../../assets/image/user.png'
+import user from './../../../../assets/image/user.svg'
 import ProfileStatus from "./ProfileStatus/ProfileStatus";
 
 
@@ -21,7 +21,7 @@ const ProfileInfo = (props) => {
                                    authUserId={props.authUserId}
                     />
                     <p className={style.lookJob}>{props.userProfile.lookingForAJob
-                        ? 'Работу ' + props.userProfile.lookingForAJobDescription
+                        ? props.userProfile.lookingForAJobDescription
                         : 'Работу не предлагать'}</p>
                 </div>
             </div>

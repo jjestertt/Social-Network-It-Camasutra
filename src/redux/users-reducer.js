@@ -10,9 +10,8 @@ const TOGGLE_IS_FETCH = 'TOGGLE_IS_FETCH';
 
 let initialState = {
     users: [],
-    pageSize: 20,
+    pageSize: 5,
     totalUsersCount: 0,
-    totalUsersCountReally: 0,
     currentPage: 1,
     isFetch: false,
     followingProgress: []
@@ -58,7 +57,7 @@ const usersReducer = (state = initialState, action) => {
         }
         case
         SET_TOTAL_USERS_COUNT: {
-            return {...state, totalUsersCount: action.totalUsersCount, totalUsersCountReally: action.totalUsersCountReally}
+            return {...state, totalUsersCount: action.totalUsersCount}
         }
         case
         TOGGLE_IS_FETCH: {
@@ -99,7 +98,7 @@ export const responseUsers = (currentPage, pageSize) => (dispatch) => {
     usersApi.getUsers(currentPage, pageSize)
         .then(data => {
             dispatch(toggleIsFetch(false));
-            dispatch(setTotalUsersCount(400 , data.totalCount)); //first its not really total count
+            dispatch(setTotalUsersCount(data.totalCount)); //first its not really total count
             dispatch(setCurrentPage(currentPage));
             dispatch(setUsers(data.items));
         });

@@ -1,0 +1,20 @@
+.statusInput{
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.statusText {
+    font-size: 15px;
+    margin-bottom: 14px;
+    color: #3b3b3b;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.statusText:hover {
+    background: #e9e9e9;
+    transition: 300ms;
+}
+.buttonSubmit{
+    padding: 5px;
+}

@@ -1,5 +1,5 @@
 import style from "./Users.module.css";
-import userPhoto from "../../../assets/image/user.png";
+import userPhoto from "../../../assets/image/user.svg";
 import React from "react";
 import Preloader from "../../General/Preloader";
 import {NavLink} from "react-router-dom";
@@ -12,19 +12,6 @@ const Users = (props) => {
     }
     return (
         <div className={style.wrapper}>
-            {/*Пагинация*/}
-            <div className={style.pagination}>
-                {props.pages.map((page) => {
-                    return (
-                        <span key={page} className={`${props.currentPage === page && style.activePage} ${style.pages}`}
-                              onClick={() => {
-                                  props.onSetCurrentPage(page)
-                              }}>
-                            {page}
-                            </span>
-                    )
-                })}
-            </div>
             {/*Перебираем масив с юзерами из аякс запроса и возвращаем разметку*/}
             {props.users.map(user => {
                 return (
@@ -57,7 +44,20 @@ const Users = (props) => {
                     </div>
                 );
             })}
-            <span className={style.totalUsersCount}>Всего Пользователей: {props.totalUsersCountReally}</span>
+            {/*Пагинация*/}
+            <div className={style.pagination}>
+                {props.pages.map((page) => {
+                    return (
+                        <span key={page} className={`${props.currentPage === page && style.activePage} ${style.pages}`}
+                              onClick={() => {
+                                  props.onSetCurrentPage(page)
+                              }}>
+                            {page}
+                            </span>
+                    )
+                })}
+            </div>
+            <span className={style.totalUsersCount}>Всего Пользователей: {props.totalUsersCount}</span>
         </div>
     );
 }

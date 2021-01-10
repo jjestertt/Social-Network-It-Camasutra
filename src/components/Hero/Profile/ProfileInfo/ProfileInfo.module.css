@@ -15,7 +15,8 @@
 }
 
 .userName {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
     margin-bottom: 2px;
 }
 
@@ -32,27 +33,15 @@
 
 }
 
-.statusText {
-    font-size: 13px;
-    margin-bottom: 7px;
-    color: #3b3b3b;
-    transition: 300ms;
-    cursor: pointer;
-}
-
-.statusText:hover {
-    background: #e9e9e9;
-    transition: 300ms;
-}
-
 .lookJob {
     font-size: 18px;
 }
 
 .name_wrapper {
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 .photo {
-    max-height: 150px;
+    max-height: 240px;
+    border-radius: 5px;
 }

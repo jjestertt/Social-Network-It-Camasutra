@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../ProfileInfo.module.css";
+import style from "./ProfileStatus.module.css";
 
 class ProfileStatus extends React.Component {
     state = {
@@ -43,7 +43,7 @@ class ProfileStatus extends React.Component {
                                    }}
                                    value={this.state.status}
                             />
-                            <button type={"submit"}>Отправить</button>
+                            <button className={style.buttonSubmit} type={"submit"}>Отправить</button>
                         </form>
 
                     </div>

@@ -11,8 +11,7 @@ import {compose} from "redux";
 import {
     getCurrentPage,
     getFollowingProgress,
-    getIsFetch, getPagesCount,
-    getTotalUsersCountReally,
+    getIsFetch, getPagesCount, getPageSize, getTotalUsersCount,
     getUsers
 } from "../../../redux/users-reselect";
 
@@ -29,7 +28,7 @@ class UsersPage extends React.Component {
     render() {
         return (
             <Users
-                totalUsersCountReally={this.props.totalUsersCountReally}
+                totalUsersCount={this.props.totalUsersCount}
                 currentPage={this.props.currentPage}
                 users={this.props.users}
                 isFetch={this.props.isFetch}
@@ -38,6 +37,7 @@ class UsersPage extends React.Component {
                 unFollow={this.props.unFollow}
                 follow={this.props.follow}
                 pages={this.props.pages}
+                pageSize={this.props.pageSize}
             />
 
         )
@@ -48,10 +48,12 @@ const mapStateToProps = (state) => {
     return {
         isFetch: getIsFetch(state),
         users: getUsers(state),
-        totalUsersCountReally: getTotalUsersCountReally(state),
+        totalUsersCount: getTotalUsersCount(state),
         pages: getPagesCount(state),
         currentPage: getCurrentPage(state),
         followingProgress: getFollowingProgress(state),
+        pageSize: getPageSize(state),
+
     }
 }
 

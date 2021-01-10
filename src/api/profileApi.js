@@ -22,6 +22,22 @@ const ProfileApi = {
             return response.data
         });
     },
+    // setUserNameToServer: (userName) => {
+    //     return axios.put(`https://social-network.samuraijs.com/api/1.0/profile`, {
+    //         lookingForAJob: true,
+    //         lookingForAJobDescription: "Хочу стать реакт разработчиком",
+    //         fullName: "Maksim Sivak",
+    //         aboutMe: "Красавчик"
+    //     }, {
+    //         withCredentials: true,
+    //         headers: {
+    //             'API-KEY': getApiKey()
+    //         }
+    //     }).then(response => {
+    //         console.log(response.data)
+    //         return response.data
+    //     });
+    // },
 
 }
 

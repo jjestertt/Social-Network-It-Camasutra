@@ -22,6 +22,5 @@ export const getPagesCount = createSelector(getTotalUsersCount, getPageSize, (to
 export const getCurrentPage = state => state.usersPage.currentPage;
 export const getIsFetch = state => state.usersPage.isFetch;
 export const getFollowingProgress = state => state.usersPage.followingProgress;
-export const getTotalUsersCountReally = state => state.usersPage.totalUsersCountReally;
 
 
