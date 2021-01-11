@@ -1,0 +1,17 @@
+
+.aboutMe{
+    position: relative;
+    margin-bottom: 14px;
+}
+.aboutMe:hover .editIcon{
+    display: block;
+}
+.editIcon{
+    display: none;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}

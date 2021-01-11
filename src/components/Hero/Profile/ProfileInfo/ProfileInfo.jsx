@@ -2,6 +2,8 @@ import React from 'react';
 import style from './ProfileInfo.module.css';
 import user from './../../../../assets/image/user.svg'
 import ProfileStatus from "./ProfileStatus/ProfileStatus";
+import ProfileAboutMe from "./ProfileAboutMe/ProfileAboutMe";
+
 
 
 const ProfileInfo = (props) => {
@@ -36,11 +38,7 @@ const ProfileInfo = (props) => {
                             ? props.userProfile.lookingForAJobDescription
                             : 'Трудоустроился'}</p>
                     </div>
-                    <div className={style.aboutMe}>
-                        <p className={style.aboutMeDescription}>Обо мне:</p>
-                        <p className={style.aboutMeText}>{props.userProfile.aboutMe}</p>
-
-                    </div>
+                    <ProfileAboutMe />
                     <div className={style.contacts}>
                         <div>Контакты:</div>
                         <ul className={style.contactList}>
