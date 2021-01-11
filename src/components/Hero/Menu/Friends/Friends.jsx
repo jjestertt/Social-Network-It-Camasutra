@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Friends.module.css';
 import FriendItem from "./FriendItem/FriendItem";
-import userPhoto from './../../../../assets/image/user.png';
+import userPhoto from './../../../../assets/image/newPerson.svg';
 
 const Friends = (props) => {
     return <div className={style.Friends}>
