@@ -4,7 +4,7 @@ import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {userLogin} from "../../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
-import {CustomInput} from "../../General/CustomInput/CustomTextarea";
+import {CustomInput} from "../../General/FormControl/FormControl";
 import {maxLengthCreator, requiredForm} from "../../../utils/validate";
 
 let maxLength20 = maxLengthCreator(20);

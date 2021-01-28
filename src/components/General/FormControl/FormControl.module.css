@@ -1,4 +1,4 @@
-.input, .textarea{
+.input {
     padding: 10px;
     display: block;
     width: 100%;
@@ -6,12 +6,9 @@
     outline: none;
     resize: none;
 }
-.textareaWrapper {
-    height: 100%;
-}
-input.error,
-textarea.error {
-    border: 2px solid red;
+
+.inputWrapper.error{
+    border: 1px solid red;
 }
 span.error {
     display: block;

@@ -1,6 +1,6 @@
 import friendsApi from "../api/friendsApi";
 
-const SET_FRIENDS = 'SET_FRIENDS';
+const SET_FRIENDS = 'my-net/friends/SET_FRIENDS';
 
 let initialState = {
     friends: []
@@ -21,9 +21,8 @@ export const setFriends = (users) => {
     }
 }
 //thunk
-export const getFriends = () => (dispatch) => {
-    friendsApi.getFriends().then(data => {
+export const getFriends = () => async (dispatch) => {
+    const data = await friendsApi.getFriends();
         dispatch(setFriends(data.items));
-    });
 }
 export default friendsReducer;

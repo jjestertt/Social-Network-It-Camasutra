@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Message.module.css';
 import MessageItem from "./MessageItem/MessageItem";
 import {Field, reduxForm, reset} from "redux-form";
-import {CustomTextarea} from "../../../General/CustomInput/CustomTextarea";
+import {Textarea} from "../../../General/FormControl/FormControl";
 import {maxLengthCreator, requiredForm} from "../../../../utils/validate";
 
 let maxLength300 = maxLengthCreator(300)
@@ -13,10 +13,9 @@ const MessagesForm = (props) => {
             <div className={style.addMessage}>
                 <Field
                     name="messageText" placeholder="Add message"
-                    validate={[requiredForm, maxLength300]} component={CustomTextarea}
+                    validate={[requiredForm, maxLength300]} component={Textarea}
                 />
             </div>
-
             <button type="submit">Send</button>
         </form>
     );

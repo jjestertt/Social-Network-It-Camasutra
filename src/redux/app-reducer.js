@@ -1,11 +1,13 @@
 import {getAuth} from "./auth-reducer";
-
-const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS'
-
+//Создаем константу успешной инициализации
+const INITIALIZED_SUCCESS = 'my-net/app/INITIALIZED_SUCCESS'
+//Инициализационный стейт редьюсера
 let initialState = {
+    //По умолчанию инициализация false
     initialized: false,
 }
 
+//Создаем редьюсер
 const appReducer = (state = initialState, action) => {
     switch (action.type){
         case INITIALIZED_SUCCESS: {
@@ -19,16 +21,17 @@ const appReducer = (state = initialState, action) => {
         }
     }
 }
-
+//Вызываем action creator
 const initializedSuccess = () => {
     return {
         type: INITIALIZED_SUCCESS,
     }
-} //action creator return object of type for dispatching to reducer
-
-export const initializeApp = () => (dispatch) => {
-    let initial =  dispatch(getAuth());
-    initial.then(()=>{dispatch(initializedSuccess())});
+}
+//call thunk first this first get Auth data
+// then dispatch action creator to reducer
+export const initializeApp = () => async (dispatch) => {
+    await dispatch(getAuth());
+    await dispatch(initializedSuccess());
 }
 
 export default appReducer;

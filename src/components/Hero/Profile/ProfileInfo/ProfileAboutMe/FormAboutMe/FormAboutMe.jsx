@@ -1,19 +1,19 @@
 import {Field, reduxForm} from "redux-form";
 import React from "react";
 import {useEffect} from "react";
-import {CustomTextarea} from "../../../../../General/CustomInput/CustomTextarea";
+import {Textarea} from "../../../../../General/FormControl/FormControl";
 
 const FormAboutMe = (props) => {
 
     useEffect(() => {
         props.initialize({ aboutMe: props.aboutMe});
-    }, [props, props.aboutMe])
+    }, [props.aboutMe])
 
     return (
         <form onSubmit={props.handleSubmit}>
             <Field autoFocus={true} onBlur={() => {
                 props.handleSubmit();
-            }} name='aboutMe' type="text" component={CustomTextarea}/>
+            }} name='aboutMe' type="text" component={Textarea}/>
         </form>
     )
 }
