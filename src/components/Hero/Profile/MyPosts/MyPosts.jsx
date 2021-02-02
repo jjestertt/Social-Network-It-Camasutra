@@ -10,7 +10,7 @@ const maxLength300 = maxLengthCreator(300);
 const PostForm = (props) => {
     return (
         <form className="form" onSubmit={props.handleSubmit} action="">
-            <div>
+            <div className={style.fieldWrapper}>
                 <Field
                     name="postText"
                     component={Textarea}

@@ -9,7 +9,7 @@ const Header = () => {
 
             <div className={style.wrapper}>
                <NavLink to="/profile" className={style.logo}>
-                  <p className={style.logo_text}>&#9731; MyNet</p>
+                  <p className={style.logo_text}>&loz; MyNet</p>
                </NavLink>
                <LogInContainer />
             </div>

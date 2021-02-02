@@ -7,7 +7,7 @@ const FormAboutMe = (props) => {
 
     useEffect(() => {
         props.initialize({ aboutMe: props.aboutMe});
-    }, [props.aboutMe])
+    }, [props, props.aboutMe])
 
     return (
         <form onSubmit={props.handleSubmit}>

@@ -12,7 +12,6 @@ const Users = (props) => {
     }
     return (
         <div className={style.wrapper}>
-            {/*Перебираем масив с юзерами из аякс запроса и возвращаем разметку*/}
             {props.users.map(user => {
                 return (
                     <div key={user.id} className={style.user}>
@@ -29,7 +28,7 @@ const Users = (props) => {
                             <p className={style.location}>"user.location"</p>
                             <p className={style.userId}>id: {user.id}</p>
                             {user.followed
-                                ? <button className={style.button} style={{color: 'red'}}
+                                ? <button className={style.button}
                                           disabled={props.followingProgress.some(id => id === user.id)}
                                           onClick={() => {
                                               props.unFollow(user.id);

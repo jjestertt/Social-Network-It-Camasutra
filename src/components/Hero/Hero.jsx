@@ -8,7 +8,7 @@ import Settings from "./Settings/Settings";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
 import MessengerContainer from "./Messenger/MessengerContainer";
-import LoginPage from "./LoginPage/LoginPage";
+import LoginPageContainer from "./LoginPage/LoginPageContainer";
 
 
 
@@ -20,7 +20,7 @@ const Hero = (props) => {
                     <Menu />
                     <div className={style.content}>
                         {/*loginPage*/}
-                        <Route path="/login" component={LoginPage} />
+                        <Route path="/login" component={LoginPageContainer} />
                         {/*ProfilePage*/}
                         <Route path="/profile/:userId?" component={ProfileContainer} />
                         {/*UsersPage*/}

@@ -21,10 +21,6 @@
     top: 10px;
     right: 10px;
 }
-.button{
-    width: 100px;
-    height: 30px;
-}
 .pages{
     font-size: 19px;
     cursor: pointer;
@@ -54,4 +50,14 @@
 .totalUsersCount{
     display: block;
     text-align: end;
+}
+
+
+.button{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100px;
+    height: 30px;
+    background: #28292a;
+    color: white;
 }
