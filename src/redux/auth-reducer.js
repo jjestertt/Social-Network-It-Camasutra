@@ -3,8 +3,8 @@ import {stopSubmit} from "redux-form";
 
 
 // create constants for reducer
-const SET_USER_DATA = 'my-net/auth/SET_USER_DATA';
-const CLEAR_USER_DATA = 'my-net/auth/CLEAR_USER_DATA';
+const SET_USER_DATA = "my-net/auth/SET_USER_DATA";
+const CLEAR_USER_DATA = "my-net/auth/CLEAR_USER_DATA";
 
 // create initial state for reducer
 let initialState = {

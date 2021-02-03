@@ -1,14 +1,14 @@
-const ADD_MESSAGE = 'ADD_MESSAGE';
+const ADD_MESSAGE = "ADD_MESSAGE";
 
 
 let initialState = {
     //Массив диалогов
     dialogs: [
-        {id: 1, name: 'Макс'},
-        {id: 2, name: 'Саша'},
-        {id: 3, name: 'Лера'},
-        {id: 4, name: 'Инокентий'},
-        {id: 5, name: 'Днепро'},
+        {id: 1, name: "Макс"},
+        {id: 2, name: "Саша"},
+        {id: 3, name: "Лера"},
+        {id: 4, name: "Инокентий"},
+        {id: 5, name: "Днепро"},
     ],
     //Массив сообщений
     messages: [],
@@ -26,7 +26,6 @@ const messengerReducer = (state = initialState, action) => {
                 ...state,
                 messageId: ++state.messageId,
                 messages: [...state.messages, message],
-                newMessageText: ''
             }
         }
         default:

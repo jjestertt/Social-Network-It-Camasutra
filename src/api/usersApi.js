@@ -11,7 +11,7 @@ const usersApi = {
     },
 
     followUser: (userId) => {
-        return axios.post('https://social-network.samuraijs.com/api/1.0/follow/' + userId, {}, {
+        return axios.post("https://social-network.samuraijs.com/api/1.0/follow/" + userId, {}, {
             withCredentials: true,
             headers: {
                 "API-KEY": getApiKey()
@@ -22,7 +22,7 @@ const usersApi = {
     },
 
     unFollowUser: (userId) => {
-        return axios.delete('https://social-network.samuraijs.com/api/1.0/follow/' + userId, {
+        return axios.delete("https://social-network.samuraijs.com/api/1.0/follow/" + userId, {
             withCredentials: true,
             headers: {
                 "API-KEY": getApiKey()

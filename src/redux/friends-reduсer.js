@@ -1,6 +1,6 @@
 import friendsApi from "../api/friendsApi";
 
-const SET_FRIENDS = 'my-net/friends/SET_FRIENDS';
+const SET_FRIENDS = "my-net/friends/SET_FRIENDS";
 
 let initialState = {
     friends: []

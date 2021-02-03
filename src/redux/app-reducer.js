@@ -1,6 +1,6 @@
 import {getAuth} from "./auth-reducer";
 //Создаем константу успешной инициализации
-const INITIALIZED_SUCCESS = 'my-net/app/INITIALIZED_SUCCESS'
+const INITIALIZED_SUCCESS = "my-net/app/INITIALIZED_SUCCESS"
 //Инициализационный стейт редьюсера
 let initialState = {
     //По умолчанию инициализация false

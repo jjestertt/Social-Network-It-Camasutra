@@ -9,7 +9,6 @@ import Preloader from "./components/General/Preloader";
 
 
 class App extends React.Component {
-
     componentDidMount() {
         this.props.initializeApp();
     }
@@ -21,7 +20,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Header/>
-                <Hero/>
+                <Hero />
                 <Footer/>
             </div>
         );
@@ -31,6 +30,7 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
     return {
         initialized: state.app.initialized,
+        isAuth: state.auth.isAuth,
     }
 }
 export default connect(mapStateToProps,{initializeApp})(App);

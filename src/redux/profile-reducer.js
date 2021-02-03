@@ -1,17 +1,17 @@
 import profileApi from "../api/profileApi";
 
 
-const ADD_POST = 'my-net/profile/ADD_POST';
-const DELETE_POST = 'my-net/profile/DELETE_POST';
-const SET_USER_PROFILE = 'my-net/profile/SET_USER_PROFILE';
-const SET_USER_PROFILE_STATUS = 'my-net/profile/SET_USER_PROFILE_STATUS';
-const SET_USER_PROFILE_ABOUT = 'my-net/profile/SET_USER_PROFILE_ABOUT';
+const ADD_POST = "my-net/profile/ADD_POST";
+const DELETE_POST = "my-net/profile/DELETE_POST";
+const SET_USER_PROFILE = "my-net/profile/SET_USER_PROFILE";
+const SET_USER_PROFILE_STATUS = "my-net/profile/SET_USER_PROFILE_STATUS";
+const SET_USER_PROFILE_ABOUT = "my-net/profile/SET_USER_PROFILE_ABOUT";
 
 let initialState = {
     posts: [],
     postId: 1,
     userProfile: null,
-    userProfileStatus: ''
+    userProfileStatus: ""
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -19,7 +19,7 @@ const profileReducer = (state = initialState, action) => {
         case ADD_POST: {
             let newPost = {
                 id: state.postId,
-                userName: 'Сивак Максим',
+                userName: "Сивак Максим",
                 likeCounter: 0,
                 postText: action.postText
             }
