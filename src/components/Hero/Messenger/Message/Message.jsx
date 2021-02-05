@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Message.module.css';
 import MessageItem from "./MessageItem/MessageItem";
 import {Field, reduxForm, reset} from "redux-form";
-import {Textarea} from "../../../General/FormControl/FormControl";
+import {Textarea} from "../../../Common/FormControl/FormControl";
 import {maxLengthCreator, requiredForm} from "../../../../utils/validate";
 
 let maxLength300 = maxLengthCreator(300)

@@ -1,7 +1,7 @@
 import {Field, reduxForm} from "redux-form";
 import React from "react";
 import {useEffect} from "react";
-import {Textarea} from "../../../../../General/FormControl/FormControl";
+import {Textarea} from "../../../../../Common/FormControl/FormControl";
 
 const FormAboutMe = (props) => {
 

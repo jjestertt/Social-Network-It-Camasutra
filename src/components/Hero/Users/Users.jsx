@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./Users.module.css";
-import Preloader from "../../General/Preloader";
+import Preloader from "../../Common/Preloader";
 import User from "./User/User";
+import Pagination from "../../Common/Pagination/Pagination";
 
 
 const Users = (props) => {
@@ -11,6 +12,12 @@ const Users = (props) => {
     }
     return (
         <div className={style.wrapper}>
+            {/*Пагинация*/}
+            <Pagination pages={props.pages} currentPage={props.currentPage}
+                        onSetCurrentPage={props.onSetCurrentPage}
+                        totalItemsCount={props.totalUsersCount}
+                        pageSize={props.pageSize}
+            />
             {props.users.map(user => {
                 return (
                     <User key={user.id}
@@ -21,19 +28,6 @@ const Users = (props) => {
                     />
                 );
             })}
-            {/*Пагинация*/}
-            <div className={style.pagination}>
-                {props.pages.map((page) => {
-                    return (
-                        <span key={page} className={`${props.currentPage === page && style.activePage} ${style.pages}`}
-                              onClick={() => {
-                                  props.onSetCurrentPage(page)
-                              }}>
-                            {page}
-                            </span>
-                    )
-                })}
-            </div>
             <span className={style.totalUsersCount}>Всего Пользователей: {props.totalUsersCount}</span>
         </div>
     );

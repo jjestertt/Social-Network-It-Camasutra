@@ -11,7 +11,7 @@ import {compose} from "redux";
 import {
     getCurrentPage,
     getFollowingProgress,
-    getIsFetch, getPagesCount, getPageSize, getTotalUsersCount,
+    getIsFetch, getPageSize, getTotalUsersCount,
     getUsers
 } from "../../../redux/users-reselect";
 
@@ -49,7 +49,6 @@ const mapStateToProps = (state) => {
         isFetch: getIsFetch(state),
         users: getUsers(state),
         totalUsersCount: getTotalUsersCount(state),
-        pages: getPagesCount(state),
         currentPage: getCurrentPage(state),
         followingProgress: getFollowingProgress(state),
         pageSize: getPageSize(state),

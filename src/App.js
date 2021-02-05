@@ -5,7 +5,7 @@ import Hero from './components/Hero/Hero.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import {connect} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
-import Preloader from "./components/General/Preloader";
+import Preloader from "./components/Common/Preloader";
 
 
 class App extends React.Component {

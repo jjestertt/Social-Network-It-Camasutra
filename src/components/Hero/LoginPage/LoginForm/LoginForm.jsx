@@ -1,7 +1,7 @@
 import React from "react"
 import {maxLengthCreator, requiredForm} from "../../../../utils/validate";
 import style from "./LoginForm.module.css";
-import {createField, CustomInput} from "../../../General/FormControl/FormControl";
+import {createField, CustomInput} from "../../../Common/FormControl/FormControl";
 import {reduxForm} from "redux-form";
 
 let maxLength20 = maxLengthCreator(20);
