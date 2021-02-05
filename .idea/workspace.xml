@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
       <updated>1612310898907</updated>
       <workItem from="1612310902500" duration="677000" />
       <workItem from="1612312668066" duration="456000" />
-      <workItem from="1612545719303" duration="8036000" />
+      <workItem from="1612545719303" duration="9717000" />
     </task>
     <servers />
   </component>

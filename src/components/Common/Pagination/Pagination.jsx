@@ -8,18 +8,22 @@ const Pagination = ({totalItemsCount, pageSize, onSetCurrentPage, currentPage, p
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
-
-    const portionCount = Math.ceil(pagesCount / portionSize);   
+    // count all portions
+    const portionCount = Math.ceil(pagesCount / portionSize);
+    // computed initial current portion from data current page
     const currentPortion = Math.ceil(currentPage / portionSize);
+    // hook with help this we can help change number of current portion
     const [portionNumber, setPortionNumber] = useState(currentPortion);
+    // start number of portion
     const leftPortionNumber = (portionNumber - 1) * portionSize + 1;
+    // end number of portion
     const rightPortionNumber = portionNumber * portionSize;
     return (
 
         <div className={style.pagination}>
-            {portionNumber <= 1 || <button onClick={() => {
+             <button className={style.button} disabled={portionNumber <= 1} onClick={() => {
                 setPortionNumber(portionNumber - 1)
-            }}>{'<<'}</button>}
+            }}>{'<<'}</button>
             {pages
                 .filter(page => page >= leftPortionNumber && page <= rightPortionNumber)
                 .map((page) => {
@@ -32,9 +36,9 @@ const Pagination = ({totalItemsCount, pageSize, onSetCurrentPage, currentPage, p
                         </span>
                     );
                 })}
-            {portionNumber >= portionCount || <button onClick={() => {
+             <button className={style.button} disabled={portionNumber >= portionCount} onClick={() => {
                 setPortionNumber(portionNumber + 1)
-            }}>{'>>'}</button>}
+            }}>{'>>'}</button>
         </div>
     );
 }

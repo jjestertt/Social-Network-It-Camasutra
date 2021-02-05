@@ -1,13 +1,18 @@
 .pagination{
+    max-width: 371px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
 }
-
 .pages{
-    font-size: 19px;
+    font-size: 14px;
     cursor: pointer;
     transition-duration: 0.2s ;
 }
 .pages:not(:last-child){
-    margin-right: 10px;
+    margin-right: 2px;
 }
 .pages:hover{
     color: #6e6e6e;
@@ -17,3 +22,6 @@
      font-weight: bold;
      border-bottom: 3px solid #000000;
  }
+.button:disabled{
+    visibility: hidden;
+}
