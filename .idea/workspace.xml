@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/Buttons/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Buttons/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/Buttons/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Buttons/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/FormControl/FormControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FormControl/FormControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/FormControl/FormControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FormControl/FormControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/Preloader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Preloader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/General/Preloader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Preloader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginForm/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginForm/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Messenger/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Messenger/Message/Message.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/FormAboutMe/FormAboutMe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/FormAboutMe/FormAboutMe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Users/UsersContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +41,7 @@
       <updated>1612310898907</updated>
       <workItem from="1612310902500" duration="677000" />
       <workItem from="1612312668066" duration="456000" />
-      <workItem from="1612545719303" duration="1740000" />
+      <workItem from="1612545719303" duration="8036000" />
     </task>
     <servers />
   </component>

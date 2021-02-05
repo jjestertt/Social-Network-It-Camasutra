@@ -11,7 +11,7 @@ const TOGGLE_IS_FETCH = "my-net/users/TOGGLE_IS_FETCH";
 
 let initialState = {
     users: [],
-    pageSize: 30,
+    pageSize: 10,
     totalUsersCount: 0,
     currentPage: 1,
     isFetch: false,
