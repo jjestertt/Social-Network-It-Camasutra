@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hoc/withSuspense.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Pagination/Pagination.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +41,17 @@
       <updated>1612310898907</updated>
       <workItem from="1612310902500" duration="677000" />
       <workItem from="1612312668066" duration="456000" />
-      <workItem from="1612545719303" duration="9717000" />
+      <workItem from="1612545719303" duration="9836000" />
+      <workItem from="1612652403091" duration="2491000" />
     </task>
+    <task id="LOCAL-00001" summary="update pagination">
+      <created>1612569007751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612569007751</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -60,5 +68,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pagination" />
   </component>
 </project>

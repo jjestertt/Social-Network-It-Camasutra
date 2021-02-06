@@ -1,14 +1,19 @@
-import React from 'react';
-import style from './Hero.module.css';
-import Menu from './Menu/Menu.jsx';
+import React from "react";
+import style from "./Hero.module.css";
 import {Route} from "react-router-dom";
-import LoginPageContainer from "./LoginPage/LoginPageContainer";
-import ProfileContainer from "./Profile/ProfileContainer";
-import UsersContainer from "./Users/UsersContainer";
-import MessengerContainer from "./Messenger/MessengerContainer";
-import News from "./News/News";
-import Music from "./Music/Music";
-import Settings from "./Settings/Settings";
+import Menu from "./Menu/Menu.jsx";
+import withSuspense from "../../hoc/withSuspense";
+
+
+//lazy load component
+const LoginPageContainer = React.lazy(() => import("./LoginPage/LoginPageContainer"));
+const ProfileContainer = React.lazy(() => import("./Profile/ProfileContainer"));
+const UsersContainer = React.lazy(() => import("./Users/UsersContainer"));
+const MessengerContainer = React.lazy(() => import("./Messenger/MessengerContainer"));
+const News = React.lazy(() => import("./News/News"));
+const Music = React.lazy(() => import("./Music/Music"));
+const Settings = React.lazy(() => import("./Settings/Settings"));
+
 
 const Hero = (props) => {
     return (
@@ -18,19 +23,19 @@ const Hero = (props) => {
                     <Menu/>
                     <div className={style.content}>
                         {/*loginPage*/}
-                        <Route path="/login" component={LoginPageContainer}/>
+                        <Route path="/login" render={withSuspense(LoginPageContainer)}/>
                         {/*ProfilePage*/}
-                        <Route path="/profile/:userId?" component={ProfileContainer}/>
+                        <Route path="/profile/:userId?" render={withSuspense(ProfileContainer)}/>
                         {/*UsersPage*/}
-                        <Route path="/users" component={UsersContainer}/>
+                        <Route path="/users" render={withSuspense(UsersContainer)}/>
                         {/*MessagePage*/}
-                        <Route path="/messenger" component={MessengerContainer}/>
+                        <Route path="/messenger" render={withSuspense(MessengerContainer)}/>
                         {/*NewsPage*/}
-                        <Route path="/news" component={News}/>
+                        <Route path="/news" render={withSuspense(News)}/>
                         {/*MusicPage*/}
-                        <Route path="/music" component={Music}/>
+                        <Route path="/music" render={withSuspense(Music)}/>
                         {/*SettingsPage*/}
-                        <Route path="/settings" component={Settings}/>
+                        <Route path="/settings" render={withSuspense(Settings)}/>
                     </div>
                 </div>
             </div>
