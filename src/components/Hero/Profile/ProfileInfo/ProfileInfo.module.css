@@ -14,7 +14,7 @@
     object-position: center;
 }
 
-.name_wrapper {
+.nameWrapper {
     padding: 5px 20px;
 }
 .userName {
@@ -46,8 +46,4 @@
 
 .contactListLink:first-letter{
     text-transform: uppercase;
-}
-.photo {
-    max-height: 240px;
-    border-radius: 5px;
 }

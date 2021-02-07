@@ -1,11 +1,11 @@
 import profileApi from "../api/profileApi";
 
-
 const ADD_POST = "my-net/profile/ADD_POST";
 const DELETE_POST = "my-net/profile/DELETE_POST";
 const SET_USER_PROFILE = "my-net/profile/SET_USER_PROFILE";
 const SET_USER_PROFILE_STATUS = "my-net/profile/SET_USER_PROFILE_STATUS";
 const SET_USER_PROFILE_ABOUT = "my-net/profile/SET_USER_PROFILE_ABOUT";
+const SET_USER_PHOTOS = "SET_USER_PHOTOS";
 
 let initialState = {
     posts: [],
@@ -47,6 +47,14 @@ const profileReducer = (state = initialState, action) => {
                 userProfileStatus: action.userProfileStatus
             }
         }
+        case SET_USER_PHOTOS: {
+            return {
+                ...state,
+                userProfile: {
+                    ...state.userProfile, photos: action.photos
+                }
+            }
+        }
         case SET_USER_PROFILE_ABOUT: {
             return {
                 ...state,
@@ -74,6 +82,9 @@ export const updateUserProfileStatus = (userProfileStatus) => {
 export const setUserProfileAboutMe = (aboutMe) => {
     return ({type: SET_USER_PROFILE_ABOUT, aboutMe})
 }
+const setUserPhotos = (photos) => {
+    return ({type: SET_USER_PHOTOS, photos})
+}
 //Замыкание thunk
 export const getUsersProfile = (userId) => {
     return dispatch => {
@@ -90,6 +101,12 @@ export const setUserProfileStatusToServer = (userProfileStatus) => async (dispat
     const data = await profileApi.setUserProfileStatusToServer(userProfileStatus)
     if (data.resultCode === 0) {
         dispatch(updateUserProfileStatus(userProfileStatus));
+    }
+}
+export const updateUserPhoto = (userPhoto) => async (dispatch) => {
+    const data = await profileApi.updateUserPhoto(userPhoto)
+    if (data.resultCode === 0) {
+        dispatch(setUserPhotos(data.data.photos))
     }
 }
 export default profileReducer;

@@ -1,0 +1,25 @@
+.profilePhoto{
+    position: relative;
+    max-height: 400px;
+}
+.updateUserPhotoBtn{
+    position: absolute;
+    padding: 3px 5px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    color: #ccc;
+    background: #000;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    opacity: 0;
+}
+.profilePhoto:hover .updateUserPhotoBtn{
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+.updateUserPhotoBtn:hover{
+    text-decoration: underline;
+}
