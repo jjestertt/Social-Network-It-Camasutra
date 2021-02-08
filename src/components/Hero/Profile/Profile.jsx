@@ -11,7 +11,7 @@ const Profile = (props) => {
     return (
         <div className="Profile">
             <ProfileInfo
-                myPage={!props.match.params.userId}
+                myOwnPage={!props.match.params.userId}
                 userProfile={props.userProfile}
                 userStatus={props.userStatus}
                 getUserProfileStatusFromSever={props.getUserProfileStatusFromSever}

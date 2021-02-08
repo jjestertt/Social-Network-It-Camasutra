@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfilePhoto/ProfilePhoto.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfilePhoto/ProfilePhoto.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMeForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/profileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/profileApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/FormAboutMe/FormAboutMe.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,9 @@
       <workItem from="1612652403091" duration="2491000" />
       <workItem from="1612709360591" duration="2406000" />
       <workItem from="1612712177486" duration="6442000" />
-      <workItem from="1612722516961" duration="341000" />
+      <workItem from="1612722516961" duration="899000" />
+      <workItem from="1612787165314" duration="45000" />
+      <workItem from="1612787310761" duration="6846000" />
     </task>
     <task id="LOCAL-00001" summary="update pagination">
       <created>1612569007751</created>
@@ -73,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612569007751</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add update user avatar api">
+      <created>1612722927496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612722927496</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="update pagination" />
+    <MESSAGE value="Add update user avatar api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add update user avatar api" />
   </component>
 </project>

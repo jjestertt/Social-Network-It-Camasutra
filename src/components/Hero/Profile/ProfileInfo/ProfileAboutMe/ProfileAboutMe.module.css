@@ -1,17 +1,19 @@
-
+.lookJob {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
 .aboutMe{
     position: relative;
     margin-bottom: 14px;
 }
-.aboutMe:hover .editIcon{
-    display: block;
+.contactListTitle{
+    margin-bottom: 2px;
 }
-.editIcon{
-    display: none;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
+
+.contactListItem:not(:last-child){
+    margin-right: 5px;
+    margin-bottom: 1px;
+}
+.contactListLink:first-letter{
+    text-transform: uppercase;
 }
