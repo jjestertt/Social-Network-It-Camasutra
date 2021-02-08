@@ -20,10 +20,10 @@ const ProfileAboutMeForm = (props) => {
         <form onSubmit={props.handleSubmit}>
             <div>
                 <div>
-                    <span>Ищу ли я работу </span>
-                    {createField('input', "checkbox",
-                        "lookingForAJob", "",
-                        [])}
+                    <div>Работа:</div>
+                    {createField("input", "checkbox",
+                        "lookingForAJob", "" ,
+                        [], "Looking for a job")}
                 </div>
                 {createField(CustomInput, "",
                     "lookingForAJobDescription", "What do i looking?",

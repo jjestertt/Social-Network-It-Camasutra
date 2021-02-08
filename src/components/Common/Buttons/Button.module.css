@@ -1,8 +1,15 @@
 .button{
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100px;
-    height: 30px;
-    background: #28292a;
-    color: white;
+    padding: 3px 5px;
+    cursor: pointer;
+    color: #ccc;
+    background: #000;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+.button:hover{
+    text-decoration: underline;
+    transition-duration: 0.3s;
 }

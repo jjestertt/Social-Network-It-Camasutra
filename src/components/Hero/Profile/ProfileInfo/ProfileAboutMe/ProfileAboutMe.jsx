@@ -4,6 +4,7 @@ import {useState} from "react";
 import {connect} from "react-redux";
 import {setUserProfileAboutMe} from "../../../../../redux/profile-reducer";
 import ProfileAboutMeReduxForm from "./ProfileAboutMeForm";
+import Button from "../../../../Common/Buttons/Button";
 
 const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
     const [editMode, setEditMode] = useState(false);
@@ -34,8 +35,10 @@ const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
 
     if (!editMode) {
         return (
-            <div>
-                {myOwnPage && <button onClick={onEditMode}>Режим редактирования</button>}
+            <div className={style.aboutMeWrapper}>
+                <div className={style.changeProfileBtn}>
+                    <Button innerText={"Редактировать"} onClick={onEditMode}/>
+                </div>
                 <div>
                     <div>Работа:</div>
                     <p className={style.lookJob}>{userProfile.lookingForAJob

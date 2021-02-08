@@ -20,7 +20,7 @@ const ProfilePhoto = (props) => {
         <div className={style.profilePhoto}>
             <img src={props.userProfile.photos.large ? props.userProfile.photos.large : user} alt=""
                  className={style.photo}/>
-            {props.myPage
+            {props.myOwnPage
             && <div>
                 <input style={{display: "none"}} ref={updateUserPhotoRef}
                        type="file" accept=".png, .jpg, .jpeg"

@@ -26,7 +26,9 @@ export const CustomInput = (props) => {
     return <FormControl {...props}><input className={style.input} {...input} {...restProps} /></FormControl>
 }
 
-export const createField = (component, type, name, placeholder, validators) => {
-    return <Field component={component} type={type} name={name} placeholder={placeholder}
-                  validate={validators} />
+export const createField = (component, type, name, placeholder, validators, innerText="") => {
+    return <div>
+        <Field id={name} component={component} type={type} name={name} placeholder={placeholder}
+               validate={validators} /> {innerText && <label htmlFor={name}>{innerText}</label>}
+    </div>
 }
