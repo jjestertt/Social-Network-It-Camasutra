@@ -16,7 +16,7 @@ const ProfileApi = {
         return axios.put("https://social-network.samuraijs.com/api/1.0/profile/status", {status: userStatus}, {
             withCredentials: true,
             headers: {
-                "API-KEY": getApiKey()
+                "API-KEY": getApiKey(),
             }
         }).then(response => {
             return response.data
@@ -32,6 +32,16 @@ const ProfileApi = {
                 "API-KEY": getApiKey(),
                 "Content-Type": 'multipart/form-data',
             }}).then(response => {
+            return response.data
+        });
+    },
+    updateProfileData: (profileData) => {
+        return axios.put("https://social-network.samuraijs.com/api/1.0/profile", {...profileData}, {
+            withCredentials: true,
+            headers: {
+                "API-KEY": getApiKey(),
+            }
+        }).then(response => {
             return response.data
         });
     },

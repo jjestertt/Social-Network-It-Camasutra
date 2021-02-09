@@ -2,11 +2,11 @@ import style from "./ProfileAboutMe.module.css"
 import React from "react";
 import {useState} from "react";
 import {connect} from "react-redux";
-import {setUserProfileAboutMe} from "../../../../../redux/profile-reducer";
+import {setUserProfileAboutMe, updateProfileData} from "../../../../../redux/profile-reducer";
 import ProfileAboutMeReduxForm from "./ProfileAboutMeForm";
 import Button from "../../../../Common/Buttons/Button";
 
-const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
+const ProfileAboutMe = ({userProfile, updateProfileData, myOwnPage, setUserProfileAboutMe}) => {
     const [editMode, setEditMode] = useState(false);
 
     const onEditMode = () => {
@@ -17,8 +17,7 @@ const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
     }
     const onSubmit = (formData) => {
         offEditMode();
-        // setUserProfileAboutMe(formData.aboutMe)
-        console.log(formData)
+        updateProfileData(formData);
     }
 
     const contacts = userProfile.contacts;
@@ -36,9 +35,10 @@ const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
     if (!editMode) {
         return (
             <div className={style.aboutMeWrapper}>
-                <div className={style.changeProfileBtn}>
+                <h4>About me:</h4>
+                {myOwnPage && <div className={style.changeProfileBtn}>
                     <Button innerText={"Редактировать"} onClick={onEditMode}/>
-                </div>
+                </div>}
                 <div>
                     <div>Работа:</div>
                     <p className={style.lookJob}>{userProfile.lookingForAJob
@@ -66,4 +66,4 @@ const ProfileAboutMe = ({userProfile, myOwnPage, setUserProfileAboutMe}) => {
 }
 
 const mapStateToProps = (state) => ({});
-export default connect(mapStateToProps, {setUserProfileAboutMe})(ProfileAboutMe);
+export default connect(mapStateToProps, {setUserProfileAboutMe, updateProfileData})(ProfileAboutMe);
