@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="add thunk and api flow for update user Data to server">
+    <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="update server form validator for profile">
+      <change afterPath="$PROJECT_DIR$/src/utils/ParserErrorsForProfileForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ApiKey.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiKey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMeForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +37,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -66,7 +65,8 @@
       <workItem from="1612800161131" duration="3887000" />
       <workItem from="1612806063389" duration="710000" />
       <workItem from="1612826019391" duration="3154000" />
-      <workItem from="1612868122201" duration="10635000" />
+      <workItem from="1612868122201" duration="10711000" />
+      <workItem from="1612885880173" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="update pagination">
       <created>1612569007751</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612829181516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update server form validator for profile">
+      <created>1612882110519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612882110519</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +126,8 @@
     <MESSAGE value="Add update user avatar api" />
     <MESSAGE value="Update" />
     <MESSAGE value="add thunk and api flow for update user Data to server" />
-    <option name="LAST_COMMIT_MESSAGE" value="add thunk and api flow for update user Data to server" />
+    <MESSAGE value="update server form validator for profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="update server form validator for profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -127,7 +135,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Hero/Profile/ProfileInfo/ProfileAboutMe/ProfileAboutMe.jsx</url>
           <line>3</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
