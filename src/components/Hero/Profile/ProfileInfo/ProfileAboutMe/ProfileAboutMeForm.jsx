@@ -3,8 +3,7 @@ import style from "./ProfileAboutMe.module.css";
 import {createField, CustomInput, Textarea} from "../../../../Common/FormControl/FormControl";
 import {reduxForm} from "redux-form";
 
-const ProfileAboutMeForm = (props) => {
-    const contacts = props.contacts;
+const ProfileAboutMeForm = ({error, handleSubmit, contacts}) => {
     const contactFormItems = Object.keys(contacts).map(key => {
             return (
                 <div key={key}>
@@ -17,7 +16,7 @@ const ProfileAboutMeForm = (props) => {
     });
 
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div>
                 <div>
                     <div>Работа:</div>
@@ -39,13 +38,14 @@ const ProfileAboutMeForm = (props) => {
                 <div className={style.contactListTitle}>Контакты:</div>
                 {contactFormItems}
             </div>
+            {!!error && <div className={style.formError}>{error.map(error => <div key={error}>{error}</div>)}</div>}
             <button>Send</button>
         </form>
     )
 }
 
 const ProfileAboutMeReduxForm = reduxForm({
-    form: "login",
+    form: "aboutMe",
 })(ProfileAboutMeForm);
 
 export default ProfileAboutMeReduxForm

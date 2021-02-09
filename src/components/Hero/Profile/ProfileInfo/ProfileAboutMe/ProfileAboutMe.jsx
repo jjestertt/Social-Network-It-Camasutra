@@ -16,8 +16,8 @@ const ProfileAboutMe = ({userProfile, updateProfileData, myOwnPage, setUserProfi
         setEditMode(false);
     }
     const onSubmit = (formData) => {
-        offEditMode();
-        updateProfileData(formData);
+        updateProfileData(formData).then(
+            result => offEditMode());
     }
 
     const contacts = userProfile.contacts;

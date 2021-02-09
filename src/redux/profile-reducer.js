@@ -1,4 +1,6 @@
 import profileApi from "../api/profileApi";
+import {stopSubmit} from "redux-form";
+
 
 const ADD_POST = "my-net/profile/ADD_POST";
 const DELETE_POST = "my-net/profile/DELETE_POST";
@@ -114,6 +116,17 @@ export const updateProfileData = (profileData) => async (dispatch, getState) => 
     const data = await profileApi.updateProfileData(profileData);
     if (data.resultCode === 0) {
         dispatch(getUsersProfile(myOwnId));
+    } else {
+        // let parseErrorFieldName = (array) => {
+        //     const nameErrorField = (array[0].split(">")[1].slice(0, -1).toLowerCase());
+        //     const errors = {contacts:{}};
+        //     errors.contacts[nameErrorField] = array[0];
+        //     return errors;
+        // }
+        // dispatch(stopSubmit("aboutMe", parseErrorFieldName(data.messages)));
+        // dispatch(stopSubmit("aboutMe", {contacts : {facebook : 'ALYARMA', website: 'toge alyarma'}}));
+        dispatch(stopSubmit("aboutMe", {_error: data.messages.map(message => message)}));
+        return Promise.reject(data.messages.map(message => message));
     }
 }
 export default profileReducer;
