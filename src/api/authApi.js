@@ -19,11 +19,9 @@ const authApi = {
             return response.data;
         });
     },
-    login: (email, password, rememberMe) => {
+    login: (email, password, rememberMe, captcha) => {
         return axios.post("https://social-network.samuraijs.com/api/1.0/auth/login", {
-            email: email,
-            password: password,
-            rememberMe: rememberMe,
+            captcha, email, password, rememberMe,
         }, {
             withCredentials: true,
             headers:{

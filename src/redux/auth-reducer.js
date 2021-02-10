@@ -1,17 +1,20 @@
 import authApi from "../api/authApi";
 import {stopSubmit} from "redux-form";
+import securityApi from "../api/securityApi";
 
 
 // create constants for reducer
 const SET_USER_DATA = "my-net/auth/SET_USER_DATA";
 const CLEAR_USER_DATA = "my-net/auth/CLEAR_USER_DATA";
+const SET_LOGIN_CAPTCHA_URL = "my-net/auth/SET_LOGIN_CAPTCHA_URL";
 
 // create initial state for reducer
 let initialState = {
     id: null,
     login: null,
     email: null,
-    isAuth: false
+    isAuth: false,
+    loginCaptchaUrl: null,
 }
 //create reducer
 const authReducer = (state = initialState, action) => {
@@ -23,6 +26,12 @@ const authReducer = (state = initialState, action) => {
                 ...action.data,
 
             }
+        case SET_LOGIN_CAPTCHA_URL:{
+            return {
+                ...state,
+                ...action.payload
+            }
+        }
         case CLEAR_USER_DATA: {
             return {
                 ...state,
@@ -39,7 +48,13 @@ const authReducer = (state = initialState, action) => {
 const setUserData = (id, login, email) => {
     return {
         type: SET_USER_DATA,
-        data: {id, login, email}
+        data: {id, login, email, loginCaptchaUrl: null}
+    }
+}
+const setLoginCaptchaUrl = (loginCaptchaUrl) => {
+    return {
+        type: SET_LOGIN_CAPTCHA_URL,
+        payload : {loginCaptchaUrl}
     }
 }
 const clearUserData = () => {
@@ -63,11 +78,20 @@ export const logout = () => async (dispatch) => {
     }
 }
 
-export const userLogin = (email, password, rememberMe = false) => async (dispatch) => {
-    let data = await authApi.login(email, password, rememberMe)
+export const getLoginCaptcha = () => async (dispatch) => {
+    let data = await securityApi.getCaptcha();
+    let captchaUrl = data.url;
+    dispatch(setLoginCaptchaUrl(captchaUrl));
+}
+
+export const userLogin = (email, password, rememberMe = false, captcha= null) => async (dispatch) => {
+    let data = await authApi.login(email, password, rememberMe, captcha)
     if (data.resultCode === 0) {
-        dispatch(getAuth())
+        dispatch(getAuth());
     } else {
+        if (data.resultCode === 10) {
+            dispatch(getLoginCaptcha());
+        }
         let action = stopSubmit('login', {_error: data.messages.map(el => el)});
         dispatch(action);
     }

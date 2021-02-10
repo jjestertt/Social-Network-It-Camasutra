@@ -6,7 +6,7 @@ import {reduxForm} from "redux-form";
 
 let maxLength20 = maxLengthCreator(20);
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error, loginCaptchaUrl}) => {
     return (
         <form onSubmit={handleSubmit} className={style.form}>
             <div className={style.input}>
@@ -23,6 +23,12 @@ const LoginForm = ({handleSubmit, error}) => {
                 <a className={style.signUp} href="https://social-network.samuraijs.com/signUp">SignUp</a>
             </div>
             <div className={style.formError}>{error}</div>
+            {loginCaptchaUrl && <div>
+                <img src={loginCaptchaUrl} alt="captcha"/>
+                <div className={style.input}>
+                    {createField(CustomInput, "text", "captcha", "Captcha", [])}
+                </div>
+            </div>}
             <button type={"submit"} className={style.submitButton}>Login</button>
         </form>)
 }

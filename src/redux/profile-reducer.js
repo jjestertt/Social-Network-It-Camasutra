@@ -1,20 +1,21 @@
 import profileApi from "../api/profileApi";
 import {stopSubmit} from "redux-form";
-import {createErrorsObjectForReduxForm, parseWord} from "../utils/ParserErrorsForProfileForm";
-
+import {parseValidatorsField} from "../utils/parseValidatorsField";
 
 const ADD_POST = "my-net/profile/ADD_POST";
 const DELETE_POST = "my-net/profile/DELETE_POST";
 const SET_USER_PROFILE = "my-net/profile/SET_USER_PROFILE";
+const TOGGLE_UPDATE_PROFILE_IS_FETCH = "my-net/profile/TOGGLE_UPDATE_IS_FETCH";
 const SET_USER_PROFILE_STATUS = "my-net/profile/SET_USER_PROFILE_STATUS";
 const SET_USER_PROFILE_ABOUT = "my-net/profile/SET_USER_PROFILE_ABOUT";
 const SET_USER_PHOTOS = "SET_USER_PHOTOS";
 
 let initialState = {
+    updateProfileIsFetch: false,
     posts: [],
     postId: 1,
     userProfile: null,
-    userProfileStatus: ""
+    userProfileStatus: "",
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -36,6 +37,12 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 posts: state.posts.filter(object => object.id !== action.postId)
+            }
+        }
+        case TOGGLE_UPDATE_PROFILE_IS_FETCH: {
+            return {
+                ...state,
+                ...action.payload
             }
         }
         case SET_USER_PROFILE: {
@@ -75,6 +82,9 @@ export const addPost = (postText) => {
 }
 export const deletePost = (postId) => {
     return ({type: DELETE_POST, postId});
+}
+export const toggleUpdateProfileIsFetch = (parametr) => {
+    return ({type: TOGGLE_UPDATE_PROFILE_IS_FETCH, payload: {parametr}});
 }
 export const setUserProfile = (userProfile) => {
     return ({type: SET_USER_PROFILE, userProfile});
@@ -118,9 +128,7 @@ export const updateProfileData = (profileData) => async (dispatch, getState) => 
     if (data.resultCode === 0) {
         dispatch(getUsersProfile(myOwnId));
     } else {
-        let keys = parseWord(data.messages.map(message => message));
-        let objectErrors = createErrorsObjectForReduxForm(keys);
-        dispatch(stopSubmit("aboutMe", objectErrors));
+        dispatch(stopSubmit("aboutMe", parseValidatorsField(data.messages.map(message => message))));
         return Promise.reject();
     }
 }

@@ -7,7 +7,7 @@ import LoginPage from "./LoginPage";
 
 const LoginPageContainer = (props) => {
     const onSubmit = (formData) => {
-        props.userLogin(formData.email, formData.password, formData.rememberMe);
+        props.userLogin(formData.email, formData.password, formData.rememberMe, formData.captcha);
     }
     if (props.isAuth) {
         return (
@@ -15,10 +15,11 @@ const LoginPageContainer = (props) => {
         );
     }
     return (
-        <LoginPage onSubmit={onSubmit}/>
+        <LoginPage onSubmit={onSubmit} loginCaptchaUrl={props.loginCaptchaUrl}/>
     );
 }
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    loginCaptchaUrl: state.auth.loginCaptchaUrl
 });
 export default connect(mapStateToProps, {userLogin})(LoginPageContainer);
