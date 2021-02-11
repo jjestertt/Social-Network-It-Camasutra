@@ -99,13 +99,11 @@ const setUserPhotos = (photos) => {
     return ({type: SET_USER_PHOTOS, photos})
 }
 //Замыкание thunk
-export const getUsersProfile = (userId) => {
-    return dispatch => {
-        profileApi.getUserProfile(userId).then(data => {
-            dispatch(setUserProfile(data));
-        });
-    }
+export const getUsersProfile = userId => async dispatch => {
+    const data = await profileApi.getUserProfile(userId)
+    dispatch(setUserProfile(data));
 }
+
 export const getUserProfileStatusFromSever = (userId) => async (dispatch) => {
     const data = await profileApi.getUserProfileStatusFromServer(userId);
     dispatch(updateUserProfileStatus(data));

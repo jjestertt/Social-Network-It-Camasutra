@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13eb6b5d-f415-4876-874c-20a6a6145493" name="Default Changelist" comment="update server form validator for profile">
-      <change afterPath="$PROJECT_DIR$/src/api/securityApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/parseValidatorsField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ApiKey.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiKey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/authApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/authApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginForm/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginForm/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginPageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LoginPage/LoginPageContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ParserErrorsForProfileForm.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,7 @@
       <workItem from="1612868122201" duration="10711000" />
       <workItem from="1612885880173" duration="3133000" />
       <workItem from="1612906019304" duration="2093000" />
-      <workItem from="1612946386263" duration="6894000" />
+      <workItem from="1612946386263" duration="8450000" />
     </task>
     <task id="LOCAL-00001" summary="update pagination">
       <created>1612569007751</created>
